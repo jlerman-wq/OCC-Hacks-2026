@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://x7tkwgeqahcu"]
+
+[ext_resource type="Texture2D" uid="uid://bvcncnq55hm3y" path="res://jackolantern unlit.png" id="1_4thn5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
+size = Vector2(994, 723.8806)
+
+[node name="Pumpkin" type="Area2D" unique_id=1431724313]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=772453102]
+position = Vector2(-150.75, -118.75)
+scale = Vector2(0.5, 0.536)
+texture = ExtResource("1_4thn5")
+region_enabled = true
+region_rect = Rect2(-45, 129.58228, 1115.5002, 1091.8241)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664971206]
+position = Vector2(-131.5, -91)
+scale = Vector2(0.5, 0.536)
+shape = SubResource("RectangleShape2D_08qor")
+
+[node name="Candle" type="PointLight2D" parent="." unique_id=1891275496]
