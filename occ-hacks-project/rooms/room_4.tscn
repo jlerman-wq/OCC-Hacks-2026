@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://deicpkqon0g6m"]
 
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://player.tscn" id="1_kjedn"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(1150, 50)
 
@@ -16,3 +18,6 @@ offset_top = 600.0
 offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_kjedn")]
+position = Vector2(500, 300)
