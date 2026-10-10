@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://daty6e27yfpqi"]
+
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://player.tscn" id="1_pcwt3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qmqve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
+size = Vector2(1241, 37)
+
+[node name="Debug Level" type="Node2D" unique_id=811741963]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1433582373]
+disable_mode = 1
+gravity_scale = 0.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D" unique_id=1400190927]
+position = Vector2(501.12506, 623)
+scale = Vector2(1237.7501, 34.5)
+mesh = SubResource("BoxMesh_qmqve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1330507034]
+position = Vector2(500.5, 623.5)
+shape = SubResource("RectangleShape2D_qmqve")
+
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_pcwt3")]

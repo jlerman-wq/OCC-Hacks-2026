@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cudv8vbmmajji"]
+
+[node name="Menu" type="Control" unique_id=1881078354]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
