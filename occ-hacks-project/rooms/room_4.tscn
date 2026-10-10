@@ -27,6 +27,9 @@ fill_to = Vector2(1, 0.5)
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_08qor"]
 light_mode = 2
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7u08x"]
+light_mode = 2
+
 [node name="room4" type="Node2D" unique_id=1079266622]
 script = ExtResource("1_roktq")
 
@@ -90,6 +93,33 @@ offset_right = 466.0
 offset_bottom = 449.0
 theme_override_font_sizes/font_size = 20
 text = "3"
+
+[node name="Hint2" type="Label" parent="." unique_id=109507925]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 490.0
+offset_top = 354.0
+offset_right = 530.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 20
+text = "8"
+
+[node name="Hint3" type="Label" parent="." unique_id=1248751090]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 709.0
+offset_top = 321.0
+offset_right = 749.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="Hint4" type="Label" parent="." unique_id=482443992]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 891.0
+offset_top = 413.0
+offset_right = 931.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 20
+text = "2"
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_roktq")]
 position = Vector2(111, 479)
