@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://di7m20fq4053u"]
 
-[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_8mlmb"]
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_m8xub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2nse"]
 size = Vector2(42, 655)
@@ -45,7 +45,7 @@ offset_bottom = 299.0
 text = "Level 4"
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_8mlmb")]
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_m8xub")]
 position = Vector2(117, 452)
 
 [node name="Enviorment" type="Node" parent="." unique_id=1475499753]

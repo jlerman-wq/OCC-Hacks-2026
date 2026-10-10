@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b4lubjqyxvcou"]
+
+[ext_resource type="Script" uid="uid://c0f4g300j10ln" path="res://Scripts/transition_trigger.gd" id="1_rtwka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
+size = Vector2(139, 206)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qmqve"]
+
+[sub_resource type="Gradient" id="Gradient_yysrb"]
+colors = PackedColorArray(0, 0, 0, 0.47058824, 1, 0, 0.08235294, 0.47058824)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k6nn7"]
+gradient = SubResource("Gradient_yysrb")
+
+[node name="Transition_Trigger" type="Area2D" unique_id=446455213]
+script = ExtResource("1_rtwka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=210218789]
+position = Vector2(-44.5, 93)
+shape = SubResource("RectangleShape2D_qmqve")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1167924649]
+position = Vector2(-45.499996, 91.00001)
+scale = Vector2(141, 208.00003)
+mesh = SubResource("BoxMesh_qmqve")
+texture = SubResource("GradientTexture1D_k6nn7")
