@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bivcjfq4rmu1f" path="res://Assets/Scenes/Level 1/grave_4.tscn" id="8_g4o7n"]
 [ext_resource type="PackedScene" uid="uid://ban3ck7b4svht" path="res://Assets/Scenes/Level 1/grave_5.tscn" id="9_d4j2s"]
 [ext_resource type="PackedScene" uid="uid://bbwg77k04478e" path="res://Assets/Scenes/Level 1/grave_6.tscn" id="10_gk1ct"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/Level 1/Example_Grave.tscn" id="12_7b7ae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
 size = Vector2(42, 655)
@@ -191,3 +192,7 @@ offset_top = -1636.0
 offset_right = 3326.0
 offset_bottom = 1124.0
 texture = ExtResource("6_anfnq")
+
+[node name="Example_Grave" parent="Enviorment" unique_id=856737939 instance=ExtResource("12_7b7ae")]
+position = Vector2(1103, 525)
+popup_offset = Vector2(0, -98)
