@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bef1mijiclfts" path="res://rooms/room_4.gd" id="1_roktq"]
 [ext_resource type="Script" uid="uid://mbb2gky37126" path="res://rooms/exit.gd" id="2_ctd8f"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_roktq"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/starry_sky.jpg" id="4_ocw8c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(1150, 50)
@@ -123,3 +124,10 @@ text = "2"
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_roktq")]
 position = Vector2(111, 479)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=750187000]
+
+[node name="StarrySky" type="Sprite2D" parent="." unique_id=1836813437]
+position = Vector2(578.00006, 184.5)
+scale = Vector2(0.4148438, 0.5802641)
+texture = ExtResource("4_ocw8c")
