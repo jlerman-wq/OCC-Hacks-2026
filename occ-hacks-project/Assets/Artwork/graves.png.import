@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gp4nh6tq5xyq"
-path="res://.godot/imported/bookshelf.png-73fee02ad05ce51d598ac87ffb345ef8.ctex"
+uid="uid://cqi7fbiaa7m82"
+path="res://.godot/imported/graves.png-b2a9c6d6a12b0f88848386b0e7cd8fdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bookshelf.png"
-dest_files=["res://.godot/imported/bookshelf.png-73fee02ad05ce51d598ac87ffb345ef8.ctex"]
+source_file="res://Assets/Artwork/graves.png"
+dest_files=["res://.godot/imported/graves.png-b2a9c6d6a12b0f88848386b0e7cd8fdd.ctex"]
 
 [params]
 

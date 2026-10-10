@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1tdmrdepq0k1"
-path="res://.godot/imported/pumpkins.png-6489230f09ba87edbcb13aacbcc6a1a8.ctex"
+uid="uid://c2g3m02nsqcft"
+path="res://.godot/imported/tungtungtung.png-6bff1a9fe41329800a3dd5aad19d40a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pumpkins.png"
-dest_files=["res://.godot/imported/pumpkins.png-6489230f09ba87edbcb13aacbcc6a1a8.ctex"]
+source_file="res://Assets/Artwork/tungtungtung.png"
+dest_files=["res://.godot/imported/tungtungtung.png-6bff1a9fe41329800a3dd5aad19d40a3.ctex"]
 
 [params]
 

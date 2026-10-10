@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b40lcmps8b7h0"
-path="res://.godot/imported/scarecrows.png-9aa72ee8b8972bec078248671f4f7e3d.ctex"
+uid="uid://ineiw203woyb"
+path="res://.godot/imported/GY gate.png-2aa8402631ad08779f5772d4c061a1bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scarecrows.png"
-dest_files=["res://.godot/imported/scarecrows.png-9aa72ee8b8972bec078248671f4f7e3d.ctex"]
+source_file="res://Assets/Artwork/GY gate.png"
+dest_files=["res://.godot/imported/GY gate.png-2aa8402631ad08779f5772d4c061a1bd.ctex"]
 
 [params]
 

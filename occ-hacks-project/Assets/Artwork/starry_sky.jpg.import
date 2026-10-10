@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqi7fbiaa7m82"
-path="res://.godot/imported/graves.png-a8c36dc6317bc0f4fe48873d0567a1eb.ctex"
+uid="uid://debob087ohtad"
+path="res://.godot/imported/starry_sky.jpg-b73414735019582f67b2c3b225413510.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graves.png"
-dest_files=["res://.godot/imported/graves.png-a8c36dc6317bc0f4fe48873d0567a1eb.ctex"]
+source_file="res://Assets/Artwork/starry_sky.jpg"
+dest_files=["res://.godot/imported/starry_sky.jpg-b73414735019582f67b2c3b225413510.ctex"]
 
 [params]
 

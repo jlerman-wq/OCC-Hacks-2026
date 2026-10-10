@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2g3m02nsqcft"
-path="res://.godot/imported/tungtungtung.png-90f9fcf5bc31b52a6bdd1f5101fb5574.ctex"
+uid="uid://cpsl0nkdi0xdf"
+path="res://.godot/imported/graves v2.png-3b78c5c864ff1177b534072512aec9c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tungtungtung.png"
-dest_files=["res://.godot/imported/tungtungtung.png-90f9fcf5bc31b52a6bdd1f5101fb5574.ctex"]
+source_file="res://Assets/Artwork/graves v2.png"
+dest_files=["res://.godot/imported/graves v2.png-3b78c5c864ff1177b534072512aec9c4.ctex"]
 
 [params]
 

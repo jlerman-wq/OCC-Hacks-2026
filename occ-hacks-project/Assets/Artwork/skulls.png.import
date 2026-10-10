@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ineiw203woyb"
-path="res://.godot/imported/GY gate.png-a824366fd328fb363289e51248f7c776.ctex"
+uid="uid://w0keumbqt18r"
+path="res://.godot/imported/skulls.png-a815abdccd28fb6e2ed50f3f471c8f7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GY gate.png"
-dest_files=["res://.godot/imported/GY gate.png-a824366fd328fb363289e51248f7c776.ctex"]
+source_file="res://Assets/Artwork/skulls.png"
+dest_files=["res://.godot/imported/skulls.png-a815abdccd28fb6e2ed50f3f471c8f7f.ctex"]
 
 [params]
 

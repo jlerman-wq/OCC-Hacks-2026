@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://debob087ohtad"
-path="res://.godot/imported/starry_sky.jpg-5ad327ea642142e5a16000c08146a509.ctex"
+uid="uid://dhkks8ry86vn2"
+path="res://.godot/imported/flying book.png-7131661c1a0f96a0e99cad7f073aba28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/starry_sky.jpg"
-dest_files=["res://.godot/imported/starry_sky.jpg-5ad327ea642142e5a16000c08146a509.ctex"]
+source_file="res://Assets/Artwork/flying book.png"
+dest_files=["res://.godot/imported/flying book.png-7131661c1a0f96a0e99cad7f073aba28.ctex"]
 
 [params]
 

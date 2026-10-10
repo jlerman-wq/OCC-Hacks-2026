@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://cudv8vbmmajji"]
 
 [ext_resource type="Script" uid="uid://jygq7qbb7d4p" path="res://Scripts/menu.gd" id="1_tt5f1"]
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="2_853f1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aqcu0"]
+font = ExtResource("2_853f1")
+font_size = 36
+
+[sub_resource type="Theme" id="Theme_gla8d"]
+default_font = ExtResource("2_853f1")
+default_font_size = 30
 
 [node name="MainMenu" type="MarginContainer" unique_id=45357579]
 anchors_preset = 8
@@ -8,10 +17,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -288.0
-offset_top = -95.5
-offset_right = 288.0
-offset_bottom = 95.5
+offset_left = -500.0
+offset_top = -267.0
+offset_right = 478.0
+offset_bottom = 218.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 120
@@ -25,36 +34,47 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="HBoxContainer" unique_id=1062837574]
-layout_mode = 2
-text = "Haunted Hacks 2026"
-
-[node name="Play_Button" type="Button" parent="HBoxContainer" unique_id=1634738503]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Play
-"
-
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=723774896]
-layout_mode = 2
-
-[node name="Options_Button" type="Button" parent="HBoxContainer" unique_id=1719150082]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Options"
-
-[node name="Control2" type="Control" parent="HBoxContainer" unique_id=987463359]
-layout_mode = 2
-
-[node name="Quit_Button" type="Button" parent="HBoxContainer" unique_id=365194383]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Quit"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=964302327]
 layout_mode = 2
 alignment = 1
 
-[connection signal="pressed" from="HBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1062837574]
+layout_mode = 2
+text = "Haunted Hacks 2026"
+label_settings = SubResource("LabelSettings_aqcu0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=167348224]
+layout_mode = 2
+alignment = 1
+
+[node name="Play_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1634738503]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_gla8d")
+text = "Play
+"
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=723774896]
+layout_mode = 2
+
+[node name="Options_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1719150082]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_gla8d")
+text = "Options"
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=987463359]
+layout_mode = 2
+
+[node name="Quit_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=365194383]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_gla8d")
+text = "Quit"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciscsluipudis"
-path="res://.godot/imported/scuba.png-ded18952e9c53fb0f4b7875f981d9f42.ctex"
+uid="uid://gp4nh6tq5xyq"
+path="res://.godot/imported/bookshelf.png-8aeb25be2c49e8e3cf5e94dcaba19fe8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scuba.png"
-dest_files=["res://.godot/imported/scuba.png-ded18952e9c53fb0f4b7875f981d9f42.ctex"]
+source_file="res://Assets/Artwork/bookshelf.png"
+dest_files=["res://.godot/imported/bookshelf.png-8aeb25be2c49e8e3cf5e94dcaba19fe8.ctex"]
 
 [params]
 
