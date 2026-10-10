@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpsl0nkdi0xdf"
-path="res://.godot/imported/graves v2.png-790e13afcda04717f52316563b79e983.ctex"
+uid="uid://dhkks8ry86vn2"
+path="res://.godot/imported/flying book.png-7131661c1a0f96a0e99cad7f073aba28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graves v2.png"
-dest_files=["res://.godot/imported/graves v2.png-790e13afcda04717f52316563b79e983.ctex"]
+source_file="res://Assets/Artwork/flying book.png"
+dest_files=["res://.godot/imported/flying book.png-7131661c1a0f96a0e99cad7f073aba28.ctex"]
 
 [params]
 

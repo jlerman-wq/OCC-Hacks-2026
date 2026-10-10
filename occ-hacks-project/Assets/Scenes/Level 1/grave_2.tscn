@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://vp75oniry7pb"]
+
+[ext_resource type="Texture2D" uid="uid://cpsl0nkdi0xdf" path="res://Assets/Artwork/graves v2.png" id="1_3okdt"]
+
+[node name="Grave2" type="Sprite2D" unique_id=1082205609]
+z_index = -1
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("1_3okdt")
+region_enabled = true
+region_rect = Rect2(728.8806, -9.849731, 722.4429, 967.35724)

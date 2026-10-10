@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1tdmrdepq0k1"
-path="res://.godot/imported/pumpkins.png-6489230f09ba87edbcb13aacbcc6a1a8.ctex"
+uid="uid://cqi7fbiaa7m82"
+path="res://.godot/imported/graves.png-b2a9c6d6a12b0f88848386b0e7cd8fdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pumpkins.png"
-dest_files=["res://.godot/imported/pumpkins.png-6489230f09ba87edbcb13aacbcc6a1a8.ctex"]
+source_file="res://Assets/Artwork/graves.png"
+dest_files=["res://.godot/imported/graves.png-b2a9c6d6a12b0f88848386b0e7cd8fdd.ctex"]
 
 [params]
 

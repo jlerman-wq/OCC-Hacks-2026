@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b40lcmps8b7h0"
-path="res://.godot/imported/scarecrows.png-81b15cdecc016d814c0ec6b5e89d4f56.ctex"
+uid="uid://gp4nh6tq5xyq"
+path="res://.godot/imported/bookshelf.png-8aeb25be2c49e8e3cf5e94dcaba19fe8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/scarecrows.png"
-dest_files=["res://.godot/imported/scarecrows.png-81b15cdecc016d814c0ec6b5e89d4f56.ctex"]
+source_file="res://Assets/Artwork/bookshelf.png"
+dest_files=["res://.godot/imported/bookshelf.png-8aeb25be2c49e8e3cf5e94dcaba19fe8.ctex"]
 
 [params]
 

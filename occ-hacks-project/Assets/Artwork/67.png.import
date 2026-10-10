@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciscsluipudis"
-path="res://.godot/imported/scuba.png-e385aa437403722d88dfd0e1c6262618.ctex"
+uid="uid://cillng8fp1oqt"
+path="res://.godot/imported/67.png-673561b16ed43e84d0a6335a3c1ca656.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/scuba.png"
-dest_files=["res://.godot/imported/scuba.png-e385aa437403722d88dfd0e1c6262618.ctex"]
+source_file="res://Assets/Artwork/67.png"
+dest_files=["res://.godot/imported/67.png-673561b16ed43e84d0a6335a3c1ca656.ctex"]
 
 [params]
 
