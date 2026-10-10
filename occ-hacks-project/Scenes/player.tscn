@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://c6lfsxfmg1qqx"]
 
-[ext_resource type="Script" uid="uid://0fbgalodrfyn" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://0k7wbiboc7ed" path="res://the guy.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://0fbgalodrfyn" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://0k7wbiboc7ed" path="res://Assets/the guy.png" id="2_cvnsp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("2_onrkg")
+atlas = ExtResource("2_cvnsp")
 region = Rect2(900, 0, 600, 2000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("2_onrkg")
+atlas = ExtResource("2_cvnsp")
 region = Rect2(2231, 0, 600, 2000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("2_onrkg")
+atlas = ExtResource("2_cvnsp")
 region = Rect2(1509, 0, 700, 2000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = ExtResource("2_onrkg")
+atlas = ExtResource("2_cvnsp")
 region = Rect2(75, 0, 800, 2000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmqve"]
@@ -75,7 +75,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=764694766]
-script = ExtResource("1_onrkg")
+script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=441330372]
 scale = Vector2(0.15, 0.097)

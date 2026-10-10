@@ -13,9 +13,11 @@ func _ready() -> void:
 	# Start the initial animation
 	sprite.play("Move_Right_Animation")
 	sprite.animation_finished.connect(_on_animation_finished)
-	
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("Menu"):
+		PauseMenu.toggle_pause()
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -25,7 +27,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Move_Left", "Move_Right")
 	if direction:
 		velocity.x = direction * SPEED
