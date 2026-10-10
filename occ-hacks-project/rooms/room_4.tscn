@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://deicpkqon0g6m"]
 
-[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://player.tscn" id="1_kjedn"]
 [ext_resource type="Script" uid="uid://bef1mijiclfts" path="res://rooms/room_4.gd" id="1_roktq"]
 [ext_resource type="Script" uid="uid://mbb2gky37126" path="res://rooms/exit.gd" id="2_ctd8f"]
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_roktq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(1150, 50)
@@ -23,6 +23,9 @@ height = 256
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_08qor"]
+light_mode = 2
 
 [node name="room4" type="Node2D" unique_id=1079266622]
 script = ExtResource("1_roktq")
@@ -64,9 +67,6 @@ offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
-[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_kjedn")]
-position = Vector2(500, 300)
-
 [node name="Exit" type="Area2D" parent="." unique_id=1185953475]
 script = ExtResource("2_ctd8f")
 
@@ -82,6 +82,14 @@ energy = 2.0
 texture = SubResource("GradientTexture2D_08qor")
 texture_scale = 3.0
 
-[node name="Switch" type="Area2D" parent="." unique_id=1892238312]
+[node name="Hint1" type="Label" parent="." unique_id=1180099341]
+material = SubResource("CanvasItemMaterial_08qor")
+offset_left = 421.0
+offset_top = 382.0
+offset_right = 466.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 20
+text = "3"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch" unique_id=1517919041]
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_roktq")]
+position = Vector2(111, 479)
