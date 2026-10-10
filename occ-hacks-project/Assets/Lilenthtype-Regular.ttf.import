@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dixj1vsepesu2"
-path="res://.godot/imported/Lilenthtype-Regular.ttf-cf0ed91cf7dce8b46d3f7aa6a10760da.fontdata"
+path="res://.godot/imported/Lilenthtype-Regular.ttf-bfb5baf5e719bf75a79877c61ded8621.fontdata"
 
 [deps]
 
-source_file="res://Lilenthtype-Regular.ttf"
-dest_files=["res://.godot/imported/Lilenthtype-Regular.ttf-cf0ed91cf7dce8b46d3f7aa6a10760da.fontdata"]
+source_file="res://Assets/Lilenthtype-Regular.ttf"
+dest_files=["res://.godot/imported/Lilenthtype-Regular.ttf-bfb5baf5e719bf75a79877c61ded8621.fontdata"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w0keumbqt18r"
-path="res://.godot/imported/skulls.png-09756c8cf41c9612b2edb2fefd548b8b.ctex"
+uid="uid://debob087ohtad"
+path="res://.godot/imported/starry_sky.jpg-5ad327ea642142e5a16000c08146a509.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://skulls.png"
-dest_files=["res://.godot/imported/skulls.png-09756c8cf41c9612b2edb2fefd548b8b.ctex"]
+source_file="res://Assets/starry_sky.jpg"
+dest_files=["res://.godot/imported/starry_sky.jpg-5ad327ea642142e5a16000c08146a509.ctex"]
 
 [params]
 

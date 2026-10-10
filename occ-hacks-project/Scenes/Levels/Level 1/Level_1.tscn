@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://bugfme471bxqy"]
+
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_njwam"]
+[ext_resource type="Texture2D" uid="uid://ineiw203woyb" path="res://Assets/GY gate.png" id="2_7acdd"]
+[ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_qwye8"]
+[ext_resource type="PackedScene" uid="uid://df2wuwl1qktxi" path="res://Scenes/Levels/Level 2/Level_2.tscn" id="3_rxrfu"]
+[ext_resource type="Texture2D" uid="uid://cpsl0nkdi0xdf" path="res://Assets/graves v2.png" id="5_n5l5u"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/starry_sky.jpg" id="6_anfnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
+size = Vector2(42, 655)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k6nn7"]
+
+[sub_resource type="Gradient" id="Gradient_qwye8"]
+offsets = PackedFloat32Array(0.9939759, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6nwbr"]
+gradient = SubResource("Gradient_qwye8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_cip34"]
+
+[sub_resource type="Gradient" id="Gradient_rxrfu"]
+offsets = PackedFloat32Array(0, 0.9939759, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.27038798, 0.108299114, 0.022964686, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2etn4"]
+gradient = SubResource("Gradient_rxrfu")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2etn4"]
+
+[sub_resource type="Gradient" id="Gradient_7acdd"]
+offsets = PackedFloat32Array(0, 0.018072288, 0.9939759, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.39156628, 0.39156628, 0.39156628, 1, 0, 0.47843137, 0.3764706, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cip34"]
+gradient = SubResource("Gradient_7acdd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6nn7"]
+size = Vector2(18.168032, 3.9050112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5l5u"]
+atlas = ExtResource("2_7acdd")
+region = Rect2(0, 0, 650, 2400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxtdl"]
+atlas = ExtResource("2_7acdd")
+region = Rect2(700, 0, 2400, 2400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anfnq"]
+atlas = ExtResource("2_7acdd")
+region = Rect2(1100, 0, 1600, 2400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmqve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5l5u")
+}],
+"loop": 1,
+"name": &"Closed Gate",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxtdl")
+}],
+"loop": 1,
+"name": &"Open Gate",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anfnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5l5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxtdl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level 1" type="Node2D" unique_id=1555038245]
+
+[node name="Label" type="Label" parent="." unique_id=1324398744]
+offset_left = 560.0
+offset_top = 276.0
+offset_right = 614.0
+offset_bottom = 299.0
+text = "Level 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_njwam")]
+position = Vector2(117, 452)
+
+[node name="Enviorment" type="Node" parent="." unique_id=1087091129]
+
+[node name="Wall" type="StaticBody2D" parent="Enviorment" unique_id=1029788827]
+position = Vector2(15.003494, 322.9975)
+rotation = -3.1415927
+scale = Vector2(29.006989, -646.995)
+
+[node name="Wall1" type="CollisionShape2D" parent="Enviorment/Wall" unique_id=738490071]
+position = Vector2(0.13801828, -0.00849697)
+rotation = 3.1415927
+scale = Vector2(0.03447445, -0.001545607)
+shape = SubResource("RectangleShape2D_qmqve")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Enviorment/Wall" unique_id=1621007667]
+position = Vector2(21.35683, 0)
+scale = Vector2(43.71366, 1)
+mesh = SubResource("BoxMesh_k6nn7")
+texture = SubResource("GradientTexture1D_6nwbr")
+
+[node name="Wall2" type="StaticBody2D" parent="Enviorment" unique_id=1598760009]
+position = Vector2(1860, 296)
+rotation = -3.1415927
+scale = Vector2(29.006989, -646.995)
+
+[node name="Wall2" type="CollisionShape2D" parent="Enviorment/Wall2" unique_id=763951751]
+position = Vector2(0.13801828, -0.00849697)
+rotation = 3.1415927
+scale = Vector2(0.03447445, -0.001545607)
+shape = SubResource("RectangleShape2D_qmqve")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Enviorment/Wall2" unique_id=178101811]
+mesh = SubResource("BoxMesh_cip34")
+texture = SubResource("GradientTexture1D_2etn4")
+
+[node name="Floor" type="StaticBody2D" parent="Enviorment" unique_id=118926317]
+position = Vector2(577.5572, 631)
+rotation = -1.5707963
+scale = Vector2(29.006989, -1152.1094)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Enviorment/Floor" unique_id=51590746]
+position = Vector2(-8.68314, -0.4257309)
+scale = Vector2(18.36628, 3.9167037)
+mesh = SubResource("BoxMesh_2etn4")
+texture = SubResource("GradientTexture1D_cip34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviorment/Floor" unique_id=1964331285]
+position = Vector2(-8.566912, -0.42352122)
+shape = SubResource("RectangleShape2D_k6nn7")
+
+[node name="Graveyard Gate" type="AnimatedSprite2D" parent="Enviorment" unique_id=2048645326]
+position = Vector2(1731, 452)
+scale = Vector2(-0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_qmqve")
+animation = &"Open Gate"
+
+[node name="Transition_Trigger" parent="Enviorment/Graveyard Gate" unique_id=446455213 instance=ExtResource("2_qwye8")]
+position = Vector2(-393.333, -213.33325)
+rotation = 3.1415927
+scale = Vector2(6.6666665, -6.6666665)
+target_scene = ExtResource("3_rxrfu")
+
+[node name="Graves" type="Node" parent="Enviorment" unique_id=1893648840]
+
+[node name="Grave1" type="Sprite2D" parent="Enviorment/Graves" unique_id=1482613297]
+z_index = -1
+position = Vector2(317.99997, 577)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(0, 0, 753.73, 967.35724)
+
+[node name="Grave2" type="Sprite2D" parent="Enviorment/Graves" unique_id=1334350332]
+z_index = -1
+position = Vector2(446, 578)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(728.8806, -9.849731, 722.4429, 967.35724)
+
+[node name="Grave3" type="Sprite2D" parent="Enviorment/Graves" unique_id=215049096]
+z_index = -1
+position = Vector2(570.00006, 577)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(1462.1787, -23.30481, 975.7031, 967.35724)
+
+[node name="Grave4" type="Sprite2D" parent="Enviorment/Graves" unique_id=966078276]
+z_index = -1
+position = Vector2(713, 575)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(2434.206, -23.30481, 763.8843, 967.35724)
+
+[node name="Grave5" type="Sprite2D" parent="Enviorment/Graves" unique_id=1270231804]
+z_index = -1
+position = Vector2(837.00006, 574)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(19.03125, 979.0936, 719.84753, 1184.4557)
+
+[node name="Grave6" type="Sprite2D" parent="Enviorment/Graves" unique_id=1986868043]
+z_index = -1
+position = Vector2(948, 543)
+scale = Vector2(0.15, 0.085)
+texture = ExtResource("5_n5l5u")
+region_enabled = true
+region_rect = Rect2(718.6919, 972.3661, 719.84753, 1774.6742)
+
+[node name="TextureRect" type="TextureRect" parent="Enviorment" unique_id=1127441446]
+z_index = -99
+offset_left = -1188.0
+offset_top = -1636.0
+offset_right = 3326.0
+offset_bottom = 1124.0
+texture = ExtResource("6_anfnq")

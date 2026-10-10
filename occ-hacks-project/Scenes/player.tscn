@@ -74,7 +74,7 @@ _data = {
 &"Move_Left": SubResource("Animation_onrkg")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=764694766]
+[node name="Player" type="CharacterBody2D" unique_id=764694766 groups=["player"]]
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=441330372]

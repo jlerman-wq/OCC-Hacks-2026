@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhkks8ry86vn2"
-path="res://.godot/imported/flying book.png-241ad7b925b035fae9c442350aa35b86.ctex"
+uid="uid://gp4nh6tq5xyq"
+path="res://.godot/imported/bookshelf.png-73fee02ad05ce51d598ac87ffb345ef8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flying book.png"
-dest_files=["res://.godot/imported/flying book.png-241ad7b925b035fae9c442350aa35b86.ctex"]
+source_file="res://Assets/bookshelf.png"
+dest_files=["res://.godot/imported/bookshelf.png-73fee02ad05ce51d598ac87ffb345ef8.ctex"]
 
 [params]
 
