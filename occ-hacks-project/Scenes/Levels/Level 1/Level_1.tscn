@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bugfme471bxqy"]
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_njwam"]
-[ext_resource type="Texture2D" uid="uid://ineiw203woyb" path="res://Assets/GY gate.png" id="2_7acdd"]
+[ext_resource type="Texture2D" uid="uid://ineiw203woyb" path="res://Assets/Artwork/GY gate.png" id="2_7acdd"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_qwye8"]
 [ext_resource type="PackedScene" uid="uid://df2wuwl1qktxi" path="res://Scenes/Levels/Level 2/Level_2.tscn" id="3_rxrfu"]
-[ext_resource type="Texture2D" uid="uid://cpsl0nkdi0xdf" path="res://Assets/graves v2.png" id="5_n5l5u"]
-[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/starry_sky.jpg" id="6_anfnq"]
+[ext_resource type="PackedScene" uid="uid://bduk77fc3crs3" path="res://Assets/Scenes/Level 1/grave_1.tscn" id="5_dxbx3"]
+[ext_resource type="PackedScene" uid="uid://vp75oniry7pb" path="res://Assets/Scenes/Level 1/grave_2.tscn" id="6_7b7ae"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="6_anfnq"]
+[ext_resource type="PackedScene" uid="uid://0lx7eib6hsi8" path="res://Assets/Scenes/Level 1/grave_3.tscn" id="7_56cmi"]
+[ext_resource type="PackedScene" uid="uid://bivcjfq4rmu1f" path="res://Assets/Scenes/Level 1/grave_4.tscn" id="8_g4o7n"]
+[ext_resource type="PackedScene" uid="uid://ban3ck7b4svht" path="res://Assets/Scenes/Level 1/grave_5.tscn" id="9_d4j2s"]
+[ext_resource type="PackedScene" uid="uid://bbwg77k04478e" path="res://Assets/Scenes/Level 1/grave_6.tscn" id="10_gk1ct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
 size = Vector2(42, 655)
@@ -161,53 +166,23 @@ target_scene = ExtResource("3_rxrfu")
 
 [node name="Graves" type="Node" parent="Enviorment" unique_id=1893648840]
 
-[node name="Grave1" type="Sprite2D" parent="Enviorment/Graves" unique_id=1482613297]
-z_index = -1
+[node name="Grave1" parent="Enviorment/Graves" unique_id=1203219104 instance=ExtResource("5_dxbx3")]
 position = Vector2(317.99997, 577)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(0, 0, 753.73, 967.35724)
 
-[node name="Grave2" type="Sprite2D" parent="Enviorment/Graves" unique_id=1334350332]
-z_index = -1
+[node name="Grave2" parent="Enviorment/Graves" unique_id=1082205609 instance=ExtResource("6_7b7ae")]
 position = Vector2(446, 578)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(728.8806, -9.849731, 722.4429, 967.35724)
 
-[node name="Grave3" type="Sprite2D" parent="Enviorment/Graves" unique_id=215049096]
-z_index = -1
+[node name="Grave3" parent="Enviorment/Graves" unique_id=1870664904 instance=ExtResource("7_56cmi")]
 position = Vector2(570.00006, 577)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(1462.1787, -23.30481, 975.7031, 967.35724)
 
-[node name="Grave4" type="Sprite2D" parent="Enviorment/Graves" unique_id=966078276]
-z_index = -1
+[node name="Grave4" parent="Enviorment/Graves" unique_id=1990975414 instance=ExtResource("8_g4o7n")]
 position = Vector2(713, 575)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(2434.206, -23.30481, 763.8843, 967.35724)
 
-[node name="Grave5" type="Sprite2D" parent="Enviorment/Graves" unique_id=1270231804]
-z_index = -1
+[node name="Grave5" parent="Enviorment/Graves" unique_id=1948849947 instance=ExtResource("9_d4j2s")]
 position = Vector2(837.00006, 574)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(19.03125, 979.0936, 719.84753, 1184.4557)
 
-[node name="Grave6" type="Sprite2D" parent="Enviorment/Graves" unique_id=1986868043]
-z_index = -1
+[node name="Grave6" parent="Enviorment/Graves" unique_id=744346583 instance=ExtResource("10_gk1ct")]
 position = Vector2(948, 543)
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("5_n5l5u")
-region_enabled = true
-region_rect = Rect2(718.6919, 972.3661, 719.84753, 1774.6742)
 
 [node name="TextureRect" type="TextureRect" parent="Enviorment" unique_id=1127441446]
 z_index = -99

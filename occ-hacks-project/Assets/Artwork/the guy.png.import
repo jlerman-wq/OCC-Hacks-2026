@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhkks8ry86vn2"
-path="res://.godot/imported/flying book.png-b006ba18c603dee4dd57860ce93ec96c.ctex"
+uid="uid://0k7wbiboc7ed"
+path="res://.godot/imported/the guy.png-73a9404abe0f979badb42d5ffad6c236.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/flying book.png"
-dest_files=["res://.godot/imported/flying book.png-b006ba18c603dee4dd57860ce93ec96c.ctex"]
+source_file="res://Assets/Artwork/the guy.png"
+dest_files=["res://.godot/imported/the guy.png-73a9404abe0f979badb42d5ffad6c236.ctex"]
 
 [params]
 
