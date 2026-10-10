@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(1150, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
+size = Vector2(1150, 50)
+
 [node name="room4" type="Node2D" unique_id=1079266622]
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=851080554]
@@ -15,6 +18,31 @@ shape = SubResource("RectangleShape2D_08qor")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=416629255]
 offset_top = 600.0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=297904412]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=13086339]
+position = Vector2(23, 46)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_kjedn")
+
+[node name="ColorRect" type="ColorRect" parent="WallLeft" unique_id=732319781]
+offset_right = 50.0
+offset_bottom = 650.0
+color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1739062197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1966736486]
+position = Vector2(1126, 90)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_08qor")
+
+[node name="ColorRect" type="ColorRect" parent="WallRight" unique_id=1767487477]
+offset_left = 1100.0
 offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
