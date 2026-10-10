@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://deicpkqon0g6m"]
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://player.tscn" id="1_kjedn"]
+[ext_resource type="Script" uid="uid://bef1mijiclfts" path="res://rooms/room_4.gd" id="1_roktq"]
+[ext_resource type="Script" uid="uid://mbb2gky37126" path="res://rooms/exit.gd" id="2_ctd8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(1150, 50)
@@ -8,7 +10,22 @@ size = Vector2(1150, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
 size = Vector2(1150, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u08x"]
+size = Vector2(60, 100)
+
+[sub_resource type="Gradient" id="Gradient_ocw8c"]
+colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_08qor"]
+gradient = SubResource("Gradient_ocw8c")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="room4" type="Node2D" unique_id=1079266622]
+script = ExtResource("1_roktq")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=851080554]
 
@@ -49,3 +66,22 @@ color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_kjedn")]
 position = Vector2(500, 300)
+
+[node name="Exit" type="Area2D" parent="." unique_id=1185953475]
+script = ExtResource("2_ctd8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
+position = Vector2(1089, 551)
+shape = SubResource("RectangleShape2D_7u08x")
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=2126978979]
+color = Color(0.12941177, 0.101960786, 0.2627451, 0.72156864)
+
+[node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
+energy = 2.0
+texture = SubResource("GradientTexture2D_08qor")
+texture_scale = 3.0
+
+[node name="Switch" type="Area2D" parent="." unique_id=1892238312]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch" unique_id=1517919041]
