@@ -1,22 +1,41 @@
 [gd_scene format=3 uid="uid://x7tkwgeqahcu"]
 
 [ext_resource type="Texture2D" uid="uid://bvcncnq55hm3y" path="res://jackolantern unlit.png" id="1_4thn5"]
+[ext_resource type="Script" uid="uid://xh3qenvorosa" path="res://Scripts/pumpkin.gd" id="1_mjg1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
-size = Vector2(994, 723.8806)
+size = Vector2(307, 252.7985)
+
+[sub_resource type="Gradient" id="Gradient_4thn5"]
+colors = PackedColorArray(0.78655547, 0.52377445, 3.657937e-06, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mjg1r"]
+gradient = SubResource("Gradient_4thn5")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
 [node name="Pumpkin" type="Area2D" unique_id=1431724313]
+script = ExtResource("1_mjg1r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=772453102]
-position = Vector2(-150.75, -118.75)
-scale = Vector2(0.5, 0.536)
+position = Vector2(66, 103.819)
+scale = Vector2(0.11121076, 0.12799084)
 texture = ExtResource("1_4thn5")
 region_enabled = true
 region_rect = Rect2(-45, 129.58228, 1115.5002, 1091.8241)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664971206]
-position = Vector2(-131.5, -91)
+position = Vector2(69, 99)
 scale = Vector2(0.5, 0.536)
 shape = SubResource("RectangleShape2D_08qor")
 
 [node name="Candle" type="PointLight2D" parent="." unique_id=1891275496]
+position = Vector2(69, 102.00001)
+scale = Vector2(1.2666017, 1.2871094)
+enabled = false
+energy = 4.53
+texture = SubResource("GradientTexture2D_mjg1r")
+texture_scale = 0.5
