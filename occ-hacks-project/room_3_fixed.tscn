@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ncgy2nlglm1a"]
+[gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
 
 [ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
 [ext_resource type="Texture2D" uid="uid://dhkks8ry86vn2" path="res://Assets/Artwork/flying book.png" id="2_se24t"]
@@ -208,7 +208,6 @@ energy = 1.1
 texture = SubResource("GradientTexture2D_su4n1")
 
 [node name="BookPopup" parent="." unique_id=1409815298 groups=["book_popup"] instance=ExtResource("7_1mld3")]
-visible = false
 
 [node name="Book1" parent="." unique_id=1304004500 instance=ExtResource("7_pwk7h")]
 position = Vector2(279, 583)
@@ -227,16 +226,10 @@ scale = Vector2(0.16325068, 0.14696659)
 texture = ExtResource("7_fo3g4")
 
 [node name="BookPopup2" parent="." unique_id=1620801905 instance=ExtResource("12_8mo5q")]
-visible = false
 
-[node name="Book2" type="Sprite2D" parent="." unique_id=1155656020]
-visible = false
-position = Vector2(464, 585)
-scale = Vector2(0.12871155, 0.13118543)
-texture = ExtResource("8_q4asw")
-
-[node name="Book2Obstackle" parent="." unique_id=538580090 instance=ExtResource("7_pwk7h")]
+[node name="Book2Obstackle" parent="." unique_id=538580090 groups=["book_popup"] instance=ExtResource("7_pwk7h")]
 position = Vector2(486, 678)
+input_pickable = true
 title_text = ""
 question_text = ""
 correct_answer = "162956"
@@ -251,9 +244,23 @@ texture = ExtResource("8_q4asw")
 [node name="CollisionShape2D" parent="Book2Obstackle" index="1" unique_id=501319830]
 position = Vector2(-15, -94)
 
-[node name="Book3Obstackle" parent="." unique_id=1115548234 instance=ExtResource("7_pwk7h")]
+[node name="Book2" type="Sprite2D" parent="." unique_id=1155656020]
+visible = false
+position = Vector2(464, 585)
+scale = Vector2(0.12871155, 0.13118543)
+texture = ExtResource("8_q4asw")
+
+[node name="Book3Popup" parent="." unique_id=44093864 instance=ExtResource("13_1mld3")]
+
+[node name="Book3Obstackle" parent="." unique_id=1115548234 groups=["book_popup"] instance=ExtResource("7_pwk7h")]
 position = Vector2(486, 678)
 script = ExtResource("13_58huc")
+title_text = "Book 3"
+question_text = "TUNG TUNG TUNG..."
+correct_answer = "sahur"
+hint_text = "Do you recognize this character?"
+second_hint_text = "The answer starts with S and has 5 letters."
+success_text = "Correct! TUNG TUNG TUNG SAHUR!"
 
 [node name="Sprite2D" parent="Book3Obstackle" index="0" unique_id=374764941]
 position = Vector2(174, -89.00001)
@@ -262,8 +269,6 @@ texture = ExtResource("9_8mo5q")
 
 [node name="CollisionShape2D" parent="Book3Obstackle" index="1" unique_id=501319830]
 position = Vector2(179, -90)
-
-[node name="BookPopup3" parent="." unique_id=44093864 instance=ExtResource("13_1mld3")]
 
 [node name="Book3" type="Sprite2D" parent="." unique_id=1684511270]
 visible = false
