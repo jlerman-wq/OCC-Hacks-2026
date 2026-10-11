@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dhebeuubpm7ao"]
+
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="1_o4nbf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qmqve"]
+font = ExtResource("1_o4nbf")
+font_size = 56
+
+[node name="TheEnd" type="Control" unique_id=417150059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="." unique_id=1833045234]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -25.0
+offset_right = 137.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "THE END ?"
+label_settings = SubResource("LabelSettings_qmqve")

@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="tWGzSaymqTELtyrDTlCU">
+    <mxGraphModel dx="1360" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y87dJiGGZo5HyGfrO338-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Grave 1" vertex="1">
+          <mxGeometry height="270" width="120" x="40" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Grave 2" vertex="1">
+          <mxGeometry height="270" width="120" x="200" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Grave 3" vertex="1">
+          <mxGeometry height="270" width="120" x="360" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Grave 4" vertex="1">
+          <mxGeometry height="270" width="120" x="520" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Grave 5" vertex="1">
+          <mxGeometry height="270" width="120" x="680" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="On this dreadful journey NO man survived." vertex="1">
+          <mxGeometry height="120" width="120" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="A Cold Stone Rest was all he found" vertex="1">
+          <mxGeometry height="120" width="120" x="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Deep in the earth we made our way." vertex="1">
+          <mxGeometry height="120" width="120" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="THE captain&#39;s fate was to fall in battle." vertex="1">
+          <mxGeometry height="120" width="120" x="520" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Marked by his final resting place the pirates gold remains." vertex="1">
+          <mxGeometry height="120" width="120" x="680" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="To our final voyages we Found a Peaceful Harbor" vertex="1">
+          <mxGeometry height="120" width="120" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="A Shallow GRAVE was his final resting place." vertex="1">
+          <mxGeometry height="120" width="120" x="200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="We were Lost BUT Found the treasure." vertex="1">
+          <mxGeometry height="120" width="120" x="360" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="but a pirates life shall not go unremembered." vertex="1">
+          <mxGeometry height="120" width="120" x="520" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Until at the end of time we are all swallowed by the SEA." vertex="1">
+          <mxGeometry height="120" width="120" x="680" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;div&gt;Grave 6&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="120" x="920" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="The final resting place for any proper pirate." vertex="1">
+          <mxGeometry height="120" width="120" x="920" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Current Words" vertex="1">
+          <mxGeometry height="120" width="120" x="920" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="No" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Grave" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="But" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="The" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="y87dJiGGZo5HyGfrO338-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Sea" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

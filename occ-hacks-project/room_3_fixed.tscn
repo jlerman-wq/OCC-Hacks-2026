@@ -16,14 +16,34 @@ size = Vector2(40, 700)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ryr1"]
 size = Vector2(100, 200)
 
+[sub_resource type="Gradient" id="Gradient_fo3g4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0ryr1"]
+gradient = SubResource("Gradient_fo3g4")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.52347416, 0.5)
+fill_to = Vector2(1, 0.3)
+
+[sub_resource type="Gradient" id="Gradient_da2yf"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_su4n1"]
+gradient = SubResource("Gradient_da2yf")
+width = 256
+height = 256
+fill_from = Vector2(0.5422535, 0.15258215)
+fill_to = Vector2(0.53286386, 1)
+
 [node name="room3" type="Node2D" unique_id=114987121]
 script = ExtResource("1_wvaa0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=310523364]
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1202.0
-offset_bottom = 698.0
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 1204.0
+offset_bottom = 695.0
 color = Color(0.10892912, 7.3567855e-05, 0.162462, 1)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356462369]
@@ -40,28 +60,23 @@ offset_right = 598.0
 offset_bottom = 20.0
 color = Color(0.16470589, 0.16470589, 0.16470589, 1)
 
-[node name="FlyingBook" type="Sprite2D" parent="." unique_id=45657130]
-position = Vector2(135, 92)
-scale = Vector2(0.084375, 0.0771875)
-texture = ExtResource("2_se24t")
-
 [node name="FlyingBook2" type="Sprite2D" parent="." unique_id=286598876]
-position = Vector2(345, 94)
+position = Vector2(240, 113)
 scale = Vector2(0.084375, 0.0771875)
 texture = ExtResource("2_se24t")
 
 [node name="FlyingBook3" type="Sprite2D" parent="." unique_id=80174327]
-position = Vector2(616, 94)
+position = Vector2(522, 217)
 scale = Vector2(0.084375, 0.0771875)
 texture = ExtResource("2_se24t")
 
 [node name="FlyingBook4" type="Sprite2D" parent="." unique_id=24254266]
-position = Vector2(844.99994, 96)
+position = Vector2(805.99994, 121)
 scale = Vector2(0.084375, 0.0771875)
 texture = ExtResource("2_se24t")
 
-[node name="FlyingBook5" type="Sprite2D" parent="." unique_id=1388336987]
-position = Vector2(1077, 90)
+[node name="FlyingBook5" type="Sprite2D" parent="." unique_id=896397333]
+position = Vector2(1105, 156)
 scale = Vector2(0.084375, 0.0771875)
 texture = ExtResource("2_se24t")
 
@@ -147,14 +162,36 @@ offset_bottom = 661.0
 color = Color(0.5148393, 0.26904586, 0.117213614, 1)
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("4_fo3g4")]
-position = Vector2(92, 574)
+position = Vector2(106, 553)
 
 [node name="skull1" type="Sprite2D" parent="." unique_id=1951924290]
-position = Vector2(228, 342)
-scale = Vector2(0.3, 0.3)
+position = Vector2(186, 353)
+scale = Vector2(0.21382816, 0.18140621)
 texture = ExtResource("6_fo3g4")
 
-[node name="skull2" type="Sprite2D" parent="." unique_id=1646175246]
-position = Vector2(733, 339)
-scale = Vector2(0.3, 0.3)
+[node name="skull2" type="Sprite2D" parent="." unique_id=2145004619]
+position = Vector2(823.00006, 348)
+scale = Vector2(0.21382816, 0.18140621)
 texture = ExtResource("6_fo3g4")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=871963062]
+color = Color(0.39678, 0.3332, 0.68, 1)
+
+[node name="PointLight1D2" type="PointLight2D" parent="." unique_id=1639214476]
+position = Vector2(164.00005, 253)
+scale = Vector2(2.6295168, 2.4804688)
+color = Color(1, 0.7058824, 0.36078432, 1)
+texture = SubResource("GradientTexture2D_0ryr1")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1317392085]
+position = Vector2(978.99994, 159)
+scale = Vector2(2.6295168, 2.4804688)
+color = Color(1, 0.7058824, 0.36078432, 1)
+texture = SubResource("GradientTexture2D_0ryr1")
+
+[node name="RoomLight" type="PointLight2D" parent="." unique_id=969804345]
+position = Vector2(598, 351)
+scale = Vector2(4.703125, 2.71875)
+color = Color(1, 0.7058824, 0.36078432, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_su4n1")
