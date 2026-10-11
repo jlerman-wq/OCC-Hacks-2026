@@ -11,11 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bppwrs27vstj6" path="res://book_obstackle.tscn" id="7_pwk7h"]
 [ext_resource type="Texture2D" uid="uid://1n1bjpu2xge1" path="res://Assets/AI Pic/bookBlue.png" id="8_q4asw"]
 [ext_resource type="Texture2D" uid="uid://d2b828espfwwr" path="res://Assets/AI Pic/bookBlack.png" id="9_8mo5q"]
+[ext_resource type="Texture2D" uid="uid://mcy84rc2f1mn" path="res://Assets/AI Pic/Puzzle1.png" id="9_58huc"]
 [ext_resource type="Texture2D" uid="uid://cfykq0s8vxd4n" path="res://Assets/AI Pic/bookPurple.png" id="10_cfakv"]
 [ext_resource type="Texture2D" uid="uid://cq21b5uuqa0jh" path="res://Assets/AI Pic/bookOrange.png" id="11_pwk7h"]
-[ext_resource type="Texture2D" uid="uid://de0ce2ipew2su" path="res://Assets/AI Pic/periodic_table_full.png" id="12_1mld3"]
 [ext_resource type="PackedScene" uid="uid://bukra2gxsd6r6" path="res://book2_popup.tscn" id="12_8mo5q"]
-[ext_resource type="Texture2D" uid="uid://ciscsluipudis" path="res://Assets/Artwork/scuba.png" id="13_58huc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)
@@ -45,9 +44,6 @@ width = 256
 height = 256
 fill_from = Vector2(0.5422535, 0.15258215)
 fill_to = Vector2(0.53286386, 1)
-
-[sub_resource type="Resource" id="Resource_58huc"]
-metadata/__load_path__ = "res://Assets/AI Pic/Puzzle 1.png"
 
 [node name="room3" type="Node2D" unique_id=114987121]
 script = ExtResource("1_wvaa0")
@@ -209,7 +205,7 @@ color = Color(1, 0.7058824, 0.36078432, 1)
 energy = 1.1
 texture = SubResource("GradientTexture2D_su4n1")
 
-[node name="BookPopup" parent="." unique_id=1409815298 instance=ExtResource("7_1mld3")]
+[node name="BookPopup" parent="." unique_id=1409815298 groups=["book_popup"] instance=ExtResource("7_1mld3")]
 
 [node name="Book1" parent="." unique_id=1304004500 instance=ExtResource("7_pwk7h")]
 position = Vector2(279, 583)
@@ -219,7 +215,7 @@ Are you sure
 you want a hint?"
 second_hint_text = "What is our group 
 number?"
-puzzle_texture = SubResource("Resource_58huc")
+puzzle_texture = ExtResource("9_58huc")
 
 [node name="Book1Pic" type="Sprite2D" parent="." unique_id=1588933246]
 visible = false
@@ -227,23 +223,21 @@ position = Vector2(292, 573.6953)
 scale = Vector2(0.16325068, 0.14696659)
 texture = ExtResource("7_fo3g4")
 
+[node name="BookPopup2" parent="." unique_id=1620801905 instance=ExtResource("12_8mo5q")]
+
 [node name="Book2" type="Sprite2D" parent="." unique_id=1155656020]
+visible = false
 position = Vector2(459.99997, 593.9783)
 scale = Vector2(0.12871155, 0.13118543)
 texture = ExtResource("8_q4asw")
 
-[node name="Book2Popup" parent="." unique_id=1733415846 instance=ExtResource("12_8mo5q")]
-visible = false
-
 [node name="Book2Obstackle" parent="." unique_id=538580090 instance=ExtResource("7_pwk7h")]
 position = Vector2(486, 678)
-title_text = "Find the secret code for"
-question_text = "S Cu Ba!"
+title_text = ""
+question_text = ""
 correct_answer = "162956"
 hint_text = "scuba!"
 success_text = ""
-puzzle_texture = ExtResource("12_1mld3")
-hint_texture = ExtResource("13_58huc")
 
 [node name="Sprite2D" parent="Book2Obstackle" index="0" unique_id=374764941]
 position = Vector2(-10.726937, -92.67298)

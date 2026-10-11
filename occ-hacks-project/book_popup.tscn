@@ -15,7 +15,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BackGround" type="ColorRect" parent="Control" unique_id=848240657]
+[node name="BackGround" type="ColorRect" parent="Control" unique_id=848240657 groups=["book_popup"]]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 1.0

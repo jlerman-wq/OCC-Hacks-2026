@@ -2,12 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_glw66"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="3_106uw"]
-[ext_resource type="PackedScene" uid="uid://bxmohb2f0jcvk" path="res://Scenes/Levels/Level 3/room_3_fixed.tscn" id="3_oem13"]
 [ext_resource type="Script" uid="uid://bhbdalsd2kj7u" path="res://Scripts/butcher_box.gd" id="4_bbox"]
 [ext_resource type="Texture2D" uid="uid://7eoyprk8g8qy" path="res://Assets/Artwork/butcher puzzle box side view.png" id="5_bside"]
 [ext_resource type="PackedScene" uid="uid://dd7o4wu6cdb65" path="res://Scenes/Levels/Level 2/ButcherPuzzle.tscn" id="6_bpuz"]
 [ext_resource type="Texture2D" uid="uid://b8k122clbrrtf" path="res://Assets/Artwork/butcher butcher.png" id="7_0u1vs"]
 [ext_resource type="Texture2D" uid="uid://dok2ipt4w8wc8" path="res://Assets/Artwork/butcher jamon.png" id="8_bfcll"]
+[ext_resource type="Texture2D" uid="uid://bhvv38pwaxkyf" path="res://Assets/Artwork/butcher counter.png" id="8_gbnhi"]
+[ext_resource type="Texture2D" uid="uid://bkff88b6ddfds" path="res://Assets/Artwork/butcher display.png" id="9_v4t0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgr4u"]
 size = Vector2(42, 655)
@@ -109,11 +110,11 @@ shape = SubResource("RectangleShape2D_8npbe")
 
 [node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("3_106uw")]
 position = Vector2(1091, 422)
-target_scene = ExtResource("3_oem13")
+target_scene_path = "res://Scenes/Levels/Level 3/room_3_fixed.tscn"
 locked = true
 
 [node name="ButcherBox" type="Area2D" parent="." unique_id=771001001 node_paths=PackedStringArray("gate")]
-position = Vector2(724, 548)
+position = Vector2(504.00003, 544)
 scale = Vector2(0.15, 0.15)
 script = ExtResource("4_bbox")
 puzzle_scene = ExtResource("6_bpuz")
@@ -127,7 +128,7 @@ shape = SubResource("RectangleShape2D_bbox")
 
 [node name="ButcherButcher" type="Sprite2D" parent="." unique_id=1507435879]
 z_index = -20
-position = Vector2(585, 422)
+position = Vector2(390.00006, 417.00003)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("7_0u1vs")
 
@@ -135,3 +136,15 @@ texture = ExtResource("7_0u1vs")
 position = Vector2(325, 260)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("8_bfcll")
+
+[node name="ButcherCounter" type="Sprite2D" parent="." unique_id=1446472631]
+z_index = -1
+position = Vector2(276, 510.00003)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("8_gbnhi")
+
+[node name="ButcherDisplay" type="Sprite2D" parent="." unique_id=658354248]
+z_index = -1
+position = Vector2(748, 437)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_v4t0b")
