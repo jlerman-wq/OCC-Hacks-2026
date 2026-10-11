@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
+
+[ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
+[ext_resource type="Texture2D" uid="uid://gp4nh6tq5xyq" path="res://Assets/Artwork/bookshelf.png" id="2_wvaa0"]
+[ext_resource type="Script" uid="uid://6vletcxil2m7" path="res://door.gd" id="3_se24t"]
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="4_fo3g4"]
+[ext_resource type="Texture2D" uid="uid://w0keumbqt18r" path="res://Assets/Artwork/skulls.png" id="6_fo3g4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
+size = Vector2(1200, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gufht"]
+size = Vector2(40, 700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ryr1"]
+size = Vector2(100, 200)
+
+[node name="room3" type="Node2D" unique_id=114987121]
+script = ExtResource("1_wvaa0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=310523364]
+offset_left = 2.0
+offset_right = 1202.0
+offset_bottom = 700.0
+color = Color(0.10892912, 7.3567855e-05, 0.162462, 1)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1356462369]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1253378339]
+position = Vector2(602, 679)
+shape = SubResource("RectangleShape2D_su4n1")
+
+[node name="ColorRect2" type="ColorRect" parent="Floor/CollisionShape2D" unique_id=598792582]
+custom_minimum_size = Vector2(1200, 40)
+offset_left = -602.0
+offset_top = -20.0
+offset_right = 598.0
+offset_bottom = 20.0
+color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+
+[node name="BookshelfBackGround" type="Sprite2D" parent="." unique_id=1445135645]
+position = Vector2(122.99999, 522.99994)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wvaa0")
+
+[node name="BookshelfBackGround2" type="Sprite2D" parent="." unique_id=1886051568]
+position = Vector2(359, 526)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wvaa0")
+
+[node name="BookshelfBackGround3" type="Sprite2D" parent="." unique_id=1453384025]
+position = Vector2(597, 521)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wvaa0")
+
+[node name="BookshelfBackGround4" type="Sprite2D" parent="." unique_id=985229269]
+position = Vector2(844, 521)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wvaa0")
+
+[node name="BookshelfBackGround5" type="Sprite2D" parent="." unique_id=195385625]
+position = Vector2(1074, 518.99994)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_wvaa0")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=558839076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=155303077]
+position = Vector2(22, 350)
+shape = SubResource("RectangleShape2D_gufht")
+
+[node name="ColorRect" type="ColorRect" parent="LeftWall" unique_id=1574224467]
+custom_minimum_size = Vector2(40, 700)
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 700.0
+color = Color(0.16350216, 0.16350219, 0.16350213, 1)
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=685386195]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=151545995]
+position = Vector2(1183, 347)
+shape = SubResource("RectangleShape2D_gufht")
+
+[node name="ColorRect2" type="ColorRect" parent="RightWall" unique_id=1446060010]
+custom_minimum_size = Vector2(40, 700)
+offset_left = 1162.0
+offset_top = -1.0
+offset_right = 1202.0
+offset_bottom = 699.0
+color = Color(0.16350216, 0.16350219, 0.16350213, 1)
+
+[node name="EntranceDoor" type="Area2D" parent="." unique_id=1162521814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceDoor" unique_id=1604006906]
+position = Vector2(91, 559)
+shape = SubResource("RectangleShape2D_0ryr1")
+
+[node name="ColorRect" type="ColorRect" parent="EntranceDoor" unique_id=391454088]
+custom_minimum_size = Vector2(100, 200)
+offset_left = 41.0
+offset_top = 459.0
+offset_right = 141.0
+offset_bottom = 659.0
+color = Color(0.5148393, 0.26904586, 0.117213614, 1)
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=736331725]
+script = ExtResource("3_se24t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=1404342873]
+position = Vector2(91, 559)
+shape = SubResource("RectangleShape2D_0ryr1")
+
+[node name="ColorRect2" type="ColorRect" parent="ExitDoor" unique_id=1132185037]
+custom_minimum_size = Vector2(100, 200)
+offset_left = 1058.0
+offset_top = 461.0
+offset_right = 1158.0
+offset_bottom = 661.0
+color = Color(0.5148393, 0.26904586, 0.117213614, 1)
+
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("4_fo3g4")]
+position = Vector2(92, 574)
+
+[node name="skull1" type="Sprite2D" parent="." unique_id=1951924290]
+position = Vector2(226, 349)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_fo3g4")
+
+[node name="skull2" type="Sprite2D" parent="." unique_id=1646175246]
+position = Vector2(743, 351)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_fo3g4")
