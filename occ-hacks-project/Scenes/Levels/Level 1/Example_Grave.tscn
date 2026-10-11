@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://dlyeeonjmfy34" path="res://Scenes/Examinable.tscn" id="1_base"]
+[ext_resource type="Texture2D" uid="uid://cqi7fbiaa7m82" path="res://Assets/Artwork/graves.png" id="2_tex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grave1"]
+atlas = ExtResource("2_tex")
+region = Rect2(50, 45, 640, 860)
+
+[node name="Example_Grave" instance=ExtResource("1_base")]
+tooltip_text = "A weathered headstone. The name has long since worn away."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = SubResource("AtlasTexture_grave1")
