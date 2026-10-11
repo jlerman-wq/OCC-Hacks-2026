@@ -6,6 +6,14 @@
 [ext_resource type="Script" uid="uid://6vletcxil2m7" path="res://door.gd" id="3_se24t"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="4_fo3g4"]
 [ext_resource type="Texture2D" uid="uid://w0keumbqt18r" path="res://Assets/Artwork/skulls.png" id="6_fo3g4"]
+[ext_resource type="Texture2D" uid="uid://cvucblw7x34ef" path="res://Assets/AI Pic/red_halloween_book_sprite.png" id="7_fo3g4"]
+[ext_resource type="PackedScene" uid="uid://bppwrs27vstj6" path="res://book_obstackle.tscn" id="7_pwk7h"]
+[ext_resource type="Texture2D" uid="uid://1n1bjpu2xge1" path="res://Assets/AI Pic/bookBlue.png" id="8_q4asw"]
+[ext_resource type="Texture2D" uid="uid://b3tpvoompkics" path="res://Assets/AI Pic/Puzzle 1.png" id="8_vhqi0"]
+[ext_resource type="Texture2D" uid="uid://d2b828espfwwr" path="res://Assets/AI Pic/bookBlack.png" id="9_8mo5q"]
+[ext_resource type="Texture2D" uid="uid://cfykq0s8vxd4n" path="res://Assets/AI Pic/bookPurple.png" id="10_cfakv"]
+[ext_resource type="Texture2D" uid="uid://cq21b5uuqa0jh" path="res://Assets/AI Pic/bookOrange.png" id="11_pwk7h"]
+[ext_resource type="PackedScene" uid="uid://bukra2gxsd6r6" path="res://book_popup.tscn" id="12_8mo5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)
@@ -178,8 +186,8 @@ texture = ExtResource("6_fo3g4")
 color = Color(0.39678, 0.3332, 0.68, 1)
 
 [node name="PointLight1D2" type="PointLight2D" parent="." unique_id=1639214476]
-position = Vector2(164.00005, 253)
-scale = Vector2(2.6295168, 2.4804688)
+position = Vector2(341, 162.00002)
+scale = Vector2(1.780426, 1.6083986)
 color = Color(1, 0.7058824, 0.36078432, 1)
 texture = SubResource("GradientTexture2D_0ryr1")
 
@@ -195,3 +203,41 @@ scale = Vector2(4.703125, 2.71875)
 color = Color(1, 0.7058824, 0.36078432, 1)
 energy = 1.1
 texture = SubResource("GradientTexture2D_su4n1")
+
+[node name="BookPopup" parent="." unique_id=1409815298 instance=ExtResource("12_8mo5q")]
+visible = false
+
+[node name="Book1" parent="." unique_id=1304004500 instance=ExtResource("7_pwk7h")]
+position = Vector2(294, 581)
+question_text = "Solve the math!!!"
+hint_text = "Your math teacher
+ is disappointed... 
+Are you sure 
+you want a hint?"
+success_text = "You passed the math, but not this room!"
+puzzle_texture = ExtResource("8_vhqi0")
+
+[node name="Book1Pic" type="Sprite2D" parent="." unique_id=1588933246]
+position = Vector2(292, 573.6953)
+scale = Vector2(0.16325068, 0.14696659)
+texture = ExtResource("7_fo3g4")
+
+[node name="Book2" type="Sprite2D" parent="." unique_id=1155656020]
+position = Vector2(459.99997, 593.9783)
+scale = Vector2(0.12871155, 0.13118543)
+texture = ExtResource("8_q4asw")
+
+[node name="Book3" type="Sprite2D" parent="." unique_id=1684511270]
+position = Vector2(637.3048, 592.00006)
+scale = Vector2(0.1301937, 0.12908368)
+texture = ExtResource("9_8mo5q")
+
+[node name="Book4" type="Sprite2D" parent="." unique_id=1108755055]
+position = Vector2(806.3596, 592.29346)
+scale = Vector2(0.11535983, 0.13219137)
+texture = ExtResource("10_cfakv")
+
+[node name="Book5" type="Sprite2D" parent="." unique_id=769590192]
+position = Vector2(967.8596, 592.4131)
+scale = Vector2(0.11628056, 0.1317861)
+texture = ExtResource("11_pwk7h")
