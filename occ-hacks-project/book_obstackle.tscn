@@ -6,9 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7ead"]
 size = Vector2(141, 208.6875)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d2el"]
-size = Vector2(140.75, 210)
-
 [node name="BookObstackle" type="StaticBody2D" unique_id=1304004500]
 script = ExtResource("1_du5wk")
 
@@ -19,8 +16,3 @@ texture = ExtResource("2_qi221")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=501319830]
 shape = SubResource("RectangleShape2D_u7ead")
-
-[node name="ClickArea" type="Area2D" parent="." unique_id=567451921]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=947842122]
-shape = SubResource("RectangleShape2D_6d2el")
