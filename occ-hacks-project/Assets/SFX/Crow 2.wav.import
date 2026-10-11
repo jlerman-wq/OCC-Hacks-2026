@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3ykmhw6hg3w7"
+path="res://.godot/imported/Crow 2.wav-84d8879980e5d0e0f73960864651474e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Crow 2.wav"
+dest_files=["res://.godot/imported/Crow 2.wav-84d8879980e5d0e0f73960864651474e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

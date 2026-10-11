@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3glh16ua3ku"
+path="res://.godot/imported/Meat Sounds (Short).wav-c6379289ed465560f34c143616e1a92d.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Meat Sounds (Short).wav"
+dest_files=["res://.godot/imported/Meat Sounds (Short).wav-c6379289ed465560f34c143616e1a92d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

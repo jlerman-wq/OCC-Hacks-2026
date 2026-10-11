@@ -51,6 +51,7 @@ func _on_puzzle_solved() -> void:
 	_apply_tint()
 	if gate and gate.has_method("open"):
 		gate.open()   # unlock the exit to Room 3
+	GameManager.puzzle_solved()
 
 # Red while unsolved, green once solved (the box art is grayscale, so the
 # tint reads clearly) -- same convention as the Level 1 gate.

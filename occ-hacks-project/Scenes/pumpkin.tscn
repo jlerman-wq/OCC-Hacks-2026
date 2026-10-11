@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://x7tkwgeqahcu"]
 
-[ext_resource type="Texture2D" uid="uid://bvcncnq55hm3y" path="res://jackolantern unlit.png" id="1_4thn5"]
+[ext_resource type="Texture2D" uid="uid://bvcncnq55hm3y" path="res://Assets/Artwork/jackolantern unlit.png" id="1_4thn5"]
 [ext_resource type="Script" uid="uid://xh3qenvorosa" path="res://Scripts/pumpkin.gd" id="1_mjg1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]

@@ -99,6 +99,7 @@ func _open() -> void:
 	if gate and gate.has_method("open"):
 		gate.open()          # drop the barrier / swap to open art
 	solved.emit()
+	GameManager.puzzle_solved()
 
 func _wrong() -> void:
 	if click_sound:

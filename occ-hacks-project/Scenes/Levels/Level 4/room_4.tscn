@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://Scenes/Levels/Level 4/room_4.gd" id="1_totw3"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_a0xj3"]
-[ext_resource type="PackedScene" uid="uid://dhebeuubpm7ao" path="res://Scenes/The_End.tscn" id="3_fclrv"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_o24b0"]
 [ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_fclrv"]
 [ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_c6prg"]
@@ -116,8 +115,13 @@ offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("2_a0xj3")]
+<<<<<<< Updated upstream
 position = Vector2(2772, 440)
 target_scene = ExtResource("3_fclrv")
+=======
+position = Vector2(2703, 432)
+target_scene_path = "res://Scenes/The_End.tscn"
+>>>>>>> Stashed changes
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
 position = Vector2(111, 479)
@@ -147,7 +151,7 @@ theme_override_font_sizes/font_size = 20
 text = "6"
 
 [node name="Hint3" type="Label" parent="." unique_id=1248751090]
-material = SubResource("CanvasItemMaterial_7u08x")
+material = SubResource("CanvasItemMaterial_7u08x"]
 offset_left = 132.0
 offset_top = -199.0
 offset_right = 172.0
