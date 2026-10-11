@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dm27gxquqdymi"]
 
-[ext_resource type="Script" path="res://rooms/room_4.gd" id="1_roktq"]
+[ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://rooms/room_4.gd" id="1_roktq"]
 [ext_resource type="Script" path="res://rooms/exit.gd" id="2_ctd8f"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_roktq"]
 [ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_ocw8c"]
@@ -17,7 +17,7 @@ size = Vector2(60, 100)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
-colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0.078431375)
+colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_08qor"]
 gradient = SubResource("Gradient_ocw8c")

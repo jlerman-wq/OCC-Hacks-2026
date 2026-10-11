@@ -36,6 +36,6 @@ shape = SubResource("RectangleShape2D_08qor")
 position = Vector2(69, 102.00001)
 scale = Vector2(1.2666017, 1.2871094)
 enabled = false
-energy = 4.53
+energy = 2.45
 texture = SubResource("GradientTexture2D_mjg1r")
 texture_scale = 0.5
