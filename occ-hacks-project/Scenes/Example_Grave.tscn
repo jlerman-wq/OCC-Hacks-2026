@@ -1,15 +1,24 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://cjjtsj3ibwomw"]
 
 [ext_resource type="PackedScene" uid="uid://dlyeeonjmfy34" path="res://Scenes/Examinable.tscn" id="1_base"]
 [ext_resource type="Texture2D" uid="uid://cqi7fbiaa7m82" path="res://Assets/Artwork/graves.png" id="2_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0l4k"]
+size = Vector2(104, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grave1"]
 atlas = ExtResource("2_tex")
 region = Rect2(50, 45, 640, 860)
 
-[node name="Example_Grave" instance=ExtResource("1_base")]
+[node name="Example_Grave" unique_id=381121502 instance=ExtResource("1_base")]
 tooltip_states = Array[String](["A weathered headstone. The name has long since worn away.", "You brush away the moss. Beneath it, freshly scratched: \"THE KEY IS UNDER THE THIRD STONE.\""])
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+[node name="CollisionShape2D" parent="." index="0" unique_id=744033012]
+shape = SubResource("RectangleShape2D_k0l4k")
+
+[node name="Label" parent="Tooltip" parent_id_path=PackedInt32Array(149860536) index="0" unique_id=836336576]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=1811513040]
+scale = Vector2(0.15, 0.15)
 texture = SubResource("AtlasTexture_grave1")
