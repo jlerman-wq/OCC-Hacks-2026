@@ -1,16 +1,23 @@
 extends Node2D
 
 @export var code: Array[int] = [3, 1, 4]
+## Candle colour applied to every pumpkin once the code is solved.
+@export var solved_light_color: Color = Color(0.4, 1.3, 0.45)
 
 @onready var darkness: CanvasModulate = $Darkness
 @onready var player_light: PointLight2D = $PlayerLight
 @onready var player: Node2D = $Player
+@onready var _exit: Node = get_node_or_null("Transition_Trigger")
 
 var pumpkins: Array = []
 var entered: Array[int] = []
 var solved := false
 
 func _ready() -> void:
+	# Lock the exit to The End until the pumpkin code is solved.
+	if _exit and _exit.has_method("lock"):
+		_exit.lock()
+
 	for child in get_children():
 		if child.has_signal("lit"):
 			pumpkins.append(child)
@@ -36,6 +43,16 @@ func _on_pumpkin_lit(number: int) -> void:
 	elif entered.size() == code.size():
 		print("Correct code!")
 		solved = true
+		light_up()
+		_glow_pumpkins_green()
+		if _exit and _exit.has_method("open"):
+			_exit.open()   # unlock the exit to The End
+
+# Turn every pumpkin's candle green as the solved state.
+func _glow_pumpkins_green() -> void:
+	for p in pumpkins:
+		if p.has_method("set_light_color"):
+			p.set_light_color(solved_light_color)
 
 func reset_pumpkins() -> void:
 	entered.clear()

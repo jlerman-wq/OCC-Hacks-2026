@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dm27gxquqdymi"]
 
 [ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://Scenes/Levels/Level 4/room_4.gd" id="1_totw3"]
-[ext_resource type="Script" uid="uid://mbb2gky37126" path="res://Scripts/exit.gd" id="2_a0xj3"]
+[ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_a0xj3"]
+[ext_resource type="PackedScene" uid="uid://dhebeuubpm7ao" path="res://Scenes/The_End.tscn" id="3_fclrv"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_o24b0"]
 [ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_fclrv"]
 [ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_c6prg"]
@@ -11,9 +12,6 @@ size = Vector2(2756, 128.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
 size = Vector2(1150, 50)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u08x"]
-size = Vector2(140, 169)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
@@ -90,12 +88,9 @@ offset_right = 2777.0
 offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
-[node name="Exit" type="Area2D" parent="." unique_id=1185953475]
-script = ExtResource("2_a0xj3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
-position = Vector2(2673, 537.5)
-shape = SubResource("RectangleShape2D_7u08x")
+[node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("2_a0xj3")]
+position = Vector2(2703, 432)
+target_scene = ExtResource("3_fclrv")
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
 position = Vector2(111, 479)

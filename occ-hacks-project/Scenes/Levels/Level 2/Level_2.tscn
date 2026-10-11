@@ -3,6 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_glw66"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="3_106uw"]
 [ext_resource type="PackedScene" uid="uid://bxmohb2f0jcvk" path="res://Scenes/Levels/Level 3/room_3_fixed.tscn" id="3_oem13"]
+[ext_resource type="Script" uid="uid://bhbdalsd2kj7u" path="res://Scripts/butcher_box.gd" id="4_bbox"]
+[ext_resource type="Texture2D" uid="uid://7eoyprk8g8qy" path="res://Assets/Artwork/butcher puzzle box side view.png" id="5_bside"]
+[ext_resource type="PackedScene" uid="uid://dd7o4wu6cdb65" path="res://Scenes/Levels/Level 2/ButcherPuzzle.tscn" id="6_bpuz"]
+[ext_resource type="Texture2D" uid="uid://b8k122clbrrtf" path="res://Assets/Artwork/butcher butcher.png" id="7_0u1vs"]
+[ext_resource type="Texture2D" uid="uid://dok2ipt4w8wc8" path="res://Assets/Artwork/butcher jamon.png" id="8_bfcll"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgr4u"]
 size = Vector2(42, 655)
@@ -36,6 +41,9 @@ gradient = SubResource("Gradient_vnunq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8npbe"]
 size = Vector2(1.0342288, 1.0285482)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbox"]
+size = Vector2(3200, 3200)
 
 [node name="Level 2" type="Node2D" unique_id=590479297]
 
@@ -102,3 +110,28 @@ shape = SubResource("RectangleShape2D_8npbe")
 [node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("3_106uw")]
 position = Vector2(1091, 422)
 target_scene = ExtResource("3_oem13")
+locked = true
+
+[node name="ButcherBox" type="Area2D" parent="." unique_id=771001001 node_paths=PackedStringArray("gate")]
+position = Vector2(724, 548)
+scale = Vector2(0.15, 0.15)
+script = ExtResource("4_bbox")
+puzzle_scene = ExtResource("6_bpuz")
+gate = NodePath("../Transition_Trigger")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButcherBox" unique_id=771001002]
+texture = ExtResource("5_bside")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButcherBox" unique_id=771001003]
+shape = SubResource("RectangleShape2D_bbox")
+
+[node name="ButcherButcher" type="Sprite2D" parent="." unique_id=1507435879]
+z_index = -20
+position = Vector2(585, 422)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_0u1vs")
+
+[node name="ButcherJamon" type="Sprite2D" parent="." unique_id=1661507936]
+position = Vector2(325, 260)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("8_bfcll")

@@ -23,10 +23,10 @@ signal switched(slot_index: int, word: String)
 @export_multiline var phrase_a: String = ""   # top tooltip
 @export_multiline var phrase_b: String = ""   # bottom tooltip
 
-@export_group("Textures (art states)")
-@export var tex_ivy: Texture2D        # state 0
-@export var tex_top: Texture2D        # state 1
-@export var tex_bottom: Texture2D     # state 2
+@export_group("Art (base grave + ivy overlays)")
+@export var tex_base: Texture2D        # the grave headstone, always shown
+@export var tex_top_ivy: Texture2D     # ivy over the TOP of the grave
+@export var tex_bottom_ivy: Texture2D  # ivy over the BOTTOM of the grave
 
 @export_group("Layout")
 @export var gap: float = 10.0
@@ -111,22 +111,38 @@ func _on_mouse_exited() -> void:
 # --- art state --------------------------------------------------------------
 
 func _apply_state() -> void:
-	var anim := get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
-	if anim:
-		anim.frame = _state
-		_fit_anim(anim)
-		return
 	var spr := get_node_or_null("Sprite2D") as Sprite2D
 	if spr == null:
 		return
-	var tex: Texture2D = tex_ivy
-	if _state == 1:
-		tex = tex_top
-	elif _state == 2:
-		tex = tex_bottom
-	if tex:
-		spr.texture = tex
+	# Base grave headstone is always visible.
+	if tex_base:
+		spr.texture = tex_base
+	# Ivy overlays. State 0 = both cover the grave; clearing the top option
+	# (state 1) strips the TOP ivy, the bottom option (state 2) strips the BOTTOM.
+	var top_ivy := get_node_or_null("TopIvy") as Sprite2D
+	var bottom_ivy := get_node_or_null("BottomIvy") as Sprite2D
+	if top_ivy:
+		if tex_top_ivy:
+			top_ivy.texture = tex_top_ivy
+		_match_ivy_scale(top_ivy, spr)
+		top_ivy.visible = (_state != 1)
+	if bottom_ivy:
+		if tex_bottom_ivy:
+			bottom_ivy.texture = tex_bottom_ivy
+		_match_ivy_scale(bottom_ivy, spr)
+		bottom_ivy.visible = (_state != 2)
 	_fit_sprite(spr)
+
+# Scale an ivy overlay to the base grave's footprint, whatever the ivy art's
+# source resolution (e.g. 3200px ivy sitting on a 770px grave). Enforced in
+# code so a scene re-save can't drop it.
+func _match_ivy_scale(ivy: Sprite2D, base: Sprite2D) -> void:
+	if ivy.texture == null or base.texture == null:
+		return
+	var iw: float = float(ivy.texture.get_width())
+	if iw <= 0.0:
+		return
+	ivy.scale = base.scale * (float(base.texture.get_width()) / iw)
 
 # --- tooltips ---------------------------------------------------------------
 
@@ -146,12 +162,13 @@ func _set_tip_text() -> void:
 		b.text = phrase_b
 
 func _show_tips() -> void:
+	# Show only the active option's tooltip; the inactive one stays hidden.
 	var top := get_node_or_null("TopTip") as Control
 	var bottom := get_node_or_null("BottomTip") as Control
 	if top:
-		top.visible = true
+		top.visible = (_state == 1)
 	if bottom:
-		bottom.visible = true
+		bottom.visible = (_state == 2)
 	_apply_highlight()
 	_position_tips()
 
@@ -195,24 +212,34 @@ func _build_styles() -> void:
 	_style_active.shadow_color = Color(0, 0, 0, 0.4)
 	_style_active.shadow_size = 5
 
+# Whichever option is currently active, or null in the ivy state.
+func _active_tip() -> Control:
+	if _state == 1:
+		return get_node_or_null("TopTip") as Control
+	elif _state == 2:
+		return get_node_or_null("BottomTip") as Control
+	return null
+
 func _position_tips() -> void:
+	var tip := _active_tip()
+	if tip == null:
+		return
 	var sprite := _get_sprite()
 	if sprite == null or sprite.texture == null:
 		return
 	var r: Rect2 = sprite.get_rect()
 	var cx: float = sprite.position.x + (r.position.x + r.size.x * 0.5) * sprite.scale.x
 	var top_y: float = sprite.position.y + r.position.y * sprite.scale.y
-	var bot_y: float = sprite.position.y + (r.position.y + r.size.y) * sprite.scale.y
-	var top := get_node_or_null("TopTip") as Control
-	var bottom := get_node_or_null("BottomTip") as Control
-	if top:
-		var sz_t := top.get_combined_minimum_size()
-		top.size = sz_t
-		top.position = Vector2(cx - sz_t.x * 0.5, top_y - sz_t.y - gap)
-	if bottom:
-		var sz_b := bottom.get_combined_minimum_size()
-		bottom.size = sz_b
-		bottom.position = Vector2(cx - sz_b.x * 0.5, bot_y + gap)
+	# The grave is instanced at a small scale (e.g. 0.15), which would shrink
+	# the tooltip text with it. Counter the node's global scale so the text
+	# renders at a readable on-screen size regardless of the instance scale.
+	var gs: Vector2 = global_scale
+	tip.scale = Vector2(1.0 / gs.x, 1.0 / gs.y) if gs.x != 0.0 and gs.y != 0.0 else Vector2.ONE
+	var sz := tip.get_combined_minimum_size()
+	tip.size = sz
+	var drawn: Vector2 = sz * tip.scale   # on-screen footprint in local units
+	# Centered horizontally, sitting just above the top of the art.
+	tip.position = Vector2(cx - drawn.x * 0.5, top_y - drawn.y - gap)
 
 # --- collision auto-fit -----------------------------------------------------
 
@@ -243,6 +270,6 @@ func _get_sprite() -> Sprite2D:
 	if s:
 		return s
 	for child in get_children():
-		if child is Sprite2D and child.name != "Ivy":
+		if child is Sprite2D and child.name != "TopIvy" and child.name != "BottomIvy":
 			return child
 	return null
