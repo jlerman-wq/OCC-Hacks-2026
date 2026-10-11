@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bugfme471bxqy"]
 
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="1_h0g2k"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_njwam"]
 [ext_resource type="Texture2D" uid="uid://ineiw203woyb" path="res://Assets/Artwork/GY gate.png" id="2_7acdd"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_qwye8"]
@@ -14,6 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://dx5rgpucdblqc" path="res://Assets/Artwork/Grave-5.png" id="10_gk1ct"]
 [ext_resource type="PackedScene" path="res://Scenes/Grave6_Lockbox.tscn" id="11_h0g2k"]
 [ext_resource type="Texture2D" uid="uid://bqc2xwum466ls" path="res://Assets/Artwork/Grave-6.png" id="12_56cmi"]
+[ext_resource type="Texture2D" uid="uid://d2ryx5iro3buc" path="res://Assets/Artwork/grave 1 top ivy.png" id="14_topivy1"]
+[ext_resource type="Texture2D" uid="uid://c8ycf25gm83n2" path="res://Assets/Artwork/grave 1 bottom ivy.png" id="15_botivy1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gk1ct"]
+font = ExtResource("1_h0g2k")
+font_size = 32
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmqve"]
 size = Vector2(42, 655)
@@ -99,11 +106,12 @@ size = Vector2(40, 239)
 [node name="Level 1" type="Node2D" unique_id=1555038245]
 
 [node name="Label" type="Label" parent="." unique_id=1324398744]
-offset_left = 560.0
-offset_top = 276.0
-offset_right = 614.0
-offset_bottom = 299.0
-text = "Level 1"
+offset_left = 297.0
+offset_top = 352.0
+offset_right = 840.0
+offset_bottom = 385.0
+text = "In this story, Dead men do Tell Tales."
+label_settings = SubResource("LabelSettings_gk1ct")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_njwam")]
@@ -191,7 +199,9 @@ word_a = "NO"
 word_b = "OUR"
 phrase_a = "On this dreadful journey NO man survived."
 phrase_b = "To OUR final voyages we Found a Peaceful Harbor."
-tex_ivy = ExtResource("6_7b7ae")
+tex_base = ExtResource("6_7b7ae")
+tex_top_ivy = ExtResource("14_topivy1")
+tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="GraveSwitch_2" parent="Environment/Graves" unique_id=1262707899 instance=ExtResource("5_7b7ae")]
 position = Vector2(481, 545)
@@ -201,7 +211,9 @@ word_a = "REST"
 word_b = "GRAVE"
 phrase_a = "A Cold Stone REST was all he found."
 phrase_b = "A Shallow GRAVE was his final resting place."
-tex_ivy = ExtResource("7_56cmi")
+tex_base = ExtResource("7_56cmi")
+tex_top_ivy = ExtResource("14_topivy1")
+tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="GraveSwitch_3" parent="Environment/Graves" unique_id=238594864 instance=ExtResource("5_7b7ae")]
 position = Vector2(618, 545)
@@ -211,7 +223,9 @@ word_a = "DEEP"
 word_b = "BUT"
 phrase_a = "DEEP in the earth we made our way."
 phrase_b = "We were Lost BUT Found the treasure."
-tex_ivy = ExtResource("8_g4o7n")
+tex_base = ExtResource("8_g4o7n")
+tex_top_ivy = ExtResource("14_topivy1")
+tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="GraveSwitch_4" parent="Environment/Graves" unique_id=1433368755 instance=ExtResource("5_7b7ae")]
 position = Vector2(762, 545)
@@ -221,7 +235,9 @@ word_a = "THE"
 word_b = "BUT"
 phrase_a = "THE captain's fate was to fall in battle."
 phrase_b = "BUT a pirates life shall not go unremembered."
-tex_ivy = ExtResource("9_d4j2s")
+tex_base = ExtResource("9_d4j2s")
+tex_top_ivy = ExtResource("14_topivy1")
+tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="GraveSwitch_5" parent="Environment/Graves" unique_id=1093036566 instance=ExtResource("5_7b7ae")]
 position = Vector2(897, 545)
@@ -231,7 +247,9 @@ word_a = "FINAL"
 word_b = "SEA"
 phrase_a = "Marked by his FINAL resting place the pirates gold remains."
 phrase_b = "Until at the end of time we are all swallowed by the SEA."
-tex_ivy = ExtResource("10_gk1ct")
+tex_base = ExtResource("10_gk1ct")
+tex_top_ivy = ExtResource("14_topivy1")
+tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="Grave6_Lockbox" parent="Environment/Graves" unique_id=583482222 node_paths=PackedStringArray("gate", "target_sprite") instance=ExtResource("11_h0g2k")]
 position = Vector2(1134, 484)

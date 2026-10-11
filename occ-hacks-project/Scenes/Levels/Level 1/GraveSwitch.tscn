@@ -7,7 +7,9 @@ script = ExtResource("1_gs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2039413236]
 
-[node name="Ivy" type="Sprite2D" parent="." unique_id=233629209]
+[node name="TopIvy" type="Sprite2D" parent="." unique_id=233629209]
+
+[node name="BottomIvy" type="Sprite2D" parent="." unique_id=233629210]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=565234524]
 

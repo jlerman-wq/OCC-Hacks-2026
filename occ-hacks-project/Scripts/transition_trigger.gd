@@ -3,6 +3,9 @@ class_name TransitionTrigger
 
 @export var target_scene: PackedScene
 @export var require_interact: bool = false;
+## While locked, entering/interacting does nothing. Call open() to unlock
+## (e.g. from a puzzle's `solved` signal). Matches the Gate open() interface.
+@export var locked: bool = false
 
 var _player_in_range: bool = false;
 
@@ -28,7 +31,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		_use()
 		
 func _use() -> void:
+	if locked:
+		return
 	if target_scene == null:
 		push_warning("Transition Trigger has no target scene set.")
 		return
 	SceneTransition.change_scene_to(target_scene)
+
+## Unlock the exit (called by a puzzle on solve). Named to match Gate.open().
+func open() -> void:
+	locked = false
+
+func lock() -> void:
+	locked = true

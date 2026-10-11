@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bppwrs27vstj6"]
+
+[ext_resource type="Script" uid="uid://dsrv76nmn1d0s" path="res://book_obstackle.gd" id="1_du5wk"]
+[ext_resource type="Texture2D" uid="uid://cvucblw7x34ef" path="res://Assets/AI Pic/red_halloween_book_sprite.png" id="2_qi221"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7ead"]
+size = Vector2(141, 208.6875)
+
+[node name="BookObstackle" type="StaticBody2D" unique_id=1304004500]
+script = ExtResource("1_du5wk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=374764941]
+position = Vector2(1.0000153, -2.0937452)
+scale = Vector2(0.17763153, 0.15517399)
+texture = ExtResource("2_qi221")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=501319830]
+shape = SubResource("RectangleShape2D_u7ead")
