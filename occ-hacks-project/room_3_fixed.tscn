@@ -213,7 +213,8 @@ hint_text = "Your math teacher
  is disappointed... 
 Are you sure 
 you want a hint?"
-second_hint_text = "What is our group number?"
+second_hint_text = "What is our group 
+number?"
 puzzle_texture = ExtResource("9_pwk7h")
 
 [node name="Book1Pic" type="Sprite2D" parent="." unique_id=1588933246]

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cqkokuun34cnc" path="res://Assets/AI Pic/OpenBookRed.png" id="1_mr6sb"]
 [ext_resource type="Texture2D" uid="uid://b3tpvoompkics" path="res://Assets/AI Pic/Puzzle 1.png" id="2_eo0jy"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewfrc"]
+
 [node name="BookPopup" type="CanvasLayer" unique_id=1409815298]
 script = ExtResource("1_ewfrc")
 
@@ -79,17 +81,27 @@ text = "💡 HINT
 "
 
 [node name="HintPanel" type="Panel" parent="Control" unique_id=1100666141]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 20.51
+anchor_right = 26.438002
+offset_left = -7.4000244
+offset_top = 72.0
+offset_right = -3.5200195
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ewfrc")
 
 [node name="HintLabel" type="Label" parent="Control/HintPanel" unique_id=574203184]
-layout_mode = 0
-offset_left = 857.0
-offset_top = 112.0
-offset_right = 1142.0
-offset_bottom = 239.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 37.0
+offset_right = 159.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.36862746, 0.12156863, 0.003921569, 1)
 text = "Your math teacher
  is disappointed... 
@@ -99,15 +111,23 @@ you want a hint?
 
 [node name="HintImage" type="TextureRect" parent="Control/HintPanel" unique_id=617900889]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 871.0
+offset_top = 150.0
+offset_right = 911.0
+offset_bottom = 190.0
 
 [node name="NextHintButton" type="Button" parent="Control/HintPanel" unique_id=314567250]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_colors/font_color = Color(0.36862746, 0.12156863, 0.003921569, 1)
+offset_left = 83.0
+offset_top = 79.0
+offset_right = 303.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
+text = "Yes
+
+"
+flat = true
 
 [node name="AnswerLabel" type="Label" parent="Control" unique_id=733973012]
 layout_mode = 0
@@ -153,10 +173,10 @@ text = "CONTINUE"
 
 [node name="ResultLabel" type="Label" parent="Control" unique_id=462695972]
 layout_mode = 0
-offset_left = 685.0
-offset_top = 395.0
-offset_right = 938.0
-offset_bottom = 418.0
+offset_left = 641.0
+offset_top = 396.0
+offset_right = 894.0
+offset_bottom = 423.0
 theme_override_colors/font_color = Color(0.6431373, 0.12941177, 0.21960784, 1)
 theme_override_font_sizes/font_size = 19
 
