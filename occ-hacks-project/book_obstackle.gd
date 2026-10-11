@@ -5,6 +5,8 @@ extends StaticBody2D
 @export_multiline var question_text: String = "Solve the math!!!"
 @export var correct_answer: String = "25"
 @export_multiline var hint_text: String = "Your math teacher is disappointed..."
+@export_multiline var second_hint_text: String = ""
+
 @export_multiline var success_text: String = "You passed the math, but not this room!"
 @export var puzzle_texture: Texture2D
 @export var hint_texture: Texture2D

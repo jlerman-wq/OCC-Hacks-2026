@@ -102,6 +102,13 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="NextHintButton" type="Button" parent="Control/HintPanel" unique_id=314567250]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0.36862746, 0.12156863, 0.003921569, 1)
+theme_override_font_sizes/font_size = 16
+
 [node name="AnswerLabel" type="Label" parent="Control" unique_id=733973012]
 layout_mode = 0
 offset_left = 686.0
