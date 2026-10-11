@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
 
 [ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
+[ext_resource type="Texture2D" uid="uid://dhkks8ry86vn2" path="res://Assets/Artwork/flying book.png" id="2_se24t"]
 [ext_resource type="Texture2D" uid="uid://gp4nh6tq5xyq" path="res://Assets/Artwork/bookshelf.png" id="2_wvaa0"]
 [ext_resource type="Script" uid="uid://6vletcxil2m7" path="res://door.gd" id="3_se24t"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="4_fo3g4"]
@@ -20,8 +21,9 @@ script = ExtResource("1_wvaa0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=310523364]
 offset_left = 2.0
+offset_top = -2.0
 offset_right = 1202.0
-offset_bottom = 700.0
+offset_bottom = 698.0
 color = Color(0.10892912, 7.3567855e-05, 0.162462, 1)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356462369]
@@ -37,6 +39,31 @@ offset_top = -20.0
 offset_right = 598.0
 offset_bottom = 20.0
 color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+
+[node name="FlyingBook" type="Sprite2D" parent="." unique_id=45657130]
+position = Vector2(135, 92)
+scale = Vector2(0.084375, 0.0771875)
+texture = ExtResource("2_se24t")
+
+[node name="FlyingBook2" type="Sprite2D" parent="." unique_id=286598876]
+position = Vector2(345, 94)
+scale = Vector2(0.084375, 0.0771875)
+texture = ExtResource("2_se24t")
+
+[node name="FlyingBook3" type="Sprite2D" parent="." unique_id=80174327]
+position = Vector2(616, 94)
+scale = Vector2(0.084375, 0.0771875)
+texture = ExtResource("2_se24t")
+
+[node name="FlyingBook4" type="Sprite2D" parent="." unique_id=24254266]
+position = Vector2(844.99994, 96)
+scale = Vector2(0.084375, 0.0771875)
+texture = ExtResource("2_se24t")
+
+[node name="FlyingBook5" type="Sprite2D" parent="." unique_id=1388336987]
+position = Vector2(1077, 90)
+scale = Vector2(0.084375, 0.0771875)
+texture = ExtResource("2_se24t")
 
 [node name="BookshelfBackGround" type="Sprite2D" parent="." unique_id=1445135645]
 position = Vector2(122.99999, 522.99994)
@@ -123,11 +150,11 @@ color = Color(0.5148393, 0.26904586, 0.117213614, 1)
 position = Vector2(92, 574)
 
 [node name="skull1" type="Sprite2D" parent="." unique_id=1951924290]
-position = Vector2(226, 349)
+position = Vector2(228, 342)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_fo3g4")
 
 [node name="skull2" type="Sprite2D" parent="." unique_id=1646175246]
-position = Vector2(743, 351)
+position = Vector2(733, 339)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_fo3g4")
