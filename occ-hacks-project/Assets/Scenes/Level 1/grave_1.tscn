@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://bduk77fc3crs3"]
 
-[ext_resource type="Texture2D" uid="uid://cpsl0nkdi0xdf" path="res://Assets/Artwork/graves v2.png" id="1_lst20"]
+[ext_resource type="PackedScene" uid="uid://dlyeeonjmfy34" path="res://Scenes/Examinable.tscn" id="1_cv7im"]
+[ext_resource type="Texture2D" uid="uid://cqi7fbiaa7m82" path="res://Assets/Artwork/graves.png" id="2_vu1np"]
 
-[node name="Grave1" type="Sprite2D" unique_id=1203219104]
-z_index = -1
-scale = Vector2(0.15, 0.085)
-texture = ExtResource("1_lst20")
-region_enabled = true
-region_rect = Rect2(0, 0, 753.73, 967.35724)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8ffw"]
+size = Vector2(104, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grave1"]
+atlas = ExtResource("2_vu1np")
+region = Rect2(50, 45, 640, 860)
+
+[node name="Example_Grave" unique_id=1406219271 instance=ExtResource("1_cv7im")]
+tooltip_text = "A weathered headstone. The name has long since worn away."
+popup_offset = Vector2(0, -48)
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=744033012]
+shape = SubResource("RectangleShape2D_x8ffw")
+
+[node name="Label" parent="Tooltip" parent_id_path=PackedInt32Array(149860536) index="0" unique_id=836336576]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=1154274810]
+scale = Vector2(0.15, 0.15)
+texture = SubResource("AtlasTexture_grave1")

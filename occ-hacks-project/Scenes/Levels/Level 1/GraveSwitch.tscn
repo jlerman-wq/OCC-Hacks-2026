@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://deojjlle81y06"]
+
+[ext_resource type="Script" uid="uid://bw4rp3in882fx" path="res://Scripts/grave_switch.gd" id="1_gs"]
+
+[node name="GraveSwitch" type="Area2D" unique_id=1488046799]
+script = ExtResource("1_gs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2039413236]
+
+[node name="Ivy" type="Sprite2D" parent="." unique_id=233629209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=565234524]
+
+[node name="TopTip" type="PanelContainer" parent="." unique_id=872349470]
+z_index = 50
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="TopTip" unique_id=1305221996]
+layout_mode = 2
+text = "WORD A"
+horizontal_alignment = 1
+
+[node name="BottomTip" type="PanelContainer" parent="." unique_id=383892689]
+z_index = 50
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="BottomTip" unique_id=1692183219]
+layout_mode = 2
+text = "WORD B"
+horizontal_alignment = 1

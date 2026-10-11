@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/lockbox.gd" id="1_lb"]
+
+[node name="Grave6_Lockbox" type="Area2D"]
+script = ExtResource("1_lb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HintTip" type="PanelContainer" parent="."]
+z_index = 50
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="HintTip"]
+custom_minimum_size = Vector2(240, 0)
+mouse_filter = 2
+autowrap_mode = 3
+horizontal_alignment = 1
+text = "Hint"
+
+[node name="WordsTip" type="PanelContainer" parent="."]
+z_index = 50
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="WordsTip"]
+custom_minimum_size = Vector2(240, 0)
+mouse_filter = 2
+autowrap_mode = 3
+horizontal_alignment = 1
+text = "____ ____ ____"
+
+[node name="MessageTip" type="PanelContainer" parent="."]
+visible = false
+z_index = 60
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MessageTip"]
+custom_minimum_size = Vector2(260, 0)
+mouse_filter = 2
+autowrap_mode = 3
+horizontal_alignment = 1
+text = ""
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
