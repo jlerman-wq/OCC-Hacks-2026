@@ -7,7 +7,8 @@
 size = Vector2(226, 160.44775)
 
 [sub_resource type="Gradient" id="Gradient_4thn5"]
-colors = PackedColorArray(0.78655547, 0.52377445, 3.657937e-06, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.38679245, 0.9433962)
+colors = PackedColorArray(0.9764706, 0.48235294, 0, 1, 0.9764706, 0.48235294, 0, 0.92941177, 0.9764706, 0.48235294, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_mjg1r"]
 gradient = SubResource("Gradient_4thn5")
@@ -36,6 +37,6 @@ shape = SubResource("RectangleShape2D_08qor")
 position = Vector2(69, 102.00001)
 scale = Vector2(1.2666017, 1.2871094)
 enabled = false
-energy = 2.45
+energy = 3.0
 texture = SubResource("GradientTexture2D_mjg1r")
 texture_scale = 0.5

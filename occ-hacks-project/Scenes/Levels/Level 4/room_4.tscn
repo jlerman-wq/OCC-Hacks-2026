@@ -17,7 +17,7 @@ size = Vector2(60, 100)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
-colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0)
+colors = PackedColorArray(1, 0.87316394, 0.6472851, 1, 1, 0.8, 0.53333336, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_08qor"]
 gradient = SubResource("Gradient_ocw8c")
@@ -138,6 +138,7 @@ theme_override_font_sizes/font_size = 20
 text = "2"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
+z_index = -10
 position = Vector2(1445.25, 87.500015)
 scale = Vector2(1.1263672, 0.74148715)
 texture = ExtResource("4_fclrv")
@@ -153,7 +154,8 @@ position = Vector2(284, 107.00003)
 position = Vector2(290, 117)
 
 [node name="Candle" parent="Pumpkin" index="2" unique_id=1891275496]
-position = Vector2(285, 120.00001)
+position = Vector2(286, 117)
+scale = Vector2(1.9379884, 1.9638672)
 
 [node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
@@ -167,8 +169,8 @@ region_rect = Rect2(1104.603, 346.44385, 534.0459, 733.78906)
 position = Vector2(470, 125)
 
 [node name="Candle" parent="Pumpkin2" index="2" unique_id=1891275496]
-position = Vector2(469, 134)
-scale = Vector2(0.5864261, 0.6811523)
+position = Vector2(469.00003, 136)
+scale = Vector2(1.066651, 1.3640137)
 
 [node name="Pumpkin3" parent="." unique_id=1365933653 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
@@ -181,7 +183,8 @@ region_rect = Rect2(580.1125, 1095.7379, 1224.1772, 749.0486)
 position = Vector2(623, 121)
 
 [node name="Candle" parent="Pumpkin3" index="2" unique_id=1891275496]
-position = Vector2(620, 142)
+position = Vector2(623.00006, 140.99998)
+scale = Vector2(1.7426753, 1.7841799)
 
 [node name="Pumpkin4" parent="." unique_id=833705654 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
@@ -195,8 +198,8 @@ region_rect = Rect2(1768.5374, 214.31067, 1221.9043, 966.78687)
 position = Vector2(799, 127)
 
 [node name="Candle" parent="Pumpkin4" index="2" unique_id=1891275496]
-position = Vector2(807, 148.99997)
-scale = Vector2(0.5864261, 0.6811523)
+position = Vector2(807, 144.00003)
+scale = Vector2(1.2854009, 1.8640137)
 
 [node name="Pumpkin5" parent="." unique_id=2050965913 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
@@ -210,8 +213,8 @@ region_rect = Rect2(5.979492, 1215.7177, 534.0459, 627.1113)
 position = Vector2(967, 115)
 
 [node name="Candle" parent="Pumpkin5" index="2" unique_id=1891275496]
-position = Vector2(978, 125.99997)
-scale = Vector2(0.5864261, 0.6811523)
+position = Vector2(978, 130.99997)
+scale = Vector2(0.87915033, 1.199951)
 
 [node name="Pumpkin6" parent="." unique_id=966898212 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
@@ -225,8 +228,11 @@ region_rect = Rect2(2014.2056, 1249.8229, 862.92676, 1099.1974)
 position = Vector2(1123, 92)
 
 [node name="Candle" parent="Pumpkin6" index="2" unique_id=1891275496]
-position = Vector2(1119, 107.99998)
-scale = Vector2(0.5864261, 0.6811523)
+position = Vector2(1116, 108.99997)
+scale = Vector2(0.84191966, 1.0960695)
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1076606315]
+color = Color(0.16470589, 0.16470589, 0.27058825, 1)
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
