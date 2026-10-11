@@ -109,6 +109,9 @@ colors = PackedColorArray(0.006044452, 0.22953445, 0.9990576, 1, 0.007843138, 0.
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_awsh0"]
 gradient = SubResource("Gradient_ogvmd")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ogvmd"]
+load_path = "res://.godot/imported/pumpkins.png-904ac01557f63d10151cd3e6fb58fd28.ctex"
+
 [node name="room4" type="Node2D" unique_id=1079266622]
 position = Vector2(21, 26)
 script = ExtResource("1_totw3")
@@ -305,6 +308,7 @@ position = Vector2(2703, 432)
 target_scene_path = "res://Scenes/The_End.tscn"
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
+z_index = 20
 position = Vector2(111, 479)
 
 [node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
@@ -355,13 +359,24 @@ text = "2"
 
 [node name="Code Found" type="Label" parent="." unique_id=786417822]
 material = SubResource("CanvasItemMaterial_totw3")
-offset_left = 329.0
-offset_top = -310.0
-offset_right = 618.0
-offset_bottom = -282.0
+offset_left = 334.0
+offset_top = -383.0
+offset_right = 623.0
+offset_bottom = -355.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "Hurray! You've found them all"
+
+[node name="Code Found2" type="Label" parent="." unique_id=1463025342]
+material = SubResource("CanvasItemMaterial_totw3")
+offset_left = 229.0
+offset_top = 455.0
+offset_right = 422.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Look for the code in
+	              the sky"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
 z_index = -10
@@ -534,6 +549,146 @@ scale = Vector2(0.07519185, 0.05177977)
 texture = ExtResource("10_ogvmd")
 region_enabled = true
 region_rect = Rect2(2009.6313, 1184.4504, 847.07764, 1201.6682)
+
+[node name="Pumpkins3" type="Sprite2D" parent="." unique_id=1030273554]
+position = Vector2(410, 289)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(565.77734, 1076.1033, 1290.3157, 775.0647)
+
+[node name="Pumpkins4" type="Sprite2D" parent="." unique_id=858473325]
+position = Vector2(1036.9999, 80.00001)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(24.041748, 150.22778, 1034.2227, 972.0596)
+
+[node name="Pumpkins9" type="Sprite2D" parent="." unique_id=213270526]
+position = Vector2(299.00018, 136)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(24.041748, 150.22778, 1034.2227, 972.0596)
+
+[node name="Pumpkins8" type="Sprite2D" parent="." unique_id=841957081]
+position = Vector2(681.0001, -74.99998)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(24.041748, 150.22778, 1034.2227, 972.0596)
+
+[node name="Pumpkins5" type="Sprite2D" parent="." unique_id=1088033023]
+position = Vector2(517, 601.99994)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(565.77734, 1076.1033, 1290.3157, 775.0647)
+
+[node name="Pumpkins6" type="Sprite2D" parent="." unique_id=258483660]
+position = Vector2(179.00002, 603.00006)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(565.77734, 1076.1033, 1290.3157, 775.0647)
+
+[node name="Pumpkins7" type="Sprite2D" parent="." unique_id=811800894]
+position = Vector2(1176, 417.00006)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(565.77734, 1076.1033, 1290.3157, 775.0647)
+
+[node name="Pumpkins10" type="Sprite2D" parent="." unique_id=659181720]
+position = Vector2(552, 605.00006)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(43.740967, 1174.6006, 502.3369, 676.5674)
+
+[node name="Pumpkins11" type="Sprite2D" parent="." unique_id=526049426]
+position = Vector2(63.00009, 213.00009)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(43.740967, 1174.6006, 502.3369, 676.5674)
+
+[node name="Pumpkins12" type="Sprite2D" parent="." unique_id=781532068]
+position = Vector2(1296, 31)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(43.740967, 1174.6006, 502.3369, 676.5674)
+
+[node name="Pumpkins13" type="Sprite2D" parent="." unique_id=1329868623]
+position = Vector2(926, 604.99994)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(43.740967, 1174.6006, 502.3369, 676.5674)
+
+[node name="Pumpkins14" type="Sprite2D" parent="." unique_id=628026753]
+position = Vector2(432, 606.00006)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1097.6631, 366.922, 581.135, 715.96643)
+
+[node name="Pumpkins15" type="Sprite2D" parent="." unique_id=47551954]
+position = Vector2(246.00005, 290)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1097.6631, 366.922, 581.135, 715.96643)
+
+[node name="Pumpkins16" type="Sprite2D" parent="." unique_id=1072075589]
+position = Vector2(657.00006, -68.00001)
+scale = Vector2(0.07519185, 0.05177977)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1097.6631, 366.922, 581.135, 715.96643)
+
+[node name="Pumpkins17" type="Sprite2D" parent="." unique_id=1308868195]
+position = Vector2(1281.4216, 34.755634)
+scale = Vector2(0.05997133, 0.038477294)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1097.6631, 366.922, 581.135, 715.96643)
+
+[node name="Pumpkins22" type="Sprite2D" parent="." unique_id=318627240]
+position = Vector2(902, 598)
+scale = Vector2(0.09883258, 0.08357429)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1097.6631, 366.922, 581.135, 715.96643)
+
+[node name="Pumpkins18" type="Sprite2D" parent="." unique_id=1724965738]
+position = Vector2(1413.0001, 25)
+scale = Vector2(0.05579741, 0.06019769)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1777.2952, 189.62671, 1201.6685, 1001.60876)
+
+[node name="Pumpkins19" type="Sprite2D" parent="." unique_id=1176423342]
+position = Vector2(912.0001, 81)
+scale = Vector2(0.05579741, 0.06019769)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1777.2952, 189.62671, 1201.6685, 1001.60876)
+
+[node name="Pumpkins20" type="Sprite2D" parent="." unique_id=1247466240]
+position = Vector2(769, 356)
+scale = Vector2(0.05579741, 0.06019769)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1777.2952, 189.62671, 1201.6685, 1001.60876)
+
+[node name="Pumpkins21" type="Sprite2D" parent="." unique_id=1245606742]
+position = Vector2(1264, 599)
+scale = Vector2(0.05579741, 0.06019769)
+texture = SubResource("CompressedTexture2D_ogvmd")
+region_enabled = true
+region_rect = Rect2(1777.2952, 189.62671, 1201.6685, 1001.60876)
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
