@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjttjm2bkgfjb"]
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_1loue"]
+[ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_b12wk"]
+[ext_resource type="PackedScene" uid="uid://deicpkqon0g6m" path="res://Scenes/Levels/Level 4/room_4.tscn" id="3_co0ub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ny1"]
 size = Vector2(42, 655)
@@ -96,3 +98,7 @@ texture = SubResource("GradientTexture1D_151xs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviorment/Floor" unique_id=366281219]
 position = Vector2(0, 0.002653718)
 shape = SubResource("RectangleShape2D_dudvk")
+
+[node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("2_b12wk")]
+position = Vector2(1093, 421)
+target_scene = ExtResource("3_co0ub")
