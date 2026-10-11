@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3tpvoompkics"
-path="res://.godot/imported/Puzzle 1.png-181112ba1ceb00b3814bdaf3b29b6b5a.ctex"
+uid="uid://de0ce2ipew2su"
+path="res://.godot/imported/periodic_table_full.png-6d292803fbdaa2a664a4354655fc20da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AI Pic/Puzzle 1.png"
-dest_files=["res://.godot/imported/Puzzle 1.png-181112ba1ceb00b3814bdaf3b29b6b5a.ctex"]
+source_file="res://Assets/AI Pic/periodic_table_full.png"
+dest_files=["res://.godot/imported/periodic_table_full.png-6d292803fbdaa2a664a4354655fc20da.ctex"]
 
 [params]
 
