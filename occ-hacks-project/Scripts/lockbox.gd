@@ -1,15 +1,17 @@
 @tool
 extends Area2D
 class_name Lockbox
-## The 6th grave. Top tooltip = a fixed hint; bottom tooltip = the live phrase
-## assembled from all GraveSwitch nodes. Player walks up and presses Interact:
-## correct combination -> opens and emits `solved`; wrong -> click + warning.
+## The 6th grave. Hint box + live assembled-words box stack above the stone.
+## Click the stone or press Interact while on it: correct combination opens the
+## gate (if assigned) and emits `solved`; wrong -> click + warning.
 
 signal solved
 
 @export_multiline var hint_text: String = "Only the truth will open the box."
 ## Correct word for each slot, in order. Its length = number of switches.
 @export var solution: Array[String] = []
+## The gate to open when solved (any node with an open() method). Optional.
+@export var gate: Node
 @export var gap: float = 10.0
 @export var padding: Vector2 = Vector2(24, 24)   # roomier so the player can reach it
 @export var target_sprite: Sprite2D
@@ -34,6 +36,7 @@ func _ready() -> void:
 		_current[i] = ""
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	input_event.connect(_on_input_event)
 	call_deferred("_setup_switches")   # deferred so every switch has entered the tree
 	_refresh_display()
 
@@ -67,9 +70,17 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		_player_in_range = false
 
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if _is_open:
+		return
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_try_solve()
+
 func _unhandled_input(event: InputEvent) -> void:
 	if _is_open or not _player_in_range:
 		return
+	if event is InputEventMouseButton:
+		return   # mouse clicks are handled by _on_input_event (avoids double-fire)
 	if event.is_action_pressed("Interact"):
 		_try_solve()
 
@@ -84,7 +95,9 @@ func _open() -> void:
 	if open_sound:
 		$Audio.stream = open_sound
 		$Audio.play()
-	_show_message("The lockbox clicks open. A key rests inside.")
+	_show_message("The lock clicks open. The gate groans apart.")
+	if gate and gate.has_method("open"):
+		gate.open()          # drop the barrier / swap to open art
 	solved.emit()
 
 func _wrong() -> void:
@@ -106,6 +119,12 @@ func _refresh_display() -> void:
 			shown.append(w if w != "" else "____")
 		words.text = " ".join(shown)
 	_position_tips()
+	if not Engine.is_editor_hint() and is_inside_tree():
+		_reposition_soon()
+
+func _reposition_soon() -> void:
+	await get_tree().process_frame   # let the boxes compute their real size
+	_position_tips()
 
 func _show_message(msg: String) -> void:
 	var m := get_node_or_null("MessageTip") as Control
@@ -124,28 +143,23 @@ func _show_message(msg: String) -> void:
 	m.visible = false
 
 func _position_tips() -> void:
+	# Stack the boxes above the stone: words just above it, hint above words,
+	# message above the hint.
 	var sprite := _get_sprite()
 	if sprite == null or sprite.texture == null:
 		return
 	var r: Rect2 = sprite.get_rect()
 	var cx: float = sprite.position.x + (r.position.x + r.size.x * 0.5) * sprite.scale.x
 	var top_y: float = sprite.position.y + r.position.y * sprite.scale.y
-	var bot_y: float = sprite.position.y + (r.position.y + r.size.y) * sprite.scale.y
-	var hint := get_node_or_null("HintTip") as Control
-	var words := get_node_or_null("WordsTip") as Control
-	var msg := get_node_or_null("MessageTip") as Control
-	if hint:
-		hint.reset_size()
-		hint.position = Vector2(cx - hint.size.x * 0.5, top_y - hint.size.y - gap)
-	if words:
-		words.reset_size()
-		words.position = Vector2(cx - words.size.x * 0.5, bot_y + gap)
-	if msg:
-		msg.reset_size()
-		var above_y: float = top_y - gap
-		if hint:
-			above_y = hint.position.y - gap
-		msg.position = Vector2(cx - msg.size.x * 0.5, above_y - msg.size.y)
+	var cursor_y: float = top_y - gap
+	for node in [get_node_or_null("WordsTip"), get_node_or_null("HintTip"), get_node_or_null("MessageTip")]:
+		var c := node as Control
+		if c == null:
+			continue
+		var sz := c.get_combined_minimum_size()
+		c.size = sz
+		c.position = Vector2(cx - sz.x * 0.5, cursor_y - sz.y)
+		cursor_y = c.position.y - gap
 
 # --- style & collision ------------------------------------------------------
 

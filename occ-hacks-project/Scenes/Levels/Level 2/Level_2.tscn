@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_glw66"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="3_106uw"]
-[ext_resource type="PackedScene" uid="uid://bjttjm2bkgfjb" path="res://Scenes/Levels/Level 3/Level_3.tscn" id="3_oem13"]
+[ext_resource type="PackedScene" uid="uid://bxmohb2f0jcvk" path="res://Scenes/Levels/Level 3/room_3_fixed.tscn" id="3_oem13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgr4u"]
 size = Vector2(42, 655)

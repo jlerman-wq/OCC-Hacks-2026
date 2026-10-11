@@ -21,6 +21,7 @@ position = Vector2(-44.5, 93)
 shape = SubResource("RectangleShape2D_qmqve")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1167924649]
+visible = false
 position = Vector2(-45.499996, 91.00001)
 scale = Vector2(141, 208.00003)
 mesh = SubResource("BoxMesh_qmqve")

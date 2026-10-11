@@ -90,3 +90,4 @@ shape = SubResource("RectangleShape2D_qmqve")
 libraries/ = SubResource("AnimationLibrary_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=766763383]
+offset = Vector2(0, -100)

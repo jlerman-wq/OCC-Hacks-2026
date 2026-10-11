@@ -13,7 +13,7 @@ size = Vector2(2756, 128.375)
 size = Vector2(1150, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u08x"]
-size = Vector2(60, 100)
+size = Vector2(140, 169)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
@@ -93,7 +93,7 @@ color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 script = ExtResource("2_a0xj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
-position = Vector2(2713, 572)
+position = Vector2(2673, 537.5)
 shape = SubResource("RectangleShape2D_7u08x")
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
@@ -202,7 +202,8 @@ texture = SubResource("CompressedTexture2D_w76ad")
 region_rect = Rect2(1768.5374, 214.31067, 1221.9043, 966.78687)
 
 [node name="CollisionShape2D" parent="Pumpkin4" index="1" unique_id=664971206]
-position = Vector2(799, 127)
+position = Vector2(806, 127)
+scale = Vector2(-0.5900857, 0.536)
 
 [node name="Candle" parent="Pumpkin4" index="2" unique_id=1891275496]
 position = Vector2(807, 144.00003)
@@ -217,7 +218,8 @@ texture = SubResource("CompressedTexture2D_w76ad")
 region_rect = Rect2(5.979492, 1215.7177, 534.0459, 627.1113)
 
 [node name="CollisionShape2D" parent="Pumpkin5" index="1" unique_id=664971206]
-position = Vector2(967, 115)
+position = Vector2(977, 114)
+scale = Vector2(0.19461213, 0.536)
 
 [node name="Candle" parent="Pumpkin5" index="2" unique_id=1891275496]
 position = Vector2(978, 130.99997)
@@ -233,10 +235,11 @@ region_rect = Rect2(2014.2056, 1249.8229, 862.92676, 1099.1974)
 
 [node name="CollisionShape2D" parent="Pumpkin6" index="1" unique_id=664971206]
 position = Vector2(1124, 104)
+scale = Vector2(0.46, 0.536)
 
 [node name="Candle" parent="Pumpkin6" index="2" unique_id=1891275496]
-position = Vector2(1116, 108.99997)
-scale = Vector2(0.84191966, 1.0960695)
+position = Vector2(1118.4415, 108.99997)
+scale = Vector2(0.80377144, 1.0960695)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=1076606315]
 color = Color(0.16470589, 0.16470589, 0.27058825, 1)
