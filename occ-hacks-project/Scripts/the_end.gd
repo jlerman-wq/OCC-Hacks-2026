@@ -20,7 +20,9 @@ func _ready() -> void:
 
 	_build_leaderboard()
 
+	submit_button.pressed.connect(SFX.play_click)
 	submit_button.pressed.connect(_on_submit)
+	play_again_btn.pressed.connect(SFX.play_click)
 	play_again_btn.pressed.connect(_on_play_again)
 
 func _build_leaderboard() -> void:

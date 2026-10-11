@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bmmwui4tyvc2h"]
+
+[ext_resource type="Script" uid="uid://bpaxa2gf3lgvk" path="res://Scripts/about_panel.gd" id="1_about"]
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="2_about"]
+
+[sub_resource type="Theme" id="Theme_about"]
+default_font = ExtResource("2_about")
+default_font_size = 22
+
+[node name="AboutPanel" type="Control" unique_id=787549674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_about")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=252820276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=66054338]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -200.0
+offset_right = 260.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_about")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer" unique_id=1238615142]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBox" unique_id=1174151537]
+layout_mode = 2
+text = "About Us"
+horizontal_alignment = 1
+
+[node name="BodyLabel" type="Label" parent="PanelContainer/VBox" unique_id=1437857124]
+layout_mode = 2
+text = "Haunted Hacks 2026
+Made at OCC Hackathon
+
+Team:
+Joshua Lerman
+Nico Zuniga
+Leif Kelly
+Mi Pham
+
+Tools: 
+Godot 4
+Clip Studio Paint"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBox" unique_id=108460271]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Close"
