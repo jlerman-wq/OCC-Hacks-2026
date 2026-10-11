@@ -15,7 +15,25 @@
 size = Vector2(2756, 128.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
-size = Vector2(1150, 50)
+size = Vector2(1225, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u08x"]
+size = Vector2(267, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddb4a"]
+size = Vector2(105, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apb17"]
+size = Vector2(226.5, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mhv8"]
+size = Vector2(228, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpelx"]
+size = Vector2(253.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awsh0"]
+size = Vector2(107, 19)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
@@ -115,6 +133,111 @@ offset_right = 2777.0
 offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
+[node name="platforms" type="StaticBody2D" parent="." unique_id=338080954]
+position = Vector2(4, 5)
+
+[node name="ColorRect" type="ColorRect" parent="platforms" unique_id=561025432]
+offset_left = 458.0
+offset_top = 548.0
+offset_right = 724.0
+offset_bottom = 564.0
+
+[node name="ColorRect2" type="ColorRect" parent="platforms" unique_id=1938814686]
+offset_left = 805.0
+offset_top = 496.0
+offset_right = 911.0
+offset_bottom = 512.0
+
+[node name="ColorRect7" type="ColorRect" parent="platforms" unique_id=1794056179]
+offset_left = 40.0
+offset_top = 223.0
+offset_right = 146.0
+offset_bottom = 240.0
+
+[node name="ColorRect11" type="ColorRect" parent="platforms" unique_id=1694489322]
+offset_left = 549.0
+offset_top = 214.0
+offset_right = 655.0
+offset_bottom = 228.0
+
+[node name="ColorRect9" type="ColorRect" parent="platforms" unique_id=848627799]
+offset_left = 196.0
+offset_top = 302.0
+offset_right = 450.0
+offset_bottom = 321.0
+
+[node name="ColorRect3" type="ColorRect" parent="platforms" unique_id=1990276436]
+offset_left = 979.0
+offset_top = 431.0
+offset_right = 1205.0
+offset_bottom = 446.0
+
+[node name="ColorRect4" type="ColorRect" parent="platforms" unique_id=554768252]
+offset_left = 596.0
+offset_top = 373.0
+offset_right = 822.0
+offset_bottom = 386.0
+
+[node name="ColorRect5" type="ColorRect" parent="platforms" unique_id=1798277455]
+offset_left = 751.0
+offset_top = 151.0
+offset_right = 977.0
+offset_bottom = 168.0
+
+[node name="ColorRect6" type="ColorRect" parent="platforms" unique_id=466847940]
+offset_left = 246.0
+offset_top = 157.0
+offset_right = 472.0
+offset_bottom = 178.0
+
+[node name="ColorRect8" type="ColorRect" parent="platforms" unique_id=1475290495]
+offset_left = 546.0
+offset_top = 53.0
+offset_right = 772.0
+offset_bottom = 67.0
+
+[node name="ColorRect10" type="ColorRect" parent="platforms" unique_id=1290018974]
+offset_left = 858.0
+offset_top = -41.0
+offset_right = 1084.0
+offset_bottom = -1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="platforms" unique_id=1265800447]
+position = Vector2(593, 556)
+shape = SubResource("RectangleShape2D_7u08x")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms" unique_id=650603479]
+position = Vector2(857, 503)
+shape = SubResource("RectangleShape2D_ddb4a")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="platforms" unique_id=567950519]
+position = Vector2(1094, 439)
+shape = SubResource("RectangleShape2D_apb17")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="platforms" unique_id=1888787062]
+position = Vector2(710, 379.5)
+shape = SubResource("RectangleShape2D_8mhv8")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="platforms" unique_id=308133921]
+position = Vector2(324.25, 313)
+shape = SubResource("RectangleShape2D_kpelx")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="platforms" unique_id=1786300934]
+position = Vector2(93.5, 231.5)
+shape = SubResource("RectangleShape2D_awsh0")
+one_way_collision = true
+one_way_collision_margin = 10.0
+
 [node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("2_a0xj3")]
 position = Vector2(2772, 440)
 target_scene = ExtResource("3_fclrv")
@@ -123,45 +246,47 @@ target_scene = ExtResource("3_fclrv")
 position = Vector2(111, 479)
 
 [node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
+position = Vector2(-437, -609)
+energy = 0.5
 texture = SubResource("GradientTexture2D_08qor")
 texture_scale = 3.0
 
 [node name="Hint1" type="Label" parent="." unique_id=1180099341]
 material = SubResource("CanvasItemMaterial_08qor")
-offset_left = 242.0
-offset_top = 323.0
-offset_right = 287.0
-offset_bottom = 390.0
+offset_left = 1168.0
+offset_top = 349.0
+offset_right = 1213.0
+offset_bottom = 416.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "3"
 
 [node name="Hint2" type="Label" parent="." unique_id=109507925]
 material = SubResource("CanvasItemMaterial_7u08x")
-offset_left = 627.0
-offset_top = 141.0
-offset_right = 667.0
-offset_bottom = 169.0
+offset_left = 57.0
+offset_top = 125.0
+offset_right = 97.0
+offset_bottom = 153.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "6"
 
 [node name="Hint3" type="Label" parent="." unique_id=1248751090]
 material = SubResource("CanvasItemMaterial_7u08x")
-offset_left = 132.0
-offset_top = -199.0
-offset_right = 172.0
-offset_bottom = -171.0
+offset_left = 899.0
+offset_top = 21.0
+offset_right = 939.0
+offset_bottom = 49.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "4"
 
 [node name="Hint4" type="Label" parent="." unique_id=482443992]
 material = SubResource("CanvasItemMaterial_totw3")
-offset_left = 756.0
-offset_top = -225.0
-offset_right = 796.0
-offset_bottom = -197.0
+offset_left = 173.0
+offset_top = -99.0
+offset_right = 213.0
+offset_bottom = -71.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "2"
@@ -264,6 +389,7 @@ position = Vector2(1118.4415, 108.99997)
 scale = Vector2(0.80377144, 1.0960695)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=1076606315]
+position = Vector2(1, -5)
 color = Color(0.16470589, 0.16470589, 0.27058825, 1)
 
 [node name="Night Ambience" type="PointLight2D" parent="." unique_id=857384444]
@@ -273,6 +399,7 @@ scale = Vector2(19.698427, 45.91194)
 color = Color(0.3553136, 0.35531354, 0.35531357, 1)
 energy = 5.78
 texture = SubResource("GradientTexture2D_7u08x")
+metadata/_edit_lock_ = true
 
 [node name="Skulls" type="Sprite2D" parent="." unique_id=751680408]
 position = Vector2(1552, 612.00006)
@@ -317,9 +444,9 @@ texture = ExtResource("10_bn0ds")
 
 [node name="Glow3" type="Sprite2D" parent="Scarecrow3" unique_id=983015816]
 material = SubResource("CanvasItemMaterial_8mhv8")
-position = Vector2(42.97061, -54.154488)
+position = Vector2(2.8781528, -54.15449)
 rotation = 1.5707964
-scale = Vector2(24.362484, 8.589352)
+scale = Vector2(24.362484, 11.408347)
 texture = SubResource("GradientTexture2D_apb17")
 
 [editable path="Pumpkin"]
