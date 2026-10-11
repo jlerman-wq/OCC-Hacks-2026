@@ -47,6 +47,7 @@ colors = PackedColorArray(0, 1, 1, 1, 0.4831578, 0.0006359035, 0.5848267, 1, 0, 
 gradient = SubResource("Gradient_totw3")
 
 [node name="room4" type="Node2D" unique_id=1079266622]
+position = Vector2(21, 26)
 script = ExtResource("1_totw3")
 code = Array[int]([3, 6, 4, 2])
 
@@ -100,7 +101,6 @@ shape = SubResource("RectangleShape2D_7u08x")
 position = Vector2(111, 479)
 
 [node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
-energy = 2.0
 texture = SubResource("GradientTexture2D_08qor")
 texture_scale = 3.0
 
