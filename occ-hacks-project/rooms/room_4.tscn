@@ -33,6 +33,9 @@ light_mode = 2
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7u08x"]
 light_mode = 2
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xjf32"]
+load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
+
 [node name="room4" type="Node2D" unique_id=1079266622]
 script = ExtResource("1_roktq")
 
@@ -142,12 +145,20 @@ metadata/_edit_lock_ = true
 [node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_xjf32")]
 position = Vector2(1141, 468)
 
-[node name="Pumpkin2" parent="." unique_id=10611362 instance=ExtResource("5_xjf32")]
+[node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_xjf32")]
 position = Vector2(1141, 468)
-rotation = -0.013005069
 
 [node name="Sprite2D" parent="Pumpkin2" index="0" unique_id=772453102]
-rotation = -0.017974142
+position = Vector2(197, 113)
+texture = SubResource("CompressedTexture2D_xjf32")
+region_rect = Rect2(1104.603, 346.44385, 534.0459, 733.78906)
+
+[node name="CollisionShape2D" parent="Pumpkin2" index="1" unique_id=664971206]
+position = Vector2(235, 96)
+
+[node name="Candle" parent="Pumpkin2" index="2" unique_id=1891275496]
+position = Vector2(197.00002, 114.999985)
+scale = Vector2(0.5864261, 0.54980445)
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
