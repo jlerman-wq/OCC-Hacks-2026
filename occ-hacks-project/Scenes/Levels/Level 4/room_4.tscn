@@ -39,6 +39,13 @@ load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w76ad"]
 load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
 
+[sub_resource type="Gradient" id="Gradient_totw3"]
+offsets = PackedFloat32Array(0, 0.3962264, 1)
+colors = PackedColorArray(0, 1, 1, 1, 0.4831578, 0.0006359035, 0.5848267, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7u08x"]
+gradient = SubResource("Gradient_totw3")
+
 [node name="room4" type="Node2D" unique_id=1079266622]
 script = ExtResource("1_totw3")
 code = Array[int]([3, 6, 4, 2])
@@ -99,10 +106,10 @@ texture_scale = 3.0
 
 [node name="Hint1" type="Label" parent="." unique_id=1180099341]
 material = SubResource("CanvasItemMaterial_08qor")
-offset_left = 421.0
-offset_top = 382.0
-offset_right = 466.0
-offset_bottom = 449.0
+offset_left = 243.0
+offset_top = 618.0
+offset_right = 288.0
+offset_bottom = 685.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "3"
@@ -217,7 +224,7 @@ position = Vector2(978, 130.99997)
 scale = Vector2(0.87915033, 1.199951)
 
 [node name="Pumpkin6" parent="." unique_id=966898212 instance=ExtResource("5_c6prg")]
-position = Vector2(1141, 468)
+position = Vector2(1141, 473)
 
 [node name="Sprite2D" parent="Pumpkin6" index="0" unique_id=772453102]
 position = Vector2(1118, 92)
@@ -225,7 +232,7 @@ texture = SubResource("CompressedTexture2D_w76ad")
 region_rect = Rect2(2014.2056, 1249.8229, 862.92676, 1099.1974)
 
 [node name="CollisionShape2D" parent="Pumpkin6" index="1" unique_id=664971206]
-position = Vector2(1123, 92)
+position = Vector2(1124, 104)
 
 [node name="Candle" parent="Pumpkin6" index="2" unique_id=1891275496]
 position = Vector2(1116, 108.99997)
@@ -233,6 +240,13 @@ scale = Vector2(0.84191966, 1.0960695)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=1076606315]
 color = Color(0.16470589, 0.16470589, 0.27058825, 1)
+
+[node name="Night Ambience" type="PointLight2D" parent="." unique_id=857384444]
+position = Vector2(1474.4814, 80.00212)
+rotation = 1.5707964
+scale = Vector2(16.458536, 45.91194)
+texture = SubResource("GradientTexture2D_7u08x")
+metadata/_edit_lock_ = true
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
