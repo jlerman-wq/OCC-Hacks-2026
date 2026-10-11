@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="OCC Hacks Project"
+config/description="A Haunted Hacks Escape Room. brought to you by Four Doors."
 run/main_scene="uid://cudv8vbmmajji"
 config/features=PackedStringArray("4.7", "Forward Plus")
 

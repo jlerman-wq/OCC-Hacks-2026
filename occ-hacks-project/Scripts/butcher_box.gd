@@ -52,6 +52,10 @@ func _on_puzzle_solved() -> void:
 	if gate and gate.has_method("open"):
 		gate.open()   # unlock the exit to Room 3
 	GameManager.puzzle_solved()
+	SFX.play_door_open()
+	var exit_sign := get_tree().current_scene.get_node_or_null("ExitSign")
+	if exit_sign:
+		exit_sign.visible = true
 
 # Red while unsolved, green once solved (the box art is grayscale, so the
 # tint reads clearly) -- same convention as the Level 1 gate.

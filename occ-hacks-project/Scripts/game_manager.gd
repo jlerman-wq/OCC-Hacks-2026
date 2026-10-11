@@ -1,7 +1,6 @@
 extends Node
 ## GameManager — autoload singleton.
 ## Tracks the 8-minute countdown timer and the player's score.
-## Registered in Project Settings > Autoload as "GameManager".
 
 signal timer_updated(seconds_left: int)
 signal score_updated(new_score: int)
@@ -9,7 +8,7 @@ signal game_won(final_score: int)
 
 const TOTAL_TIME        : float = 480.0   # 8 minutes in seconds
 const POINTS_PER_PUZZLE : int   = 2500
-const DRAIN_RATE        : float = 10.0    # points lost per second
+const DRAIN_RATE        : int = 10    # points lost per second
 
 var time_left : float = TOTAL_TIME
 var score     : float = 0.0

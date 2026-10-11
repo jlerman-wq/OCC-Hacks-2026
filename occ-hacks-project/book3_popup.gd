@@ -47,7 +47,6 @@ func _ready() -> void:
 		success.hide()
 
 	hint_button.pressed.connect(show_hint)
-	next_hint_button.pressed.connect(show_second_hint)
 	submit_button.pressed.connect(check_answer)
 	continue_button.pressed.connect(continue_game)
 	close_button.pressed.connect(close_popup)
@@ -86,8 +85,9 @@ func open_popup(book: Node) -> void:
 		hint_image.texture = new_hint
 
 	hint_image.show()
-	next_hint_button.visible = not second_hint_text.is_empty()
+	next_hint_button.hide()
 	hint_panel.hide()
+	hint_button.disabled = false
 
 	# Reset answer
 	answer_box.text = ""
@@ -103,12 +103,8 @@ func open_popup(book: Node) -> void:
 
 
 func show_hint() -> void:
-	hint_panel.visible = not hint_panel.visible
-
-
-func show_second_hint() -> void:
-	hint_label.text = second_hint_text
-	next_hint_button.hide()
+	hint_panel.show()
+	hint_button.disabled = true   # can't click hint again once revealed
 
 
 func check_answer() -> void:

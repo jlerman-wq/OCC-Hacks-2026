@@ -7,8 +7,8 @@ extends StaticBody2D
 @export_multiline var question_text: String = "TUNG TUNG TUNG..."
 @export var correct_answer: String = "sahur"
 
-@export_multiline var hint_text: String = "Do you recognize this character?"
-@export_multiline var second_hint_text: String = "The answer starts with S and has 5 letters."
+@export_multiline var hint_text: String = "The answer starts with S and has 5 letters."
+@export_multiline var second_hint_text: String = "Do you recognize this character?"
 @export_multiline var success_text: String = "Correct! TUNG TUNG TUNG SAHUR!"
 
 @export var puzzle_texture: Texture2D

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://df2wuwl1qktxi"]
 
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_glw66"]
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="1_ljvl6"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="3_106uw"]
 [ext_resource type="Script" uid="uid://bhbdalsd2kj7u" path="res://Scripts/butcher_box.gd" id="4_bbox"]
 [ext_resource type="Texture2D" uid="uid://7eoyprk8g8qy" path="res://Assets/Artwork/butcher puzzle box side view.png" id="5_bside"]
@@ -9,6 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://dok2ipt4w8wc8" path="res://Assets/Artwork/butcher jamon.png" id="8_bfcll"]
 [ext_resource type="Texture2D" uid="uid://bhvv38pwaxkyf" path="res://Assets/Artwork/butcher counter.png" id="8_gbnhi"]
 [ext_resource type="Texture2D" uid="uid://bkff88b6ddfds" path="res://Assets/Artwork/butcher display.png" id="9_v4t0b"]
+[ext_resource type="Texture2D" uid="uid://rfnnmawbtqdr" path="res://Assets/Artwork/butcher wall.png" id="10_gbnhi"]
+[ext_resource type="Texture2D" uid="uid://ch53xuwo507qp" path="res://Assets/Artwork/butcher sosig.png" id="11_v4t0b"]
+[ext_resource type="Texture2D" uid="uid://bf0xt2uf3l3yf" path="res://Assets/Artwork/exit sign.png" id="13_24ofk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4t0b"]
+font = ExtResource("1_ljvl6")
+font_size = 24
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgr4u"]
 size = Vector2(42, 655)
@@ -49,15 +57,16 @@ size = Vector2(3200, 3200)
 [node name="Level 2" type="Node2D" unique_id=590479297]
 
 [node name="Label" type="Label" parent="." unique_id=605264935]
-offset_left = 560.0
-offset_top = 276.0
-offset_right = 614.0
-offset_bottom = 299.0
-text = "Level 2"
+offset_left = 420.0
+offset_top = 254.0
+offset_right = 891.0
+offset_bottom = 279.0
+text = "In this story, we make the unknown known."
+label_settings = SubResource("LabelSettings_v4t0b")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_glw66")]
-position = Vector2(117, 452)
+position = Vector2(117, 522)
 
 [node name="Enviorment" type="Node" parent="." unique_id=550676062]
 
@@ -90,6 +99,8 @@ scale = Vector2(0.03447445, -0.001545607)
 shape = SubResource("RectangleShape2D_vgr4u")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Enviorment/Wall2" unique_id=1138707700]
+position = Vector2(-10.507778, 0)
+scale = Vector2(22.015556, 1)
 mesh = SubResource("BoxMesh_wn4i5")
 texture = SubResource("GradientTexture1D_2g134")
 
@@ -133,7 +144,12 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("7_0u1vs")
 
 [node name="ButcherJamon" type="Sprite2D" parent="." unique_id=1661507936]
-position = Vector2(325, 260)
+position = Vector2(325, 241.00002)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("8_bfcll")
+
+[node name="ButcherJamon2" type="Sprite2D" parent="." unique_id=443182542]
+position = Vector2(149, 241)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("8_bfcll")
 
@@ -148,3 +164,28 @@ z_index = -1
 position = Vector2(748, 437)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_v4t0b")
+
+[node name="ButcherWall" type="Sprite2D" parent="." unique_id=1999701985]
+z_index = -99
+position = Vector2(347.5, 94)
+scale = Vector2(0.9584375, 0.6525)
+texture = ExtResource("10_gbnhi")
+
+[node name="ButcherSosig" type="Sprite2D" parent="." unique_id=1273687612]
+position = Vector2(250.00002, 198)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_v4t0b")
+
+[node name="ButcherSosig2" type="Sprite2D" parent="." unique_id=592660224]
+position = Vector2(447, 198.00002)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_v4t0b")
+
+[node name="ExitSign" type="Sprite2D" parent="." unique_id=1186578573]
+visible = false
+position = Vector2(1070, 358)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("13_24ofk")
+
+[node name="PointLight2D" type="PointLight2D" parent="ExitSign" unique_id=1151704744]
+texture = ExtResource("13_24ofk")

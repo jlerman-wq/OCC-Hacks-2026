@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://7ilj6tr5ghwa"]
 
-[ext_resource type="Script" path="res://Scripts/gate.gd" id="1_gate"]
+[ext_resource type="Script" uid="uid://cai2jlky21k2n" path="res://Scripts/gate.gd" id="1_gate"]
 
-[node name="Gate" type="StaticBody2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
+
+[node name="Gate" type="AnimatedSprite2D" unique_id=507955786]
+self_modulate = Color(1, 0.3, 0.3, 1)
+sprite_frames = SubResource("SpriteFrames_x3wgy")
 script = ExtResource("1_gate")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Barrier" type="StaticBody2D" parent="." unique_id=1561948308]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier" unique_id=1254053713]

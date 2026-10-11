@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://jygq7qbb7d4p" path="res://Scripts/menu.gd" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="2_853f1"]
 [ext_resource type="PackedScene" path="res://Scenes/UI/OptionsPanel.tscn" id="3_opts"]
-[ext_resource type="PackedScene" path="res://Scenes/UI/AboutPanel.tscn" id="4_about"]
+[ext_resource type="PackedScene" uid="uid://bmmwui4tyvc2h" path="res://Scenes/UI/AboutPanel.tscn" id="4_about"]
+[ext_resource type="Texture2D" uid="uid://bwu8c5j8uyqs6" path="res://Assets/Artwork/main menu bg.png" id="5_df05h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aqcu0"]
 font = ExtResource("2_853f1")
@@ -87,11 +88,19 @@ size_flags_horizontal = 3
 theme = SubResource("Theme_gla8d")
 text = "Quit"
 
-[node name="OptionsPanel" parent="." instance=ExtResource("3_opts")]
+[node name="OptionsPanel" parent="." unique_id=1214576401 instance=ExtResource("3_opts")]
+visible = false
 layout_mode = 2
 
-[node name="AboutPanel" parent="." instance=ExtResource("4_about")]
+[node name="AboutPanel" parent="." unique_id=1174570520 instance=ExtResource("4_about")]
+visible = false
 layout_mode = 2
+
+[node name="MainMenuBg" type="Sprite2D" parent="." unique_id=1081734914]
+z_index = -99
+position = Vector2(502.00006, 263.49997)
+scale = Vector2(0.35874996, 0.20531254)
+texture = ExtResource("5_df05h")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]

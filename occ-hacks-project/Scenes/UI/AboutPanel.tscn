@@ -54,11 +54,17 @@ layout_mode = 2
 text = "Haunted Hacks 2026
 Made at OCC Hackathon
 
+Controls -
+A or Left Arrow to move Left
+D or Right Arrow to move Right.
+Spacebar to Jump
+E and or Left Mouse Button to Interact
+
 Team:
-Joshua Lerman
-Nico Zuniga
-Leif Kelly
-Mi Pham
+Joshua Lerman -Gravekeeper
+Nico Zuniga - Pumpkin Farmer
+Leif Kelly - Lead Artist & Butcher
+Mi Pham - Librarian
 
 Tools: 
 Godot 4

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
+[gd_scene format=3 uid="uid://b66p6yyicaco"]
 
 [ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
 [ext_resource type="Texture2D" uid="uid://dhkks8ry86vn2" path="res://Assets/Artwork/flying book.png" id="2_se24t"]

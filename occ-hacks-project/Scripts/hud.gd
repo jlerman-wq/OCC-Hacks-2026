@@ -1,7 +1,6 @@
 extends CanvasLayer
 ## HUD — displays the score (top-left) and countdown timer (top-right).
-## Add this as a CanvasLayer child of your level scene and it auto-connects
-## to GameManager signals.
+
 
 @onready var score_label : Label = $ScoreLabel
 @onready var timer_label : Label = $TimerLabel

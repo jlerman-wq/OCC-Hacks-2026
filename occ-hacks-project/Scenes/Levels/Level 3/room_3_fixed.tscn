@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bpi0jofwmrvc3"]
+[gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
 
 [ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
+[ext_resource type="Texture2D" uid="uid://qjxm81kfmint" path="res://Assets/Artwork/library wallpaper.png" id="2_ok8op"]
 [ext_resource type="Texture2D" uid="uid://dhkks8ry86vn2" path="res://Assets/Artwork/flying book.png" id="2_se24t"]
 [ext_resource type="Texture2D" uid="uid://gp4nh6tq5xyq" path="res://Assets/Artwork/bookshelf.png" id="2_wvaa0"]
-[ext_resource type="Script" uid="uid://6vletcxil2m7" path="res://door.gd" id="3_se24t"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="4_fo3g4"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="4_qdsgl"]
 [ext_resource type="Texture2D" uid="uid://w0keumbqt18r" path="res://Assets/Artwork/skulls.png" id="6_fo3g4"]
@@ -12,18 +12,17 @@
 [ext_resource type="Texture2D" uid="uid://1n1bjpu2xge1" path="res://Assets/AI Pic/bookBlue.png" id="8_q4asw"]
 [ext_resource type="Texture2D" uid="uid://d2b828espfwwr" path="res://Assets/AI Pic/bookBlack.png" id="9_8mo5q"]
 [ext_resource type="Texture2D" uid="uid://mcy84rc2f1mn" path="res://Assets/AI Pic/Puzzle1.png" id="9_pwk7h"]
-[ext_resource type="Texture2D" uid="uid://cfykq0s8vxd4n" path="res://Assets/AI Pic/bookPurple.png" id="10_cfakv"]
-[ext_resource type="Texture2D" uid="uid://cq21b5uuqa0jh" path="res://Assets/AI Pic/bookOrange.png" id="11_pwk7h"]
+[ext_resource type="PackedScene" uid="uid://bgys0k2pqt5qc" path="res://book2_popup.tscn" id="10_4bk5o"]
 [ext_resource type="PackedScene" uid="uid://bpdk2r7ggosww" path="res://book_popup.tscn" id="12_8mo5q"]
+[ext_resource type="PackedScene" uid="uid://cn85cro6edg5i" path="res://book3_popup.tscn" id="12_qdsgl"]
+[ext_resource type="Script" uid="uid://qjtcfunxshqd" path="res://book3_obstackle.gd" id="13_ok8op"]
+[ext_resource type="Texture2D" uid="uid://bf0xt2uf3l3yf" path="res://Assets/Artwork/exit sign.png" id="16_qdsgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gufht"]
 size = Vector2(40, 700)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ryr1"]
-size = Vector2(100, 200)
 
 [sub_resource type="Gradient" id="Gradient_fo3g4"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -48,12 +47,13 @@ fill_to = Vector2(0.53286386, 1)
 [node name="room3" type="Node2D" unique_id=114987121]
 script = ExtResource("1_wvaa0")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=310523364]
-offset_left = 4.0
-offset_top = -5.0
-offset_right = 1204.0
-offset_bottom = 695.0
-color = Color(0.10892912, 7.3567855e-05, 0.162462, 1)
+[node name="ColorRect" type="TextureRect" parent="." unique_id=2089210157]
+z_index = -99
+offset_left = -1072.0
+offset_top = -2426.0
+offset_right = 2128.0
+offset_bottom = 774.0
+texture = ExtResource("2_ok8op")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356462369]
 
@@ -141,39 +141,6 @@ offset_right = 1202.0
 offset_bottom = 699.0
 color = Color(0.16350216, 0.16350219, 0.16350213, 1)
 
-[node name="EntranceDoor" type="Area2D" parent="." unique_id=1162521814]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceDoor" unique_id=1604006906]
-position = Vector2(91, 559)
-shape = SubResource("RectangleShape2D_0ryr1")
-
-[node name="ColorRect" type="ColorRect" parent="EntranceDoor" unique_id=391454088]
-custom_minimum_size = Vector2(100, 200)
-offset_left = 41.0
-offset_top = 459.0
-offset_right = 141.0
-offset_bottom = 659.0
-color = Color(0.5148393, 0.26904586, 0.117213614, 1)
-
-[node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("4_qdsgl")]
-position = Vector2(1134, 472)
-target_scene_path = "res://Scenes/Levels/Level 4/room_4.tscn"
-
-[node name="ExitDoor" type="Area2D" parent="." unique_id=736331725]
-script = ExtResource("3_se24t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=1404342873]
-position = Vector2(91, 559)
-shape = SubResource("RectangleShape2D_0ryr1")
-
-[node name="ColorRect2" type="ColorRect" parent="ExitDoor" unique_id=1132185037]
-custom_minimum_size = Vector2(100, 200)
-offset_left = 1058.0
-offset_top = 461.0
-offset_right = 1158.0
-offset_bottom = 661.0
-color = Color(0.5148393, 0.26904586, 0.117213614, 1)
-
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("4_fo3g4")]
 position = Vector2(106, 553)
 
@@ -209,11 +176,11 @@ color = Color(1, 0.7058824, 0.36078432, 1)
 energy = 1.1
 texture = SubResource("GradientTexture2D_su4n1")
 
-[node name="BookPopup" parent="." unique_id=1409815298 instance=ExtResource("12_8mo5q")]
+[node name="BookPopup" parent="." unique_id=1409815298 groups=["book_popup"] instance=ExtResource("12_8mo5q")]
 visible = false
 
 [node name="Book1" parent="." unique_id=1304004500 instance=ExtResource("7_pwk7h")]
-position = Vector2(279, 583)
+position = Vector2(360, 568)
 hint_text = "Your math teacher
  is disappointed... 
 Are you sure 
@@ -228,22 +195,72 @@ position = Vector2(292, 573.6953)
 scale = Vector2(0.16325068, 0.14696659)
 texture = ExtResource("7_fo3g4")
 
+[node name="BookPopup2" parent="." unique_id=1620801905 instance=ExtResource("10_4bk5o")]
+visible = false
+
+[node name="Book2Obstackle" parent="." unique_id=538580090 groups=["book_popup"] instance=ExtResource("7_pwk7h")]
+position = Vector2(486, 678)
+input_pickable = true
+title_text = ""
+question_text = ""
+correct_answer = "162956"
+hint_text = "scuba!"
+success_text = ""
+
+[node name="Sprite2D" parent="Book2Obstackle" index="0" unique_id=374764941]
+position = Vector2(101.00001, -106.00001)
+scale = Vector2(0.15971817, 0.14457594)
+texture = ExtResource("8_q4asw")
+
+[node name="CollisionShape2D" parent="Book2Obstackle" index="1" unique_id=501319830]
+position = Vector2(104, -107)
+
 [node name="Book2" type="Sprite2D" parent="." unique_id=1155656020]
-position = Vector2(459.99997, 593.9783)
+visible = false
+position = Vector2(464, 585)
 scale = Vector2(0.12871155, 0.13118543)
 texture = ExtResource("8_q4asw")
 
+[node name="Book3Popup" parent="." unique_id=44093864 instance=ExtResource("12_qdsgl")]
+visible = false
+
+[node name="Book3Obstackle" parent="." unique_id=1115548234 groups=["book_popup"] instance=ExtResource("7_pwk7h")]
+position = Vector2(486, 678)
+script = ExtResource("13_ok8op")
+title_text = "Book 3"
+question_text = "TUNG TUNG TUNG..."
+correct_answer = "sahur"
+hint_text = "The answer starts with S and has 5 letters."
+second_hint_text = "Do you recognize this character?"
+success_text = "Correct! TUNG TUNG TUNG SAHUR!"
+
+[node name="Sprite2D" parent="Book3Obstackle" index="0" unique_id=374764941]
+position = Vector2(325, -104.00001)
+scale = Vector2(0.15971817, 0.14457594)
+texture = ExtResource("9_8mo5q")
+
+[node name="CollisionShape2D" parent="Book3Obstackle" index="1" unique_id=501319830]
+position = Vector2(328, -107)
+
 [node name="Book3" type="Sprite2D" parent="." unique_id=1684511270]
+visible = false
 position = Vector2(637.3048, 592.00006)
 scale = Vector2(0.1301937, 0.12908368)
 texture = ExtResource("9_8mo5q")
 
-[node name="Book4" type="Sprite2D" parent="." unique_id=1108755055]
-position = Vector2(806.3596, 592.29346)
-scale = Vector2(0.11535983, 0.13219137)
-texture = ExtResource("10_cfakv")
+[node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("4_qdsgl")]
+position = Vector2(1127, 459)
+target_scene_path = "uid://dm27gxquqdymi"
+locked = true
 
-[node name="Book5" type="Sprite2D" parent="." unique_id=769590192]
-position = Vector2(967.8596, 592.4131)
-scale = Vector2(0.11628056, 0.1317861)
-texture = ExtResource("11_pwk7h")
+[node name="ExitSign" type="Sprite2D" parent="." unique_id=393232029]
+visible = false
+position = Vector2(1081, 380)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("16_qdsgl")
+
+[node name="PointLight2D" type="PointLight2D" parent="ExitSign" unique_id=358907410]
+texture = ExtResource("16_qdsgl")
+
+[editable path="Book2Obstackle"]
+[editable path="Book3Obstackle"]

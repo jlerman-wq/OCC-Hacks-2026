@@ -100,6 +100,10 @@ func _open() -> void:
 		gate.open()          # drop the barrier / swap to open art
 	solved.emit()
 	GameManager.puzzle_solved()
+	SFX.play_door_open()
+	var exit_sign := get_tree().current_scene.get_node_or_null("ExitSign")
+	if exit_sign:
+		exit_sign.visible = true
 
 func _wrong() -> void:
 	if click_sound:

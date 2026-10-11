@@ -1,12 +1,12 @@
 extends Node
 ## MusicManager — autoload singleton for background music.
-## Register in Project Settings > Autoload as "MusicManager".
 
 const TRACKS := {
 	"menu":   "res://Assets/Music/Menu.wav",
 	"level1": "res://Assets/Music/Level 1.wav",
 	"level2": "res://Assets/Music/Level 2.wav",
 	"level3": "res://Assets/Music/Level 3.wav",
+	"level4": "res://Assets/Music/Level 4.wav"
 }
 
 var _player      : AudioStreamPlayer

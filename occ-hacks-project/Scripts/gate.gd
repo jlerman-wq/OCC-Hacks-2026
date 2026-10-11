@@ -19,20 +19,40 @@ class_name Gate
 ## A StaticBody2D (with a CollisionShape2D) that blocks the player while closed.
 @export var barrier: Node2D
 
+var _player_ref: CharacterBody2D = null
+
 func _ready() -> void:
 	_apply()
+	if not Engine.is_editor_hint():
+		await get_tree().process_frame
+		_player_ref = get_tree().get_first_node_in_group("player") as CharacterBody2D
 
-func _process(_delta: float) -> void:
-	if Engine.is_editor_hint():
+func _physics_process(_delta: float) -> void:
+	if Engine.is_editor_hint() or is_open or not barrier or not _player_ref:
+		return
+	for i in _player_ref.get_slide_collision_count():
+		var col := _player_ref.get_slide_collision(i)
+		if col.get_collider() == barrier:
+			SFX.play_door_locked()
+			break
+
+func _set(property: StringName, value: Variant) -> bool:
+	if Engine.is_editor_hint() and property == &"is_open":
+		is_open = value
 		_apply()
+		return true
+	return false
 
 func open() -> void:
 	is_open = true
 	_apply()
+	if not Engine.is_editor_hint():
+		SFX.play_door_open()
 
 func close() -> void:
 	is_open = false
 	_apply()
+
 
 func _apply() -> void:
 	var a: StringName = open_anim if is_open else closed_anim

@@ -2,8 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="1_h0g2k"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="1_njwam"]
-[ext_resource type="Texture2D" uid="uid://ineiw203woyb" path="res://Assets/Artwork/GY gate.png" id="2_7acdd"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_qwye8"]
+[ext_resource type="Texture2D" uid="uid://ddodql0but1el" path="res://Assets/Artwork/GY gate final.png" id="3_8n6ol"]
 [ext_resource type="Script" uid="uid://cai2jlky21k2n" path="res://Scripts/gate.gd" id="3_g4o7n"]
 [ext_resource type="PackedScene" uid="uid://deojjlle81y06" path="res://Scenes/Levels/Level 1/GraveSwitch.tscn" id="5_7b7ae"]
 [ext_resource type="Texture2D" uid="uid://bagktufwailgd" path="res://Assets/Artwork/Grave-1.png" id="6_7b7ae"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ycf25gm83n2" path="res://Assets/Artwork/grave 1 bottom ivy.png" id="15_botivy1"]
 [ext_resource type="Texture2D" uid="uid://cfytwapucwncm" path="res://Assets/Artwork/tree v2.png" id="17_8n6ol"]
 [ext_resource type="Texture2D" uid="uid://cgrugukewlu4u" path="res://Assets/Artwork/GY fence v2.png" id="18_ikwow"]
+[ext_resource type="Texture2D" uid="uid://bf0xt2uf3l3yf" path="res://Assets/Artwork/exit sign.png" id="19_ikwow"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gk1ct"]
 font = ExtResource("1_h0g2k")
@@ -39,7 +40,7 @@ gradient = SubResource("Gradient_qwye8")
 
 [sub_resource type="Gradient" id="Gradient_rxrfu"]
 offsets = PackedFloat32Array(0, 0.9939759, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.27038798, 0.108299114, 0.022964686, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.27038798, 0.108299114, 0.022964686, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_2etn4"]
 gradient = SubResource("Gradient_rxrfu")
@@ -56,23 +57,19 @@ gradient = SubResource("Gradient_7acdd")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6nn7"]
 size = Vector2(18.168032, 3.9050112)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n5l5u"]
-atlas = ExtResource("2_7acdd")
-region = Rect2(0, 0, 650, 2400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikwow"]
+atlas = ExtResource("3_8n6ol")
+region = Rect2(0, 0, 1100, 2260)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gxtdl"]
-atlas = ExtResource("2_7acdd")
-region = Rect2(700, 0, 2400, 2400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_anfnq"]
-atlas = ExtResource("2_7acdd")
-region = Rect2(1100, 0, 1600, 2400)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy00u"]
+atlas = ExtResource("3_8n6ol")
+region = Rect2(1250, 0, 1800, 2260)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmqve"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n5l5u")
+"texture": SubResource("AtlasTexture_ikwow")
 }],
 "loop": 1,
 "name": &"Closed Gate",
@@ -80,22 +77,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gxtdl")
+"texture": SubResource("AtlasTexture_dy00u")
 }],
 "loop": 1,
 "name": &"Open Gate",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_anfnq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n5l5u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gxtdl")
-}],
+"frames": [],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
@@ -116,7 +104,7 @@ label_settings = SubResource("LabelSettings_gk1ct")
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("1_njwam")]
-position = Vector2(117, 452)
+position = Vector2(117, 524)
 
 [node name="Environment" type="Node" parent="." unique_id=1087091129]
 
@@ -149,6 +137,14 @@ scale = Vector2(0.03447445, -0.001545607)
 shape = SubResource("RectangleShape2D_qmqve")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Wall2" unique_id=178101811]
+position = Vector2(-11.137661, 0)
+scale = Vector2(23.275322, 1)
+mesh = SubResource("BoxMesh_cip34")
+texture = SubResource("GradientTexture1D_2etn4")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Environment/Wall2" unique_id=38174963]
+position = Vector2(-4.309305, -0.092736386)
+scale = Vector2(23.947134, 0.10189101)
 mesh = SubResource("BoxMesh_cip34")
 texture = SubResource("GradientTexture1D_2etn4")
 
@@ -169,21 +165,21 @@ shape = SubResource("RectangleShape2D_k6nn7")
 
 [node name="Graveyard Gate" type="AnimatedSprite2D" parent="Environment" unique_id=2048645326 node_paths=PackedStringArray("barrier")]
 self_modulate = Color(1, 0.3, 0.3, 1)
-position = Vector2(1566.0001, 452)
-scale = Vector2(-0.15, 0.15)
+position = Vector2(1525.0001, 452)
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_qmqve")
 animation = &"Closed Gate"
 script = ExtResource("3_g4o7n")
 barrier = NodePath("Barrier")
 
 [node name="Transition_Trigger" parent="Environment/Graveyard Gate" unique_id=446455213 instance=ExtResource("2_qwye8")]
-position = Vector2(-393.333, -213.33325)
+position = Vector2(306.66614, -213.33325)
 rotation = 3.1415927
 scale = Vector2(6.6666665, -6.6666665)
 target_scene_path = "res://Scenes/Levels/Level 2/Level_2.tscn"
 
 [node name="Barrier" type="StaticBody2D" parent="Environment/Graveyard Gate" unique_id=1509199053]
-position = Vector2(580, -426.66675)
+position = Vector2(346.66586, -440.0001)
 rotation = 3.1415927
 scale = Vector2(6.6666665, -6.6666665)
 
@@ -253,8 +249,8 @@ tex_top_ivy = ExtResource("14_topivy1")
 tex_bottom_ivy = ExtResource("15_botivy1")
 
 [node name="Grave6_Lockbox" parent="Environment/Graves" unique_id=583482222 node_paths=PackedStringArray("gate", "target_sprite") instance=ExtResource("11_h0g2k")]
-position = Vector2(1134, 484)
-hint_text = "The final resting place for any proper pirate."
+position = Vector2(1135, 481)
+hint_text = "Under the Ivy, lies the final resting place for any proper pirate."
 solution = Array[String](["NO", "GRAVE", "BUT", "THE", "SEA"])
 gate = NodePath("../../Graveyard Gate")
 gap = 48.0
@@ -283,3 +279,12 @@ texture = ExtResource("17_8n6ol")
 position = Vector2(1694, 511.00003)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("18_ikwow")
+
+[node name="ExitSign" type="Sprite2D" parent="." unique_id=1813903148]
+visible = false
+position = Vector2(1605, 286)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_ikwow")
+
+[node name="PointLight2D" type="PointLight2D" parent="ExitSign" unique_id=1782137482]
+texture = ExtResource("19_ikwow")
