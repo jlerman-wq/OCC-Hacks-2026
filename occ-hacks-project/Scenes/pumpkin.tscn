@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xh3qenvorosa" path="res://Scripts/pumpkin.gd" id="1_mjg1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
-size = Vector2(307, 252.7985)
+size = Vector2(226, 160.44775)
 
 [sub_resource type="Gradient" id="Gradient_4thn5"]
 colors = PackedColorArray(0.78655547, 0.52377445, 3.657937e-06, 1, 1, 1, 1, 0)
@@ -28,7 +28,7 @@ region_enabled = true
 region_rect = Rect2(-45, 129.58228, 1115.5002, 1091.8241)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664971206]
-position = Vector2(69, 99)
+position = Vector2(65.5, 113)
 scale = Vector2(0.5, 0.536)
 shape = SubResource("RectangleShape2D_08qor")
 
