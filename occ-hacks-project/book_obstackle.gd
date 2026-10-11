@@ -44,7 +44,7 @@ func _input(event: InputEvent) -> void:
 				var popup_name: String = "BookPopup"
 
 				# Book 2 uses its own SCUBA popup
-				if name == "Book2Obstacle":
+				if name == "Book2Obstackle":
 					popup_name = "BookPopup2"
 
 				var popup: Node = get_parent().get_node_or_null(popup_name)

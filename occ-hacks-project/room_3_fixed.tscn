@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://cfykq0s8vxd4n" path="res://Assets/AI Pic/bookPurple.png" id="10_cfakv"]
 [ext_resource type="Texture2D" uid="uid://cq21b5uuqa0jh" path="res://Assets/AI Pic/bookOrange.png" id="11_pwk7h"]
 [ext_resource type="PackedScene" uid="uid://bukra2gxsd6r6" path="res://book2_popup.tscn" id="12_8mo5q"]
-[ext_resource type="Texture2D" uid="uid://ciscsluipudis" path="res://Assets/Artwork/scuba.png" id="13_58huc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)
@@ -239,7 +238,6 @@ question_text = ""
 correct_answer = "162956"
 hint_text = "scuba!"
 success_text = ""
-hint_texture = ExtResource("13_58huc")
 
 [node name="Sprite2D" parent="Book2Obstackle" index="0" unique_id=374764941]
 position = Vector2(-10.726937, -92.67298)
