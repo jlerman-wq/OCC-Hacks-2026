@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_xjf32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
-size = Vector2(1554, 50)
+size = Vector2(2107, 128.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
 size = Vector2(1150, 50)
@@ -39,14 +39,14 @@ script = ExtResource("1_roktq")
 [node name="Floor" type="StaticBody2D" parent="." unique_id=851080554]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1108499381]
-position = Vector2(777, 625)
+position = Vector2(1060.5, 685.1875)
 shape = SubResource("RectangleShape2D_08qor")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=416629255]
 z_index = -10
-offset_top = 598.0
-offset_right = 1555.0
-offset_bottom = 658.0
+offset_top = 620.0
+offset_right = 2123.0
+offset_bottom = 790.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=297904412]
@@ -64,22 +64,22 @@ color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=1739062197]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1966736486]
-position = Vector2(1528, -168)
+position = Vector2(2155, -265)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_08qor")
 
 [node name="ColorRect" type="ColorRect" parent="WallRight" unique_id=1767487477]
-offset_left = 1501.0
-offset_top = -51.0
-offset_right = 1551.0
-offset_bottom = 599.0
+offset_left = 2076.0
+offset_top = -338.0
+offset_right = 2126.0
+offset_bottom = 649.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Exit" type="Area2D" parent="." unique_id=1185953475]
 script = ExtResource("2_ctd8f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
-position = Vector2(1487, 552)
+position = Vector2(2075, 574)
 shape = SubResource("RectangleShape2D_7u08x")
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=2126978979]
@@ -134,10 +134,20 @@ text = "2"
 position = Vector2(111, 479)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
-position = Vector2(768.25, 179.5)
-scale = Vector2(0.59746104, 0.6136206)
+position = Vector2(1060.75, 121)
+scale = Vector2(0.82597667, 0.69492704)
 texture = ExtResource("4_ocw8c")
 metadata/_edit_lock_ = true
 
 [node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_xjf32")]
-position = Vector2(339, 439)
+position = Vector2(1141, 468)
+
+[node name="Pumpkin2" parent="." unique_id=10611362 instance=ExtResource("5_xjf32")]
+position = Vector2(1141, 468)
+rotation = -0.013005069
+
+[node name="Sprite2D" parent="Pumpkin2" index="0" unique_id=772453102]
+rotation = -0.017974142
+
+[editable path="Pumpkin"]
+[editable path="Pumpkin2"]
