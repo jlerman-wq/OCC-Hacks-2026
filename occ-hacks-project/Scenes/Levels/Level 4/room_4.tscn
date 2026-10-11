@@ -281,7 +281,7 @@ one_way_collision = true
 one_way_collision_margin = 10.0
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="platforms" unique_id=993678077]
-position = Vector2(947, 106)
+position = Vector2(949, 108)
 shape = SubResource("RectangleShape2D_o2uhb")
 one_way_collision = true
 one_way_collision_margin = 10.0
@@ -395,6 +395,7 @@ z_index = -10
 position = Vector2(1445.25, -74)
 scale = Vector2(1.1263672, 0.9659486)
 texture = ExtResource("4_fclrv")
+metadata/_edit_lock_ = true
 
 [node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
