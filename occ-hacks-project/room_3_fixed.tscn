@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bxmohb2f0jcvk"]
 
 [ext_resource type="Script" uid="uid://1xkcmie78mn7" path="res://room_3.gd" id="1_wvaa0"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="2_se24t"]
 [ext_resource type="Texture2D" uid="uid://gp4nh6tq5xyq" path="res://Assets/Artwork/bookshelf.png" id="2_wvaa0"]
 [ext_resource type="Script" uid="uid://6vletcxil2m7" path="res://door.gd" id="3_se24t"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="4_fo3g4"]
+[ext_resource type="Texture2D" uid="uid://w0keumbqt18r" path="res://Assets/Artwork/skulls.png" id="6_fo3g4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)
@@ -17,11 +19,13 @@ size = Vector2(100, 200)
 [node name="room3" type="Node2D" unique_id=114987121]
 script = ExtResource("1_wvaa0")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=277892816]
+texture = ExtResource("2_se24t")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=310523364]
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 1201.0
-offset_bottom = 698.0
+offset_left = 5.0
+offset_right = 1205.0
+offset_bottom = 700.0
 color = Color(0.14873391, 0.00012915887, 0.2173084, 1)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356462369]
@@ -44,7 +48,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_wvaa0")
 
 [node name="BookshelfBackGround2" type="Sprite2D" parent="." unique_id=1886051568]
-position = Vector2(363, 520)
+position = Vector2(359, 526)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_wvaa0")
 
@@ -54,7 +58,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_wvaa0")
 
 [node name="BookshelfBackGround4" type="Sprite2D" parent="." unique_id=985229269]
-position = Vector2(846, 521)
+position = Vector2(844, 521)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_wvaa0")
 
@@ -111,13 +115,23 @@ script = ExtResource("3_se24t")
 position = Vector2(91, 559)
 shape = SubResource("RectangleShape2D_0ryr1")
 
-[node name="ColorRect" type="ColorRect" parent="ExitDoor" unique_id=561940534]
+[node name="ColorRect2" type="ColorRect" parent="ExitDoor" unique_id=1132185037]
 custom_minimum_size = Vector2(100, 200)
-offset_left = 1062.0
-offset_top = 458.0
-offset_right = 1162.0
-offset_bottom = 658.0
+offset_left = 1058.0
+offset_top = 461.0
+offset_right = 1158.0
+offset_bottom = 661.0
 color = Color(0.5148393, 0.26904586, 0.117213614, 1)
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("4_fo3g4")]
-position = Vector2(236, 244)
+position = Vector2(92, 574)
+
+[node name="skull1" type="Sprite2D" parent="." unique_id=1951924290]
+position = Vector2(226, 349)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_fo3g4")
+
+[node name="skull2" type="Sprite2D" parent="." unique_id=1646175246]
+position = Vector2(743, 351)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_fo3g4")
