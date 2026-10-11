@@ -168,9 +168,10 @@ anchor_right = 21.675001
 anchor_bottom = 8.625
 offset_left = -6.1035156e-05
 offset_top = -3.0517578e-05
-offset_right = -6.1035156e-05
+offset_right = 64.99994
+offset_bottom = 3.0
 theme_override_font_sizes/font_size = 34
-placeholder_text = "_ _ _ _ _ _"
+placeholder_text = "    _ _ _ _ _ _"
 
 [node name="SubmitButton" type="Button" parent="Control" unique_id=1216426683]
 layout_mode = 0
