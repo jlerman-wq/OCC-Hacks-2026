@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://Scenes/Levels/Level 4/room_4.gd" id="1_totw3"]
 [ext_resource type="PackedScene" uid="uid://b4lubjqyxvcou" path="res://Scenes/Transition_Trigger.tscn" id="2_a0xj3"]
+[ext_resource type="PackedScene" uid="uid://dhebeuubpm7ao" path="res://Scenes/The_End.tscn" id="3_fclrv"]
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_o24b0"]
 [ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_fclrv"]
 [ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_c6prg"]

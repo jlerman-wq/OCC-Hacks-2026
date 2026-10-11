@@ -11,10 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bppwrs27vstj6" path="res://book_obstackle.tscn" id="7_pwk7h"]
 [ext_resource type="Texture2D" uid="uid://1n1bjpu2xge1" path="res://Assets/AI Pic/bookBlue.png" id="8_q4asw"]
 [ext_resource type="Texture2D" uid="uid://d2b828espfwwr" path="res://Assets/AI Pic/bookBlack.png" id="9_8mo5q"]
-[ext_resource type="Texture2D" uid="uid://b3tpvoompkics" path="res://Assets/AI Pic/Puzzle 1.png" id="9_pwk7h"]
+[ext_resource type="Texture2D" uid="uid://mcy84rc2f1mn" path="res://Assets/AI Pic/Puzzle1.png" id="9_pwk7h"]
 [ext_resource type="Texture2D" uid="uid://cfykq0s8vxd4n" path="res://Assets/AI Pic/bookPurple.png" id="10_cfakv"]
 [ext_resource type="Texture2D" uid="uid://cq21b5uuqa0jh" path="res://Assets/AI Pic/bookOrange.png" id="11_pwk7h"]
-[ext_resource type="PackedScene" uid="uid://bukra2gxsd6r6" path="res://book_popup.tscn" id="12_8mo5q"]
+[ext_resource type="PackedScene" uid="uid://bpdk2r7ggosww" path="res://book_popup.tscn" id="12_8mo5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4n1"]
 size = Vector2(1200, 40)

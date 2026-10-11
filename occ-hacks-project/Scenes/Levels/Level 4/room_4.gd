@@ -43,7 +43,6 @@ func _on_pumpkin_lit(number: int) -> void:
 	elif entered.size() == code.size():
 		print("Correct code!")
 		solved = true
-		GameManager.puzzle_solved()
 		light_up()
 		_glow_pumpkins_green()
 		if _exit and _exit.has_method("open"):
