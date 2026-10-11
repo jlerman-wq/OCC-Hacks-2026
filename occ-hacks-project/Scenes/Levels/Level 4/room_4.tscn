@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dkxr7c43sj8ne" path="res://Assets/Artwork/scarecrow2.png" id="9_j0v7r"]
 [ext_resource type="Texture2D" uid="uid://c7koq7c2levmr" path="res://Assets/Artwork/scarecrow3.png" id="10_bn0ds"]
 [ext_resource type="Texture2D" uid="uid://1tdmrdepq0k1" path="res://Assets/Artwork/pumpkins.png" id="10_ogvmd"]
+[ext_resource type="Texture2D" uid="uid://cfytwapucwncm" path="res://Assets/Artwork/tree v2.png" id="11_j0v7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(2756, 128.375)
@@ -389,13 +390,13 @@ metadata/_edit_lock_ = true
 position = Vector2(1141, 468)
 
 [node name="Sprite2D" parent="Pumpkin" index="0" unique_id=772453102]
-position = Vector2(284, 107.00003)
+position = Vector2(257, 109.00003)
 
 [node name="CollisionShape2D" parent="Pumpkin" index="1" unique_id=664971206]
-position = Vector2(290, 117)
+position = Vector2(264, 117)
 
 [node name="Candle" parent="Pumpkin" index="2" unique_id=1891275496]
-position = Vector2(286, 117)
+position = Vector2(256, 123.99997)
 scale = Vector2(1.9379884, 1.9638672)
 
 [node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_c6prg")]
@@ -689,6 +690,12 @@ scale = Vector2(0.05579741, 0.06019769)
 texture = SubResource("CompressedTexture2D_ogvmd")
 region_enabled = true
 region_rect = Rect2(1777.2952, 189.62671, 1201.6685, 1001.60876)
+
+[node name="TreeV2" type="Sprite2D" parent="." unique_id=300216201]
+z_index = -5
+position = Vector2(1354.9998, 332)
+scale = Vector2(0.22171876, 0.298125)
+texture = ExtResource("11_j0v7r")
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
