@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dm27gxquqdymi"]
+
+[ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://rooms/room_4.gd" id="1_roktq"]
+[ext_resource type="Script" path="res://rooms/exit.gd" id="2_ctd8f"]
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_roktq"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_ocw8c"]
+[ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_xjf32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
+size = Vector2(2107, 128.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
+size = Vector2(1150, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u08x"]
+size = Vector2(60, 100)
+
+[sub_resource type="Gradient" id="Gradient_ocw8c"]
+offsets = PackedFloat32Array(0, 0.9811321)
+colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_08qor"]
+gradient = SubResource("Gradient_ocw8c")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_08qor"]
+light_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7u08x"]
+light_mode = 2
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xjf32"]
+load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
+
+[node name="room4" type="Node2D" unique_id=1079266622]
+script = ExtResource("1_roktq")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=851080554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1108499381]
+position = Vector2(1060.5, 685.1875)
+shape = SubResource("RectangleShape2D_08qor")
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=416629255]
+z_index = -10
+offset_top = 620.0
+offset_right = 2123.0
+offset_bottom = 790.0
+color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=297904412]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=13086339]
+position = Vector2(23, 46)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_kjedn")
+
+[node name="ColorRect" type="ColorRect" parent="WallLeft" unique_id=732319781]
+offset_right = 50.0
+offset_bottom = 650.0
+color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1739062197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1966736486]
+position = Vector2(2155, -265)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_08qor")
+
+[node name="ColorRect" type="ColorRect" parent="WallRight" unique_id=1767487477]
+offset_left = 2076.0
+offset_top = -338.0
+offset_right = 2126.0
+offset_bottom = 649.0
+color = Color(0.13627082, 0.10981006, 0.25389758, 1)
+
+[node name="Exit" type="Area2D" parent="." unique_id=1185953475]
+script = ExtResource("2_ctd8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
+position = Vector2(2075, 574)
+shape = SubResource("RectangleShape2D_7u08x")
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=2126978979]
+color = Color(0.12941177, 0.101960786, 0.2627451, 0.72156864)
+
+[node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
+energy = 2.0
+texture = SubResource("GradientTexture2D_08qor")
+texture_scale = 3.0
+
+[node name="Hint1" type="Label" parent="." unique_id=1180099341]
+material = SubResource("CanvasItemMaterial_08qor")
+offset_left = 421.0
+offset_top = 382.0
+offset_right = 466.0
+offset_bottom = 449.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "3"
+
+[node name="Hint2" type="Label" parent="." unique_id=109507925]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 490.0
+offset_top = 354.0
+offset_right = 530.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "8"
+
+[node name="Hint3" type="Label" parent="." unique_id=1248751090]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 709.0
+offset_top = 321.0
+offset_right = 749.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="Hint4" type="Label" parent="." unique_id=482443992]
+material = SubResource("CanvasItemMaterial_7u08x")
+offset_left = 891.0
+offset_top = 413.0
+offset_right = 931.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "2"
+
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_roktq")]
+position = Vector2(111, 479)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
+position = Vector2(1060.75, 121)
+scale = Vector2(0.82597667, 0.69492704)
+texture = ExtResource("4_ocw8c")
+metadata/_edit_lock_ = true
+
+[node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_xjf32")]
+position = Vector2(1141, 468)
+
+[node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_xjf32")]
+position = Vector2(1141, 468)
+
+[node name="Sprite2D" parent="Pumpkin2" index="0" unique_id=772453102]
+position = Vector2(197, 113)
+texture = SubResource("CompressedTexture2D_xjf32")
+region_rect = Rect2(1104.603, 346.44385, 534.0459, 733.78906)
+
+[node name="CollisionShape2D" parent="Pumpkin2" index="1" unique_id=664971206]
+position = Vector2(235, 96)
+
+[node name="Candle" parent="Pumpkin2" index="2" unique_id=1891275496]
+position = Vector2(197.00002, 114.999985)
+scale = Vector2(0.5864261, 0.54980445)
+
+[editable path="Pumpkin"]
+[editable path="Pumpkin2"]
