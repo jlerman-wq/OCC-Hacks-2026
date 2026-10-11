@@ -33,6 +33,9 @@ light_mode = 2
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7u08x"]
 light_mode = 2
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_totw3"]
+light_mode = 2
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xjf32"]
 load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
 
@@ -40,8 +43,8 @@ load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa
 load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
 
 [sub_resource type="Gradient" id="Gradient_totw3"]
-offsets = PackedFloat32Array(0, 0.3962264, 1)
-colors = PackedColorArray(0, 1, 1, 1, 0.4831578, 0.0006359035, 0.5848267, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0.6886792, 0.7924528, 0.990566, 1)
+colors = PackedColorArray(0, 1, 1, 0.83137256, 0.41482353, 0.13999999, 0.6425098, 0.46713725, 0.050980393, 0, 0.05882353, 0, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7u08x"]
 gradient = SubResource("Gradient_totw3")
@@ -91,6 +94,7 @@ offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Exit" type="Area2D" parent="." unique_id=1185953475]
+position = Vector2(79, 0)
 script = ExtResource("2_a0xj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
@@ -106,40 +110,40 @@ texture_scale = 3.0
 
 [node name="Hint1" type="Label" parent="." unique_id=1180099341]
 material = SubResource("CanvasItemMaterial_08qor")
-offset_left = 243.0
-offset_top = 618.0
-offset_right = 288.0
-offset_bottom = 685.0
+offset_left = 242.0
+offset_top = 323.0
+offset_right = 287.0
+offset_bottom = 390.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "3"
 
 [node name="Hint2" type="Label" parent="." unique_id=109507925]
 material = SubResource("CanvasItemMaterial_7u08x")
-offset_left = 490.0
-offset_top = 354.0
-offset_right = 530.0
-offset_bottom = 382.0
+offset_left = 627.0
+offset_top = 141.0
+offset_right = 667.0
+offset_bottom = 169.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "6"
 
 [node name="Hint3" type="Label" parent="." unique_id=1248751090]
 material = SubResource("CanvasItemMaterial_7u08x")
-offset_left = 709.0
-offset_top = 321.0
-offset_right = 749.0
-offset_bottom = 349.0
+offset_left = 132.0
+offset_top = -199.0
+offset_right = 172.0
+offset_bottom = -171.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "4"
 
 [node name="Hint4" type="Label" parent="." unique_id=482443992]
-material = SubResource("CanvasItemMaterial_7u08x")
-offset_left = 891.0
-offset_top = 413.0
-offset_right = 931.0
-offset_bottom = 441.0
+material = SubResource("CanvasItemMaterial_totw3")
+offset_left = 756.0
+offset_top = -225.0
+offset_right = 796.0
+offset_bottom = -197.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "2"
@@ -245,11 +249,12 @@ scale = Vector2(0.80377144, 1.0960695)
 color = Color(0.16470589, 0.16470589, 0.27058825, 1)
 
 [node name="Night Ambience" type="PointLight2D" parent="." unique_id=857384444]
-position = Vector2(1474.4814, 80.00212)
+position = Vector2(1434.0001, -541)
 rotation = 1.5707964
 scale = Vector2(16.458536, 45.91194)
+color = Color(0.3553136, 0.35531354, 0.35531357, 1)
+energy = 5.78
 texture = SubResource("GradientTexture2D_7u08x")
-metadata/_edit_lock_ = true
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
