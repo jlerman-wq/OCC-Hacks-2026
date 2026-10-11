@@ -392,10 +392,9 @@ text = "Set the pumpkins ablaze,
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
 z_index = -10
-position = Vector2(1445.25, 87.500015)
-scale = Vector2(1.1263672, 0.74148715)
+position = Vector2(1445.25, -74)
+scale = Vector2(1.1263672, 0.9659486)
 texture = ExtResource("4_fclrv")
-metadata/_edit_lock_ = true
 
 [node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
