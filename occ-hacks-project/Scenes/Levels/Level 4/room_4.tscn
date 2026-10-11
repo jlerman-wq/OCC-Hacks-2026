@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_o24b0"]
 [ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_fclrv"]
 [ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_c6prg"]
+[ext_resource type="Texture2D" uid="uid://w0keumbqt18r" path="res://Assets/Artwork/skulls.png" id="8_fclrv"]
+[ext_resource type="Texture2D" uid="uid://dhayd72kxx5ku" path="res://Assets/Artwork/scarecrows1.png" id="8_ogvmd"]
+[ext_resource type="Texture2D" uid="uid://dkxr7c43sj8ne" path="res://Assets/Artwork/scarecrow2.png" id="9_j0v7r"]
+[ext_resource type="Texture2D" uid="uid://c7koq7c2levmr" path="res://Assets/Artwork/scarecrow3.png" id="10_bn0ds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
 size = Vector2(2756, 128.375)
@@ -41,11 +45,31 @@ load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa
 load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
 
 [sub_resource type="Gradient" id="Gradient_totw3"]
-offsets = PackedFloat32Array(0.6886792, 0.7924528, 0.990566, 1)
+offsets = PackedFloat32Array(0.254717, 0.7169811, 0.8962264, 1)
 colors = PackedColorArray(0, 1, 1, 0.83137256, 0.41482353, 0.13999999, 0.6425098, 0.46713725, 0.050980393, 0, 0.05882353, 0, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7u08x"]
 gradient = SubResource("Gradient_totw3")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8mhv8"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_wc2id"]
+offsets = PackedFloat32Array(0.08490566, 0.1509434, 0.28301886, 0.509434, 1)
+colors = PackedColorArray(0.007843138, 0.23137255, 1, 0.77254903, 0.007843138, 0.23137255, 1, 0.77254903, 0.51032645, 0.0025147356, 0.7945224, 1, 0.8352941, 0.6627451, 0.92941177, 0.23137255, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_apb17"]
+gradient = SubResource("Gradient_wc2id")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kpelx"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_ogvmd"]
+offsets = PackedFloat32Array(0.009433962, 0.24528302, 0.49056605, 0.7830189, 0.8679245, 1)
+colors = PackedColorArray(0.006044452, 0.22953445, 0.9990576, 1, 0.007843138, 0.23137255, 1, 0.77254903, 0.47843137, 0.32156864, 1, 0.79607844, 0.92428845, 0.9015181, 1, 0.13586336, 1, 1, 1, 0.047058824, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_awsh0"]
+gradient = SubResource("Gradient_ogvmd")
 
 [node name="room4" type="Node2D" unique_id=1079266622]
 position = Vector2(21, 26)
@@ -92,9 +116,8 @@ offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Transition_Trigger" parent="." unique_id=446455213 instance=ExtResource("2_a0xj3")]
-position = Vector2(2703, 432)
+position = Vector2(2772, 440)
 target_scene = ExtResource("3_fclrv")
-
 
 [node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
 position = Vector2(111, 479)
@@ -221,7 +244,7 @@ position = Vector2(977, 114)
 scale = Vector2(0.19461213, 0.536)
 
 [node name="Candle" parent="Pumpkin5" index="2" unique_id=1891275496]
-position = Vector2(978, 130.99997)
+position = Vector2(980, 136.99997)
 scale = Vector2(0.87915033, 1.199951)
 
 [node name="Pumpkin6" parent="." unique_id=966898212 instance=ExtResource("5_c6prg")]
@@ -244,12 +267,60 @@ scale = Vector2(0.80377144, 1.0960695)
 color = Color(0.16470589, 0.16470589, 0.27058825, 1)
 
 [node name="Night Ambience" type="PointLight2D" parent="." unique_id=857384444]
-position = Vector2(1434.0001, -541)
+position = Vector2(1455.0001, -173.32346)
 rotation = 1.5707964
-scale = Vector2(16.458536, 45.91194)
+scale = Vector2(19.698427, 45.91194)
 color = Color(0.3553136, 0.35531354, 0.35531357, 1)
 energy = 5.78
 texture = SubResource("GradientTexture2D_7u08x")
+
+[node name="Skulls" type="Sprite2D" parent="." unique_id=751680408]
+position = Vector2(1552, 612.00006)
+scale = Vector2(0.067782685, 0.06458573)
+texture = ExtResource("8_fclrv")
+region_enabled = true
+region_rect = Rect2(1134.3762, 861.2693, 770.07056, 671.57336)
+
+[node name="Scarecrows1" type="Sprite2D" parent="." unique_id=1318599036]
+clip_children = 2
+z_index = -2
+position = Vector2(2425.375, 473)
+scale = Vector2(0.21369952, 0.17010684)
+texture = ExtResource("8_ogvmd")
+
+[node name="Glow" type="Sprite2D" parent="Scarecrows1" unique_id=1934522362]
+material = SubResource("CanvasItemMaterial_8mhv8")
+position = Vector2(11.804871, -107.420074)
+rotation = 1.5707964
+scale = Vector2(31.735966, 10.289077)
+texture = SubResource("GradientTexture2D_apb17")
+
+[node name="Scarecrow2" type="Sprite2D" parent="." unique_id=2118621598]
+clip_children = 2
+z_index = -2
+position = Vector2(1884, 488)
+scale = Vector2(0.20188133, 0.17888662)
+texture = ExtResource("9_j0v7r")
+
+[node name="Glow2" type="Sprite2D" parent="Scarecrow2" unique_id=185259647]
+material = SubResource("CanvasItemMaterial_kpelx")
+rotation = 1.5707964
+scale = Vector2(23.020887, 10.636562)
+texture = SubResource("GradientTexture2D_awsh0")
+
+[node name="Scarecrow3" type="Sprite2D" parent="." unique_id=1799082617]
+clip_children = 2
+z_index = -2
+position = Vector2(1557, 493.00012)
+scale = Vector2(0.25598797, 0.2215909)
+texture = ExtResource("10_bn0ds")
+
+[node name="Glow3" type="Sprite2D" parent="Scarecrow3" unique_id=983015816]
+material = SubResource("CanvasItemMaterial_8mhv8")
+position = Vector2(42.97061, -54.154488)
+rotation = 1.5707964
+scale = Vector2(24.362484, 8.589352)
+texture = SubResource("GradientTexture2D_apb17")
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
