@@ -1,7 +1,9 @@
 
 extends CanvasLayer
 
-# BOOK 3 POPUP - TUNG TUNG TUNG SAHUR
+# BOOK 4 - OCC HACKATHON
+# Correct answer: hackathon
+# Hint: Cat meme picture only
 
 @onready var title_label = $Control/TitleLabel
 @onready var question_label = $Control/QuestionLabel
@@ -20,9 +22,9 @@ extends CanvasLayer
 @onready var close_button = $Control/CloseButton
 
 var current_book: Node = null
-var correct_answer: String = "sahur"
+var correct_answer: String = "hackathon"
 var second_hint_text: String = ""
-var success_text: String = ""
+var success_text: String = "Correct!"
 var answer_correct: bool = false
 
 
@@ -52,40 +54,47 @@ func _ready() -> void:
 	continue_button.pressed.connect(continue_game)
 	close_button.pressed.connect(close_popup)
 
-	print("BOOK 3 POPUP READY!")
+	print("BOOK 4 POPUP READY!")
 
 
 func open_popup(book: Node) -> void:
-	print("OPENING BOOK 3!")
+	print("OPENING BOOK 4!")
 
 	current_book = book
 	answer_correct = false
 
-	# Get information from Book 3 Inspector
+	# Information from Book4Obsta Inspector
 	title_label.text = str(book.get("title_text"))
 	question_label.text = str(book.get("question_text"))
-
 	correct_answer = str(book.get("correct_answer"))
 	second_hint_text = str(book.get("second_hint_text"))
 	success_text = str(book.get("success_text"))
 
-	# Puzzle image
-	var new_puzzle = book.get("puzzle_texture") as Texture2D
+	# Puzzle image - optional for Book 4
+	var new_puzzle: Texture2D = book.get("puzzle_texture") as Texture2D
 
 	if new_puzzle != null:
 		puzzle_image.texture = new_puzzle
+		puzzle_image.show()
+	else:
+		puzzle_image.hide()
 
-	puzzle_image.show()
-
-	# Hints
+	# Hint text - optional
 	hint_label.text = str(book.get("hint_text"))
 
-	var new_hint = book.get("hint_texture") as Texture2D
+	if hint_label.text.strip_edges().is_empty():
+		hint_label.hide()
+	else:
+		hint_label.show()
+
+	# Hint picture - cat meme
+	var new_hint: Texture2D = book.get("hint_texture") as Texture2D
 
 	if new_hint != null:
 		hint_image.texture = new_hint
 
-	hint_image.show()
+	hint_image.visible = hint_image.texture != null
+
 	next_hint_button.visible = not second_hint_text.is_empty()
 	hint_panel.hide()
 
@@ -93,7 +102,6 @@ func open_popup(book: Node) -> void:
 	answer_box.text = ""
 	answer_box.editable = true
 	submit_button.disabled = false
-
 	result_label.text = ""
 	continue_button.hide()
 
@@ -108,6 +116,7 @@ func show_hint() -> void:
 
 func show_second_hint() -> void:
 	hint_label.text = second_hint_text
+	hint_label.show()
 	next_hint_button.hide()
 
 
@@ -116,11 +125,10 @@ func check_answer() -> void:
 
 	if answer == correct_answer.strip_edges().to_lower():
 		answer_correct = true
-
 		result_label.text = success_text
+
 		submit_button.disabled = true
 		answer_box.editable = false
-
 		continue_button.show()
 	else:
 		result_label.text = "Wrong answer! Try again!"
@@ -136,8 +144,6 @@ func continue_game() -> void:
 
 func close_popup() -> void:
 	hide()
-
 	current_book = null
 	answer_correct = false
-
 	get_tree().paused = false
