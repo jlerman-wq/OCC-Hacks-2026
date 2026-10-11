@@ -14,6 +14,14 @@ const HUD_HIDDEN_SCENES: Array[String] = [
 	"res://Scenes/The_End.tscn",
 ]
 
+# Maps scene file path → music track key for MusicManager
+const SCENE_MUSIC: Dictionary = {
+	"res://Scenes/MainMenu.tscn":                          "menu",
+	"res://Scenes/Levels/Level 1/Level_1.tscn":            "level1",
+	"res://Scenes/Levels/Level 2/Level_2.tscn":            "level2",
+	"res://Scenes/Levels/Level 3/room_3_fixed.tscn":       "level3",
+}
+
 var _rect: ColorRect
 var _hud: CanvasLayer
 var _is_transitioning: bool = false
@@ -56,6 +64,13 @@ func _update_hud_visibility() -> void:
 		_ensure_hud()
 	if _hud != null:
 		_hud.visible = path not in HUD_HIDDEN_SCENES
+	_update_music(path)
+
+func _update_music(path: String) -> void:
+	if path in SCENE_MUSIC:
+		MusicManager.play(SCENE_MUSIC[path])
+	elif path == "res://Scenes/The_End.tscn":
+		MusicManager.stop()
 
 func change_scene(path: String) -> void:
 	if _is_transitioning:

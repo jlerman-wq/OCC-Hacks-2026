@@ -61,4 +61,5 @@ func _process(delta: float) -> void:
 		_finished = true
 		_running  = false
 		game_won.emit(int(score))
+		SFX.play_out_of_time()
 		SceneTransition.change_scene("res://Scenes/The_End.tscn")

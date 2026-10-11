@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://options_panel_001"]
+
+[ext_resource type="Script" path="res://Scripts/options_panel.gd" id="1_opts"]
+[ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="2_opts"]
+
+[sub_resource type="Theme" id="Theme_opts"]
+default_font = ExtResource("2_opts")
+default_font_size = 24
+
+[node name="OptionsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opts")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -160.0
+offset_right = 220.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_opts")
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBox"]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="MusicRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="PanelContainer/VBox/MusicRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="PanelContainer/VBox/MusicRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFXRow" type="HBoxContainer" parent="PanelContainer/VBox"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="PanelContainer/VBox/SFXRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="PanelContainer/VBox/SFXRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Close"

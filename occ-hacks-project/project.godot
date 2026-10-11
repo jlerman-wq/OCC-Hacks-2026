@@ -16,6 +16,8 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]
 
+SFX="*uid://dwu4pqvdytu56"
+MusicManager="*uid://dkj6f00mvbitf"
 PauseMenu="*uid://cj7qj4jyji0ij"
 SceneTransition="*uid://dn401345o8hwv"
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"

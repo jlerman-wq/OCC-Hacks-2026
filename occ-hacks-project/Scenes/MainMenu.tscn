@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://jygq7qbb7d4p" path="res://Scripts/menu.gd" id="1_tt5f1"]
 [ext_resource type="FontFile" uid="uid://dixj1vsepesu2" path="res://Assets/Font/Lilenthtype-Regular.ttf" id="2_853f1"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/OptionsPanel.tscn" id="3_opts"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/AboutPanel.tscn" id="4_about"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aqcu0"]
 font = ExtResource("2_853f1")
@@ -68,6 +70,16 @@ text = "Options"
 [node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=987463359]
 layout_mode = 2
 
+[node name="About_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1234567890]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_gla8d")
+text = "About Us"
+
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=987463360]
+layout_mode = 2
+
 [node name="Quit_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=365194383]
 unique_name_in_owner = true
 layout_mode = 2
@@ -75,6 +87,13 @@ size_flags_horizontal = 3
 theme = SubResource("Theme_gla8d")
 text = "Quit"
 
+[node name="OptionsPanel" parent="." instance=ExtResource("3_opts")]
+layout_mode = 2
+
+[node name="AboutPanel" parent="." instance=ExtResource("4_about")]
+layout_mode = 2
+
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/About_Button" to="." method="_on_about_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
