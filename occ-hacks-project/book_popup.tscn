@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://bukra2gxsd6r6"]
+[gd_scene format=3 uid="uid://bpdk2r7ggosww"]
 
-[ext_resource type="Script" uid="uid://d6qsy0ltlsyf" path="res://book_popup.gd" id="1_ewfrc"]
+[ext_resource type="Script" uid="uid://d6qsy0ltlsyf" path="res://book_popup.gd" id="1_4ffdx"]
 [ext_resource type="Texture2D" uid="uid://cqkokuun34cnc" path="res://Assets/AI Pic/OpenBookRed.png" id="1_mr6sb"]
-[ext_resource type="Texture2D" uid="uid://b3tpvoompkics" path="res://Assets/AI Pic/Puzzle 1.png" id="2_eo0jy"]
+[ext_resource type="Texture2D" uid="uid://mcy84rc2f1mn" path="res://Assets/AI Pic/Puzzle1.png" id="3_ewfrc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewfrc"]
 
 [node name="BookPopup" type="CanvasLayer" unique_id=1409815298]
-script = ExtResource("1_ewfrc")
+script = ExtResource("1_4ffdx")
 
 [node name="Control" type="Control" parent="." unique_id=815298118]
 layout_mode = 3
@@ -65,7 +65,7 @@ offset_left = 191.0
 offset_top = 160.0
 offset_right = 484.0
 offset_bottom = 474.0
-texture = ExtResource("2_eo0jy")
+texture = ExtResource("3_ewfrc")
 expand_mode = 1
 
 [node name="HintButton" type="Button" parent="Control" unique_id=1075270781]
@@ -111,10 +111,10 @@ you want a hint?
 
 [node name="HintImage" type="TextureRect" parent="Control/HintPanel" unique_id=617900889]
 layout_mode = 0
-offset_left = 871.0
-offset_top = 150.0
-offset_right = 911.0
-offset_bottom = 190.0
+offset_left = 855.0
+offset_top = 123.0
+offset_right = 895.0
+offset_bottom = 163.0
 
 [node name="NextHintButton" type="Button" parent="Control/HintPanel" unique_id=314567250]
 layout_mode = 0
@@ -163,12 +163,14 @@ theme_override_font_sizes/font_size = 20
 text = "SUBMIT"
 
 [node name="ContinueButton" type="Button" parent="Control" unique_id=1611449476]
-visible = false
-layout_mode = 0
-offset_left = 749.0
-offset_top = 436.0
-offset_right = 840.0
-offset_bottom = 467.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.725
+anchor_top = 10.900001
+anchor_right = 21.000002
+anchor_bottom = 11.675
+offset_top = -3.0517578e-05
+offset_right = -6.1035156e-05
 text = "CONTINUE"
 
 [node name="ResultLabel" type="Label" parent="Control" unique_id=462695972]
