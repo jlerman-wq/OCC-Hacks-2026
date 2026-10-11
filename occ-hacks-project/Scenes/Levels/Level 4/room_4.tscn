@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://deicpkqon0g6m"]
+[gd_scene format=3 uid="uid://dm27gxquqdymi"]
 
-[ext_resource type="Script" uid="uid://bef1mijiclfts" path="res://Scripts/room_4.gd" id="1_roktq"]
-[ext_resource type="Script" uid="uid://mbb2gky37126" path="res://Scripts/exit.gd" id="2_ctd8f"]
-[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_roktq"]
-[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_ocw8c"]
-[ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_xjf32"]
+[ext_resource type="Script" uid="uid://dhi8427xs3hsw" path="res://Scenes/Levels/Level 4/room_4.gd" id="1_totw3"]
+[ext_resource type="Script" uid="uid://mbb2gky37126" path="res://Scripts/exit.gd" id="2_a0xj3"]
+[ext_resource type="PackedScene" uid="uid://c6lfsxfmg1qqx" path="res://Scenes/player.tscn" id="3_o24b0"]
+[ext_resource type="Texture2D" uid="uid://debob087ohtad" path="res://Assets/Artwork/starry_sky.jpg" id="4_fclrv"]
+[ext_resource type="PackedScene" uid="uid://x7tkwgeqahcu" path="res://Scenes/pumpkin.tscn" id="5_c6prg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08qor"]
-size = Vector2(2107, 128.375)
+size = Vector2(2756, 128.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjedn"]
 size = Vector2(1150, 50)
@@ -17,7 +17,7 @@ size = Vector2(60, 100)
 
 [sub_resource type="Gradient" id="Gradient_ocw8c"]
 offsets = PackedFloat32Array(0, 0.9811321)
-colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0.078431375)
+colors = PackedColorArray(1, 0.8, 0.53333336, 1, 1, 0.8, 0.53333336, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_08qor"]
 gradient = SubResource("Gradient_ocw8c")
@@ -36,19 +36,23 @@ light_mode = 2
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xjf32"]
 load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w76ad"]
+load_path = "res://.godot/imported/jackolantern unlit.png-78acdc652145a676187baa6d17102786.ctex"
+
 [node name="room4" type="Node2D" unique_id=1079266622]
-script = ExtResource("1_roktq")
+script = ExtResource("1_totw3")
+code = Array[int]([3, 6, 4, 2])
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=851080554]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1108499381]
-position = Vector2(1060.5, 685.1875)
+position = Vector2(1385, 685.1875)
 shape = SubResource("RectangleShape2D_08qor")
 
 [node name="ColorRect" type="ColorRect" parent="Floor" unique_id=416629255]
 z_index = -10
 offset_top = 620.0
-offset_right = 2123.0
+offset_right = 2890.0
 offset_bottom = 790.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
@@ -67,26 +71,26 @@ color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=1739062197]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1966736486]
-position = Vector2(2155, -265)
+position = Vector2(2804, -571)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_08qor")
 
 [node name="ColorRect" type="ColorRect" parent="WallRight" unique_id=1767487477]
-offset_left = 2076.0
-offset_top = -338.0
-offset_right = 2126.0
-offset_bottom = 649.0
+offset_left = 2727.0
+offset_top = -348.0
+offset_right = 2777.0
+offset_bottom = 639.0
 color = Color(0.13627082, 0.10981006, 0.25389758, 1)
 
 [node name="Exit" type="Area2D" parent="." unique_id=1185953475]
-script = ExtResource("2_ctd8f")
+script = ExtResource("2_a0xj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=827993505]
-position = Vector2(2075, 574)
+position = Vector2(2713, 572)
 shape = SubResource("RectangleShape2D_7u08x")
 
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=2126978979]
-color = Color(0.12941177, 0.101960786, 0.2627451, 0.72156864)
+[node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_o24b0")]
+position = Vector2(111, 479)
 
 [node name="PlayerLight" type="PointLight2D" parent="." unique_id=1035058780]
 energy = 2.0
@@ -111,7 +115,7 @@ offset_right = 530.0
 offset_bottom = 382.0
 theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
-text = "8"
+text = "6"
 
 [node name="Hint3" type="Label" parent="." unique_id=1248751090]
 material = SubResource("CanvasItemMaterial_7u08x")
@@ -133,32 +137,100 @@ theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "2"
 
-[node name="Player" parent="." unique_id=764694766 instance=ExtResource("3_roktq")]
-position = Vector2(111, 479)
-
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
-position = Vector2(1060.75, 121)
-scale = Vector2(0.82597667, 0.69492704)
-texture = ExtResource("4_ocw8c")
+position = Vector2(1445.25, 87.500015)
+scale = Vector2(1.1263672, 0.74148715)
+texture = ExtResource("4_fclrv")
 metadata/_edit_lock_ = true
 
-[node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_xjf32")]
+[node name="Pumpkin" parent="." unique_id=1431724313 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
 
-[node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_xjf32")]
+[node name="Sprite2D" parent="Pumpkin" index="0" unique_id=772453102]
+position = Vector2(284, 107.00003)
+
+[node name="CollisionShape2D" parent="Pumpkin" index="1" unique_id=664971206]
+position = Vector2(290, 117)
+
+[node name="Candle" parent="Pumpkin" index="2" unique_id=1891275496]
+position = Vector2(285, 120.00001)
+
+[node name="Pumpkin2" parent="." unique_id=780638531 instance=ExtResource("5_c6prg")]
 position = Vector2(1141, 468)
 
 [node name="Sprite2D" parent="Pumpkin2" index="0" unique_id=772453102]
-position = Vector2(197, 113)
+position = Vector2(471, 118)
 texture = SubResource("CompressedTexture2D_xjf32")
 region_rect = Rect2(1104.603, 346.44385, 534.0459, 733.78906)
 
 [node name="CollisionShape2D" parent="Pumpkin2" index="1" unique_id=664971206]
-position = Vector2(235, 96)
+position = Vector2(470, 125)
 
 [node name="Candle" parent="Pumpkin2" index="2" unique_id=1891275496]
-position = Vector2(197.00002, 114.999985)
-scale = Vector2(0.5864261, 0.54980445)
+position = Vector2(469, 134)
+scale = Vector2(0.5864261, 0.6811523)
+
+[node name="Pumpkin3" parent="." unique_id=1365933653 instance=ExtResource("5_c6prg")]
+position = Vector2(1141, 468)
+
+[node name="Sprite2D" parent="Pumpkin3" index="0" unique_id=772453102]
+position = Vector2(626, 117)
+region_rect = Rect2(580.1125, 1095.7379, 1224.1772, 749.0486)
+
+[node name="CollisionShape2D" parent="Pumpkin3" index="1" unique_id=664971206]
+position = Vector2(623, 121)
+
+[node name="Candle" parent="Pumpkin3" index="2" unique_id=1891275496]
+position = Vector2(620, 142)
+
+[node name="Pumpkin4" parent="." unique_id=833705654 instance=ExtResource("5_c6prg")]
+position = Vector2(1141, 468)
+
+[node name="Sprite2D" parent="Pumpkin4" index="0" unique_id=772453102]
+position = Vector2(806, 115)
+texture = SubResource("CompressedTexture2D_w76ad")
+region_rect = Rect2(1768.5374, 214.31067, 1221.9043, 966.78687)
+
+[node name="CollisionShape2D" parent="Pumpkin4" index="1" unique_id=664971206]
+position = Vector2(799, 127)
+
+[node name="Candle" parent="Pumpkin4" index="2" unique_id=1891275496]
+position = Vector2(807, 148.99997)
+scale = Vector2(0.5864261, 0.6811523)
+
+[node name="Pumpkin5" parent="." unique_id=2050965913 instance=ExtResource("5_c6prg")]
+position = Vector2(1141, 468)
+
+[node name="Sprite2D" parent="Pumpkin5" index="0" unique_id=772453102]
+position = Vector2(977, 117)
+texture = SubResource("CompressedTexture2D_w76ad")
+region_rect = Rect2(5.979492, 1215.7177, 534.0459, 627.1113)
+
+[node name="CollisionShape2D" parent="Pumpkin5" index="1" unique_id=664971206]
+position = Vector2(967, 115)
+
+[node name="Candle" parent="Pumpkin5" index="2" unique_id=1891275496]
+position = Vector2(978, 125.99997)
+scale = Vector2(0.5864261, 0.6811523)
+
+[node name="Pumpkin6" parent="." unique_id=966898212 instance=ExtResource("5_c6prg")]
+position = Vector2(1141, 468)
+
+[node name="Sprite2D" parent="Pumpkin6" index="0" unique_id=772453102]
+position = Vector2(1118, 92)
+texture = SubResource("CompressedTexture2D_w76ad")
+region_rect = Rect2(2014.2056, 1249.8229, 862.92676, 1099.1974)
+
+[node name="CollisionShape2D" parent="Pumpkin6" index="1" unique_id=664971206]
+position = Vector2(1123, 92)
+
+[node name="Candle" parent="Pumpkin6" index="2" unique_id=1891275496]
+position = Vector2(1119, 107.99998)
+scale = Vector2(0.5864261, 0.6811523)
 
 [editable path="Pumpkin"]
 [editable path="Pumpkin2"]
+[editable path="Pumpkin3"]
+[editable path="Pumpkin4"]
+[editable path="Pumpkin5"]
+[editable path="Pumpkin6"]
