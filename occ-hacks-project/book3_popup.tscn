@@ -276,7 +276,6 @@ theme_override_font_sizes/font_size = 24
 text = "x"
 
 [node name="SuccessOverlay" type="Control" parent="Control" unique_id=1131949031]
-visible = false
 anchors_preset = 0
 offset_left = 3.0
 offset_top = 1.0
@@ -297,6 +296,7 @@ offset_bottom = 84.89197
 color = Color(0, 0, 0, 0.003921569)
 
 [node name="SuccessImage" type="TextureRect" parent="Control/SuccessOverlay" unique_id=133289087]
+visible = false
 layout_mode = 0
 offset_left = 562.0
 offset_top = 222.0
@@ -320,9 +320,11 @@ theme_override_font_sizes/font_size = 18
 [node name="SuccessContinueButton" type="Button" parent="Control/SuccessOverlay" unique_id=848986541]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.007
-offset_left = 686.0
-offset_top = 400.0
-offset_right = 769.027
-offset_bottom = 432.0
+anchor_top = 0.69000006
+anchor_right = 0.73300004
+anchor_bottom = 0.74500006
+offset_left = 744.0
+offset_top = 0.109954834
+offset_right = 0.112976074
+offset_bottom = 0.15496826
 text = "CONTINUE"

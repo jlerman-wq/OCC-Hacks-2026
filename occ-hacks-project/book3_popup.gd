@@ -1,8 +1,7 @@
 
 extends CanvasLayer
 
-# BOOK 3 - TUNG TUNG TUNG SAHUR
-# Correct answer: sahur
+# BOOK 3 POPUP - TUNG TUNG TUNG SAHUR
 
 @onready var title_label = $Control/TitleLabel
 @onready var question_label = $Control/QuestionLabel
@@ -20,22 +19,32 @@ extends CanvasLayer
 @onready var continue_button = $Control/ContinueButton
 @onready var close_button = $Control/CloseButton
 
-const CORRECT_ANSWER = "sahur"
-
 var current_book: Node = null
+var correct_answer: String = "sahur"
+var second_hint_text: String = ""
+var success_text: String = ""
 var answer_correct: bool = false
 
 
 func _ready() -> void:
-	add_to_group("book_popup")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 	hide()
 	hint_panel.hide()
 	continue_button.hide()
 
-	title_label.text = "Book 3"
-	question_label.text = "TUNG TUNG TUNG..."
+	# Hide unused Book 2 features
+	var periodic = get_node_or_null("Control/PeriodicTableButton")
+	if periodic:
+		periodic.hide()
+
+	var zoom = get_node_or_null("Control/ZoomOverlay")
+	if zoom:
+		zoom.hide()
+
+	var success = get_node_or_null("Control/SuccessOverlay")
+	if success:
+		success.hide()
 
 	hint_button.pressed.connect(show_hint)
 	next_hint_button.pressed.connect(show_second_hint)
@@ -52,26 +61,40 @@ func open_popup(book: Node) -> void:
 	current_book = book
 	answer_correct = false
 
-	title_label.text = "Book 3"
-	question_label.text = "TUNG TUNG TUNG..."
+	# Get information from Book 3 Inspector
+	title_label.text = str(book.get("title_text"))
+	question_label.text = str(book.get("question_text"))
 
-	# Keep the classmate's drawing
+	correct_answer = str(book.get("correct_answer"))
+	second_hint_text = str(book.get("second_hint_text"))
+	success_text = str(book.get("success_text"))
+
+	# Puzzle image
+	var new_puzzle = book.get("puzzle_texture") as Texture2D
+
+	if new_puzzle != null:
+		puzzle_image.texture = new_puzzle
+
 	puzzle_image.show()
 
-	# Keep the hint picture from the Inspector
-	hint_label.text = "Do you recognize this character?"
-	hint_image.show()
+	# Hints
+	hint_label.text = str(book.get("hint_text"))
 
-	next_hint_button.show()
+	var new_hint = book.get("hint_texture") as Texture2D
+
+	if new_hint != null:
+		hint_image.texture = new_hint
+
+	hint_image.show()
+	next_hint_button.visible = not second_hint_text.is_empty()
 	hint_panel.hide()
 
 	# Reset answer
 	answer_box.text = ""
 	answer_box.editable = true
+	submit_button.disabled = false
 
 	result_label.text = ""
-
-	submit_button.disabled = false
 	continue_button.hide()
 
 	show()
@@ -84,23 +107,21 @@ func show_hint() -> void:
 
 
 func show_second_hint() -> void:
-	hint_label.text = "The answer starts with S and has 5 letters."
+	hint_label.text = second_hint_text
 	next_hint_button.hide()
 
 
 func check_answer() -> void:
 	var answer: String = answer_box.text.strip_edges().to_lower()
 
-	if answer == CORRECT_ANSWER:
-		result_label.text = "Correct! TUNG TUNG TUNG SAHUR!"
-
+	if answer == correct_answer.strip_edges().to_lower():
 		answer_correct = true
 
+		result_label.text = success_text
 		submit_button.disabled = true
 		answer_box.editable = false
 
 		continue_button.show()
-
 	else:
 		result_label.text = "Wrong answer! Try again!"
 
