@@ -1,23 +1,23 @@
 
 extends CanvasLayer
 
-# BOOK 1 - Original math book popup
+# BOOK 1 - MATH POPUP
 
-@onready var title_label: Label = $Control/TitleLabel
-@onready var question_label: RichTextLabel = $Control/QuestionLabel
-@onready var puzzle_image: TextureRect = $Control/PuzzleImage
+@onready var title_label = $Control/TitleLabel
+@onready var question_label = $Control/QuestionLabel
+@onready var puzzle_image = $Control/PuzzleImage
 
-@onready var hint_button: Button = $Control/HintButton
-@onready var hint_panel: Control = $Control/HintPanel
-@onready var hint_label: Label = $Control/HintPanel/HintLabel
-@onready var hint_image: TextureRect = $Control/HintPanel/HintImage
-@onready var next_hint_button: Button = $Control/HintPanel/NextHintButton
+@onready var hint_button = $Control/HintButton
+@onready var hint_panel = $Control/HintPanel
+@onready var hint_label = $Control/HintPanel/HintLabel
+@onready var hint_image = $Control/HintPanel/HintImage
+@onready var next_hint_button = $Control/HintPanel/NextHintButton
 
-@onready var answer_box: LineEdit = $Control/AnswerBox
-@onready var submit_button: Button = $Control/SubmitButton
-@onready var result_label: Label = $Control/ResultLabel
-@onready var continue_button: Button = $Control/ContinueButton
-@onready var close_button: Button = $Control/CloseButton
+@onready var answer_box = $Control/AnswerBox
+@onready var submit_button = $Control/SubmitButton
+@onready var result_label = $Control/ResultLabel
+@onready var continue_button = $Control/ContinueButton
+@onready var close_button = $Control/CloseButton
 
 var current_book: Node = null
 var answer_correct: bool = false
@@ -48,7 +48,7 @@ func open_popup(book: Node) -> void:
 	answer_correct = false
 	showing_second_hint = false
 
-	# Get puzzle information from the clicked book
+	# Load information from the clicked book
 	title_label.text = book.title_text
 	question_label.text = book.question_text
 
@@ -56,14 +56,14 @@ func open_popup(book: Node) -> void:
 	puzzle_image.visible = book.puzzle_texture != null
 
 	hint_label.text = book.hint_text
-
 	hint_image.texture = book.hint_texture
 	hint_image.visible = book.hint_texture != null
 
-	# Reset popup
+	# Reset hints
 	hint_panel.hide()
 	next_hint_button.visible = book.second_hint_text != ""
 
+	# Reset answer
 	answer_box.text = ""
 	answer_box.editable = true
 
@@ -73,6 +73,7 @@ func open_popup(book: Node) -> void:
 	result_label.text = ""
 	continue_button.hide()
 
+	# Show popup and pause game
 	show()
 	get_tree().paused = true
 	answer_box.grab_focus()
@@ -109,10 +110,12 @@ func check_answer() -> void:
 		result_label.text = "Wrong answer! Try again!"
 		return
 
+	# Correct answer
 	answer_correct = true
 
 	answer_box.editable = false
 	submit_button.disabled = true
+	submit_button.hide()
 
 	result_label.text = current_book.success_text
 
