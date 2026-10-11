@@ -379,6 +379,17 @@ theme_override_font_sizes/font_size = 20
 text = "Look for the code in
 	              the sky"
 
+[node name="Code Found3" type="Label" parent="." unique_id=2068242913]
+material = SubResource("CanvasItemMaterial_totw3")
+offset_left = 1951.0
+offset_top = 363.0
+offset_right = 2193.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(0.78039217, 0.8117647, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Set the pumpkins ablaze,
+                 Press E"
+
 [node name="Background" type="Sprite2D" parent="." unique_id=1102841762]
 z_index = -10
 position = Vector2(1445.25, 87.500015)
